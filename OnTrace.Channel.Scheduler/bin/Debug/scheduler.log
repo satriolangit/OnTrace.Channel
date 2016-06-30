@@ -1,0 +1,7 @@
+2016-06-27 13:48:24,871 [OnTrace.Channel.Scheduler.Program] DEBUG - Developer : Debugging mail sender..
+2016-06-27 13:48:24,906 [OnTrace.Channel.Scheduler.Program] INFO - User : Sending mail unsucessful, please contact your administrator.
+2016-06-27 13:48:24,910 [OnTrace.Channel.Scheduler.Program] WARN - User : Sending mail failed, please contact your administrator
+2016-06-27 13:48:24,913 [OnTrace.Channel.Scheduler.Program] ERROR - Developer : Failed sending mail, Error : 
+System.DivideByZeroException: Attempted to divide by zero.
+   at OnTrace.Channel.Scheduler.Program.LogTest() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 128
+2016-06-27 13:48:24,929 [OnTrace.Channel.Scheduler.Program] FATAL - Developer : Fatal system fail, send email to developer

@@ -1,0 +1,10 @@
+D:\wahyu\kantor\Development\OnTrace10\Bin\CDA.dll
+D:\wahyu\kantor\Development\OnTrace10\Bin\CDA.pdb
+D:\wahyu\kantor\Development\OnTrace10\CDA\obj\Debug\ResolveAssemblyReference.cache
+D:\wahyu\kantor\Development\OnTrace10\CDA\obj\Debug\CDA.dll
+D:\wahyu\kantor\Development\OnTrace10\CDA\obj\Debug\CDA.pdb
+D:\Wahyu\Kantor\Development\OnTrace.Channel\Bin\CDA.dll
+D:\Wahyu\Kantor\Development\OnTrace.Channel\Bin\CDA.pdb
+D:\Wahyu\Kantor\Development\OnTrace.Channel\CDA\obj\Debug\CommonDataAccess.csprojResolveAssemblyReference.cache
+D:\Wahyu\Kantor\Development\OnTrace.Channel\CDA\obj\Debug\CDA.dll
+D:\Wahyu\Kantor\Development\OnTrace.Channel\CDA\obj\Debug\CDA.pdb

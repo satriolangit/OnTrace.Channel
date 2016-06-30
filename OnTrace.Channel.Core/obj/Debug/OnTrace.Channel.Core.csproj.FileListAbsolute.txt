@@ -1,0 +1,5 @@
+D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Core\obj\Debug\OnTrace.Channel.Core.csprojResolveAssemblyReference.cache
+D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Core\bin\Debug\OnTrace.Channel.Core.dll
+D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Core\bin\Debug\OnTrace.Channel.Core.pdb
+D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Core\obj\Debug\OnTrace.Channel.Core.dll
+D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Core\obj\Debug\OnTrace.Channel.Core.pdb

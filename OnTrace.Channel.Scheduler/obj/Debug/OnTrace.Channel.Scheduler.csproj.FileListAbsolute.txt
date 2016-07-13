@@ -12,10 +12,7 @@ D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\obj\Debug\
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\obj\Debug\OnTrace.Channel.Scheduler.exe
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\obj\Debug\OnTrace.Channel.Scheduler.pdb
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\OnTrace.Channel.Core.dll
-D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\System.Net.Http.Formatting.dll
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\OnTrace.Channel.Core.pdb
-D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\System.Net.Http.Formatting.xml
-D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\OpenPop.dll
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\BouncyCastle.dll
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\MailKit.dll
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\MimeKit.dll
@@ -26,7 +23,6 @@ D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\MimeKit.xml
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\CDA.dll
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\CDA.pdb
-D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\GSMCommServer.dll
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\GSMCommShared.dll
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\GSMCommunication.dll
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\PDUConverter.dll
@@ -43,3 +39,10 @@ D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\Quartz.xml
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\log4net.dll
 D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\log4net.xml
+D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\Tweetinvi.dll
+D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\Autofac.dll
+D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\Autofac.xml
+D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml

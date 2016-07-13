@@ -11,8 +11,6 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using MailKit.Net.Pop3;
-using MimeKit;
 using OnTrace.Channel.Core.Domain;
 using OnTrace.Channel.Infrastructure.Services;
 using OnTrace.Channel.Infrastructure.Data;
@@ -95,7 +93,7 @@ namespace OnTrace.Channel.Scheduler
                             Stop();
                             break;
                         case "6":
-                            LogTest();
+                            TwitterTest();
                             break;
                         case "x":
                             _start = false;
@@ -103,6 +101,12 @@ namespace OnTrace.Channel.Scheduler
                     }
                 }
             }
+        }
+
+        private static void TwitterTest()
+        {
+            var helper = new TwitterHelper();
+            helper.TweetTest();
         }
 
 

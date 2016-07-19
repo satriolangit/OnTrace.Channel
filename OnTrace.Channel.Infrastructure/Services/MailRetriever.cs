@@ -66,14 +66,16 @@ namespace OnTrace.Channel.Infrastructure.Services
 
                         var from = message.From.Mailboxes.FirstOrDefault();
                         
-                        if (from != null && !Regex.IsMatch(from.Address, "[+-*]"))
+                        if (from != null && !Regex.IsMatch(from.Address, "[+-]"))
                         {
                             var mailMessage = new MailMessage()
                             {
                                 From = from.Address,
                                 To = _mailAccount.Username,
                                 Message = message.TextBody,
-                                MediaFiles = medias
+                                MediaFiles = medias,
+                                Subject = message.Subject
+                                
                             };
 
                             result.Add(mailMessage);

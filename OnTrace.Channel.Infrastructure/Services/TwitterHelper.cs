@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tweetinvi;
-using Tweetinvi.Core.Authentication;
-
+using Tweetinvi.Models;
 
 
 namespace OnTrace.Channel.Infrastructure.Services

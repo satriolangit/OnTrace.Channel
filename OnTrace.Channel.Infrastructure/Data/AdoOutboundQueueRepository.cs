@@ -133,7 +133,7 @@ namespace OnTrace.Channel.Infrastructure.Data
                         {
                             QueueId = row["QueueID"].ToString(),
                             AccountName = row["AccountName"].ToString(),
-                            Subject = row["Subject"].ToString(),
+                            Subject =  row["Subject"]?.ToString() ?? "-",
                             Message = row["Message"].ToString(),
                             MessageType = Convert.ToInt32(row["MessageType"]),
                             MessageStatus = row["MessageStatus"].ToString(),

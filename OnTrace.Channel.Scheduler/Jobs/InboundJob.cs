@@ -56,6 +56,7 @@ namespace OnTrace.Channel.Scheduler.Jobs
                 Logger.Write($"Failed to create mail inbound queue.", ex, EventSeverity.Error);
             }
 
+            /*
            try
            {
                
@@ -78,6 +79,7 @@ namespace OnTrace.Channel.Scheduler.Jobs
            {
                Logger.Write($"Failed to create sms inbound queue", ex, EventSeverity.Error);
            }
+           */
         }
     }
 }

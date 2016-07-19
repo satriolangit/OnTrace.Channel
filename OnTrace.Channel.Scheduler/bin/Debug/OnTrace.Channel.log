@@ -727,3 +727,285 @@ Parameter name: index
 2016-06-29 16:27:01,622 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieving sms message..
 2016-06-29 16:27:17,740 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
 2016-06-29 16:27:17,939 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-19 10:41:33,057 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-19 10:41:33,503 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 10:42:03,257 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 10:42:07,250 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [ERROR] Failed to create mail inbound queue.
+System.Exception: Failed to retrieve mail messages ---> System.ArgumentException: parsing "[+-*]" - [x-y] range in reverse order.
+   at System.Text.RegularExpressions.RegexParser.ScanCharClass(Boolean caseInsensitive, Boolean scanOnly)
+   at System.Text.RegularExpressions.RegexParser.ScanRegex()
+   at System.Text.RegularExpressions.RegexParser.Parse(String re, RegexOptions op)
+   at System.Text.RegularExpressions.Regex..ctor(String pattern, RegexOptions options, TimeSpan matchTimeout, Boolean useCache)
+   at System.Text.RegularExpressions.Regex.IsMatch(String input, String pattern)
+   at OnTrace.Channel.Infrastructure.Services.MailRetriever.GetMailMessages(Int32 limit) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailRetriever.cs:line 69
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailRetriever.GetMailMessages(Int32 limit) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailRetriever.cs:line 88
+   at OnTrace.Channel.Scheduler.Jobs.InboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\InboundJob.cs:line 45
+2016-07-19 10:42:59,290 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-19 10:42:59,599 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 10:43:29,357 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 10:43:59,351 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 10:44:29,350 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 10:44:59,351 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 10:45:29,352 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 10:45:59,350 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 10:46:29,351 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 10:46:34,460 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create mail inbound queue, [address=wahyu.hw@gmail.com]
+2016-07-19 10:46:34,467 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[Mail], QueueId=[45cf1996485945a0a29b61e1b04e6fc0], address=[wahyu.hw@gmail.com], subject=[]
+2016-07-19 10:46:34,534 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[45cf1996485945a0a29b61e1b04e6fc0], filename=[technology-3.jpg]
+2016-07-19 10:46:34,549 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [ERROR] Failed to create mail inbound queue.
+System.Exception: Failed to create inbound queue file.. ---> System.Data.SqlClient.SqlException: Could not find stored procedure 'sp_InsertInboundQueueFile'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at CommonDataAccess.CDA.ExecuteNonQueryWithTransaction(SqlCommand cmd) in D:\Wahyu\Kantor\Development\OnTrace.Channel\CDA\CDA.cs:line 222
+   at OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository.InsertMediaFile(InboundQueueFile file) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoInboundQueueRepository.cs:line 175
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository.InsertMediaFile(InboundQueueFile file) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoInboundQueueRepository.cs:line 180
+   at OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository.CreateMailInboundQueue(MailMessage message) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoInboundQueueRepository.cs:line 101
+   at OnTrace.Channel.Scheduler.Jobs.InboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\InboundJob.cs:line 51
+2016-07-19 10:46:59,351 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 11:07:55,784 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 11:07:56,107 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:07:56,120 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[005b7c9802184364ba5c5ffe8ac97911]
+2016-07-19 11:07:56,123 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[2ef93ce9849344c985d00d7f2ec8d799]
+2016-07-19 11:07:56,126 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[35651d0e98b442b496bdfe3dd2df96f3]
+2016-07-19 11:07:56,132 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[85f116545c504a40acee8f579fbe23ff]
+2016-07-19 11:07:56,232 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[91926847f3c94086aa31e04c1583a047]
+2016-07-19 11:07:56,236 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[pradekso.a@gmail.com], subject=[]
+2016-07-19 11:08:00,403 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[3bf22bbfe3b34305885279df4db4401e], agentId=[7], channel=[1], subject=[]
+2016-07-19 11:08:00,411 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[3bf22bbfe3b34305885279df4db4401e], AgentId=[7], Account=[pradekso.a@gmail.com], channel=[1]
+2016-07-19 11:08:00,430 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[005b7c9802184364ba5c5ffe8ac97911]
+2016-07-19 11:08:00,432 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[005b7c9802184364ba5c5ffe8ac97911]
+2016-07-19 11:08:00,446 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[]
+2016-07-19 11:08:03,809 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[6d53fdc640db4760961a64278c08f91f], agentId=[7], channel=[1], subject=[]
+2016-07-19 11:08:03,809 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[6d53fdc640db4760961a64278c08f91f], AgentId=[7], Account=[florensia.damayanti@gmail.com], channel=[1]
+2016-07-19 11:08:03,820 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[2ef93ce9849344c985d00d7f2ec8d799]
+2016-07-19 11:08:03,821 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[2ef93ce9849344c985d00d7f2ec8d799]
+2016-07-19 11:08:03,829 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[pradekso.a@gmail.com], subject=[]
+2016-07-19 11:08:06,848 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[f4f6426f75c9404aaf02742d609847ab], agentId=[7], channel=[1], subject=[]
+2016-07-19 11:08:06,848 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[f4f6426f75c9404aaf02742d609847ab], AgentId=[7], Account=[pradekso.a@gmail.com], channel=[1]
+2016-07-19 11:08:06,861 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[35651d0e98b442b496bdfe3dd2df96f3]
+2016-07-19 11:08:06,862 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[35651d0e98b442b496bdfe3dd2df96f3]
+2016-07-19 11:08:07,534 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[pradekso.a@gmail.com], subject=[]
+2016-07-19 11:08:24,575 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[7b6ed07400e74a7dbc00e83cad5d300d], agentId=[7], channel=[1], subject=[]
+2016-07-19 11:08:24,576 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[7b6ed07400e74a7dbc00e83cad5d300d], AgentId=[7], Account=[pradekso.a@gmail.com], channel=[1]
+2016-07-19 11:08:24,595 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[7b6ed07400e74a7dbc00e83cad5d300d], Filename=[EPPlus.dll]
+2016-07-19 11:08:24,717 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[85f116545c504a40acee8f579fbe23ff]
+2016-07-19 11:08:24,718 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[85f116545c504a40acee8f579fbe23ff]
+2016-07-19 11:08:24,725 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[pradekso.a@gmail.com], subject=[]
+2016-07-19 11:08:28,888 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[1c28305e9c694ac48a3ceaf6ad75c61e], agentId=[7], channel=[1], subject=[]
+2016-07-19 11:08:28,889 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[1c28305e9c694ac48a3ceaf6ad75c61e], AgentId=[7], Account=[pradekso.a@gmail.com], channel=[1]
+2016-07-19 11:08:28,900 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[91926847f3c94086aa31e04c1583a047]
+2016-07-19 11:08:28,901 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[91926847f3c94086aa31e04c1583a047]
+2016-07-19 11:08:28,923 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:08:28,926 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[cf788b0c92b3479a8daa0336a23466f8]
+2016-07-19 11:08:28,929 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[da89fbb0262a4d82b98dd05ef9f88347]
+2016-07-19 11:08:28,932 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[dd96805bc10144949cf6a8e92aef5da4]
+2016-07-19 11:08:28,947 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[pradekso.a@gmail.com], subject=[ok]
+2016-07-19 11:08:32,850 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[8f8320459a474557aac7c6c4fe64c641], agentId=[7], channel=[1], subject=[ok]
+2016-07-19 11:08:32,851 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[8f8320459a474557aac7c6c4fe64c641], AgentId=[7], Account=[pradekso.a@gmail.com], channel=[1]
+2016-07-19 11:08:32,867 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[cf788b0c92b3479a8daa0336a23466f8]
+2016-07-19 11:08:32,868 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[cf788b0c92b3479a8daa0336a23466f8]
+2016-07-19 11:08:32,875 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[verify@twitter.com], subject=[ok]
+2016-07-19 11:08:37,629 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[f2319e11229a4314a1883e579a17c263], agentId=[7], channel=[1], subject=[ok]
+2016-07-19 11:08:37,630 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[f2319e11229a4314a1883e579a17c263], AgentId=[7], Account=[verify@twitter.com], channel=[1]
+2016-07-19 11:08:37,649 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[da89fbb0262a4d82b98dd05ef9f88347]
+2016-07-19 11:08:37,650 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[da89fbb0262a4d82b98dd05ef9f88347]
+2016-07-19 11:08:37,736 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[notification+kjdk-p-dvud_@facebookmail.com], subject=[notif fb]
+2016-07-19 11:08:42,600 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[3d12fe862bbc47b8b5f4c80d4856c308], agentId=[7], channel=[1], subject=[notif fb]
+2016-07-19 11:08:42,602 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[3d12fe862bbc47b8b5f4c80d4856c308], AgentId=[7], Account=[notification+kjdk-p-dvud_@facebookmail.com], channel=[1]
+2016-07-19 11:08:42,624 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[3d12fe862bbc47b8b5f4c80d4856c308], Filename=[Pendaftaran Online _ PPDB SMA Jalur Domisili Luar ]
+2016-07-19 11:08:42,658 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[dd96805bc10144949cf6a8e92aef5da4]
+2016-07-19 11:08:42,660 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[dd96805bc10144949cf6a8e92aef5da4]
+2016-07-19 11:08:55,844 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:10:16,822 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 11:10:17,038 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-19 11:10:17,136 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 11:10:17,148 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:10:46,881 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:10:46,894 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[405b8137d0094a5d98c276940e6ef74f]
+2016-07-19 11:10:46,899 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[]
+2016-07-19 11:10:47,042 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 11:10:47,193 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.damayanti@gmail.com], subject=[]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 11:10:49,465 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create mail inbound queue, [address=florensia.damayanti@gmail.com]
+2016-07-19 11:10:49,470 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[Mail], QueueId=[d9e5f0d1bfb54a5cb0422203cf433524], address=[florensia.damayanti@gmail.com], subject=[]
+2016-07-19 11:11:16,881 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:11:16,885 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[405b8137d0094a5d98c276940e6ef74f]
+2016-07-19 11:11:16,887 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[]
+2016-07-19 11:11:17,042 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 11:11:17,161 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.damayanti@gmail.com], subject=[]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 11:11:46,880 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:11:46,885 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[405b8137d0094a5d98c276940e6ef74f]
+2016-07-19 11:11:46,888 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[]
+2016-07-19 11:11:47,041 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 11:11:47,167 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.damayanti@gmail.com], subject=[]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 11:11:50,623 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create mail inbound queue, [address=pradekso.a@gmail.com]
+2016-07-19 11:11:50,624 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[Mail], QueueId=[00e42bbdfdc44667b277cca0eda7cdde], address=[pradekso.a@gmail.com], subject=[]
+2016-07-19 11:11:50,648 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[00e42bbdfdc44667b277cca0eda7cdde], filename=[kresna.png]
+2016-07-19 11:12:16,881 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:12:16,884 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[405b8137d0094a5d98c276940e6ef74f]
+2016-07-19 11:12:16,890 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[]
+2016-07-19 11:12:17,041 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 11:12:17,167 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.damayanti@gmail.com], subject=[]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 11:12:46,881 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:12:46,886 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[405b8137d0094a5d98c276940e6ef74f]
+2016-07-19 11:12:46,891 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[]
+2016-07-19 11:12:47,042 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 11:12:47,199 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.damayanti@gmail.com], subject=[]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 11:12:56,036 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-19 11:12:56,415 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-19 11:12:56,417 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-19 11:12:56,417 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-19 11:20:12,565 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 11:20:12,775 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-19 11:20:12,880 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 11:20:12,887 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:20:12,899 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[405b8137d0094a5d98c276940e6ef74f]
+2016-07-19 11:20:12,904 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[]
+2016-07-19 11:20:13,664 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.damayanti@gmail.com], subject=[]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 11:20:17,292 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create mail inbound queue, [address=pradekso_a@yahoo.com]
+2016-07-19 11:20:17,299 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[Mail], QueueId=[f21aaf7ab381428081865b647611fa26], address=[pradekso_a@yahoo.com], subject=[subyek lewat yahoo]
+2016-07-19 11:20:17,325 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[f21aaf7ab381428081865b647611fa26], filename=[kresna2.png]
+2016-07-19 11:20:17,337 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create mail inbound queue, [address=florensia.fd@gmail.com]
+2016-07-19 11:20:17,338 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[Mail], QueueId=[c291d9754bba4761842afeea730038d3], address=[florensia.fd@gmail.com], subject=[ini subject sesungguhnya]
+2016-07-19 11:20:42,623 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:20:42,778 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 11:20:49,439 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[405b8137d0094a5d98c276940e6ef74f]
+2016-07-19 11:20:49,442 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[]
+2016-07-19 11:20:49,743 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.damayanti@gmail.com], subject=[]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 11:21:12,623 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:21:12,627 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[405b8137d0094a5d98c276940e6ef74f]
+2016-07-19 11:21:12,629 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[]
+2016-07-19 11:21:12,779 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 11:21:12,899 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.damayanti@gmail.com], subject=[]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 11:21:42,623 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:21:42,627 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[405b8137d0094a5d98c276940e6ef74f]
+2016-07-19 11:21:42,629 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[]
+2016-07-19 11:21:42,778 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 11:21:42,935 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.damayanti@gmail.com], subject=[]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 11:22:12,624 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:22:12,628 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[405b8137d0094a5d98c276940e6ef74f]
+2016-07-19 11:22:12,631 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[]
+2016-07-19 11:22:12,778 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 11:22:12,899 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.damayanti@gmail.com], subject=[]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 11:48:31,397 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 11:48:31,610 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-19 11:48:31,710 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 11:48:31,719 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:48:31,733 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[405b8137d0094a5d98c276940e6ef74f]
+2016-07-19 11:48:31,736 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[a0cbab769dec458499b3e3c5a838acbc]
+2016-07-19 11:48:31,741 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[new subject]
+2016-07-19 11:48:32,140 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.damayanti@gmail.com], subject=[new subject]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 11:49:02,463 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 11:49:02,703 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-19 11:49:02,804 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 11:49:02,813 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:49:02,827 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[405b8137d0094a5d98c276940e6ef74f]
+2016-07-19 11:49:02,831 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[a0cbab769dec458499b3e3c5a838acbc]
+2016-07-19 11:49:02,836 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[new subject]
+2016-07-19 11:49:03,196 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.damayanti@gmail.com], subject=[new subject]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 11:49:28,513 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 11:49:28,719 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-19 11:49:28,818 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 11:49:28,827 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:49:28,840 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[a0cbab769dec458499b3e3c5a838acbc]
+2016-07-19 11:49:28,845 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.fd@gmail.com], subject=[New subject]
+2016-07-19 11:49:29,205 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.fd@gmail.com], subject=[New subject]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81

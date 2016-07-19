@@ -86,7 +86,7 @@ namespace OnTrace.Channel.Scheduler.Jobs
                         Logger.Write($"Sending sms to=[{queue.AccountName}], message=[{queue.Message}]", EventSeverity.Information);
 
                         var sender = new SmsSender(modemSetting);
-                       sender.SendMessage(queue.Message, queue.AccountName);
+                       //sender.SendMessage(queue.Message, queue.AccountName);
                    }
                    else if (channelId == 3)
                    {

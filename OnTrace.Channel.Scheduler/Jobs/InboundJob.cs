@@ -47,7 +47,6 @@ namespace OnTrace.Channel.Scheduler.Jobs
                 foreach (var message in messages)
                 {
                     Logger.Write($"Create mail inbound queue, [address={message.From}]", EventSeverity.Information);
-
                     repo.CreateMailInboundQueue(message);
                 }
             }

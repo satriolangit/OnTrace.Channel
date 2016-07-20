@@ -161,7 +161,7 @@ namespace OnTrace.Channel.Infrastructure.Data
                 var cmd = new SqlCommand("sp_InsertInboundQueueFile") {CommandType = CommandType.StoredProcedure};
                 cmd.Parameters.Add("@QueueID", SqlDbType.VarChar, 50);
                 cmd.Parameters.Add("@Filename", SqlDbType.VarChar, 50);
-                cmd.Parameters.Add("@FileData", SqlDbType.VarBinary, 8000);
+                cmd.Parameters.Add("@FileData", SqlDbType.VarBinary, -1);
                 cmd.Parameters.Add("@IsAttachment", SqlDbType.Bit);
 
                 //set values

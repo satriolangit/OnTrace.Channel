@@ -591,8 +591,9 @@
             <remarks>
             <para>Passes along the client implementation details to the server while also obtaining implementation
             details from the server.</para>
-            <para>If the <paramref name="clientImplementation"/> is null or no properties have been set, no
+            <para>If the <paramref name="clientImplementation"/> is <c>null</c> or no properties have been set, no
             identifying information will be sent to the server.</para>
+            <note type="security">
             <para>Security Implications</para>
             <para>This command has the danger of violating the privacy of users if misused. Clients should
             notify users that they send the ID command.</para>
@@ -603,6 +604,7 @@
             Some properties, such as a processor ID number, Ethernet address, or other unique (or mostly unique) identifier
             would allow tracking of users in ways that violate user privacy expectations and may also make it easier for
             attackers to exploit security holes in the client.</para>
+            </note>
             </remarks>
             <example>
             <code language="c#" source="Examples\ImapExamples.cs" region="Capabilities"/>
@@ -639,8 +641,9 @@
             <remarks>
             <para>Passes along the client implementation details to the server while also obtaining implementation
             details from the server.</para>
-            <para>If the <paramref name="clientImplementation"/> is null or no properties have been set, no
+            <para>If the <paramref name="clientImplementation"/> is <c>null</c> or no properties have been set, no
             identifying information will be sent to the server.</para>
+            <note type="security">
             <para>Security Implications</para>
             <para>This command has the danger of violating the privacy of users if misused. Clients should
             notify users that they send the ID command.</para>
@@ -651,6 +654,7 @@
             Some properties, such as a processor ID number, Ethernet address, or other unique (or mostly unique) identifier
             would allow tracking of users in ways that violate user privacy expectations and may also make it easier for
             attackers to exploit security holes in the client.</para>
+            </note>
             </remarks>
             <returns>The implementation details of the server if available; otherwise, <c>null</c>.</returns>
             <param name="clientImplementation">The client implementation.</param>
@@ -10997,6 +11001,17 @@
             </remarks>
             <value><c>true</c> if the client is connected; otherwise, <c>false</c>.</value>
         </member>
+        <member name="M:MailKit.Net.Smtp.SmtpClient.OnNoRecipientsAccepted(MimeKit.MimeMessage)">
+            <summary>
+            Invoked only when no recipients were accepted by the SMTP server.
+            </summary>
+            <remarks>
+            If <see cref="M:MailKit.Net.Smtp.SmtpClient.OnRecipientNotAccepted(MimeKit.MimeMessage,MimeKit.MailboxAddress,MailKit.Net.Smtp.SmtpResponse)"/> is overridden to not throw
+            an exception, this method should be overridden to throw an appropriate
+            exception instead.
+            </remarks>
+            <param name="message">The message being sent.</param>
+        </member>
         <member name="M:MailKit.Net.Smtp.SmtpClient.Authenticate(System.Text.Encoding,System.Net.ICredentials,System.Threading.CancellationToken)">
             <summary>
             Authenticates using the supplied credentials.
@@ -11229,6 +11244,28 @@
             An SMTP protocol error occurred.
             </exception>
         </member>
+        <member name="M:MailKit.Net.Smtp.SmtpClient.OnSenderAccepted(MimeKit.MimeMessage,MimeKit.MailboxAddress,MailKit.Net.Smtp.SmtpResponse)">
+            <summary>
+            Invoked when the sender is accepted by the SMTP server.
+            </summary>
+            <remarks>
+            The default implementation does nothing.
+            </remarks>
+            <param name="message">The message being sent.</param>
+            <param name="mailbox">The mailbox used in the <c>MAIL FROM</c> command.</param>
+            <param name="response">The response to the <c>MAIL FROM</c> command.</param>
+        </member>
+        <member name="M:MailKit.Net.Smtp.SmtpClient.OnSenderNotAccepted(MimeKit.MimeMessage,MimeKit.MailboxAddress,MailKit.Net.Smtp.SmtpResponse)">
+            <summary>
+            Invoked when a recipient is not accepted by the SMTP server.
+            </summary>
+            <remarks>
+            The default implementation throws an appropriate <see cref="T:MailKit.Net.Smtp.SmtpCommandException"/>.
+            </remarks>
+            <param name="message">The message being sent.</param>
+            <param name="mailbox">The mailbox used in the <c>MAIL FROM</c> command.</param>
+            <param name="response">The response to the <c>MAIL FROM</c> command.</param>
+        </member>
         <member name="M:MailKit.Net.Smtp.SmtpClient.GetEnvelopeId(MimeKit.MimeMessage)">
             <summary>
             Get the envelope identifier to be used with delivery status notifications.
@@ -11247,20 +11284,27 @@
             <returns>The envelope identifier.</returns>
             <param name="message">The message.</param>
         </member>
-        <member name="M:MailKit.Net.Smtp.SmtpClient.ProcessRcptToResponse(MailKit.Net.Smtp.SmtpResponse,MimeKit.MailboxAddress)">
+        <member name="M:MailKit.Net.Smtp.SmtpClient.OnRecipientAccepted(MimeKit.MimeMessage,MimeKit.MailboxAddress,MailKit.Net.Smtp.SmtpResponse)">
             <summary>
-            Process the response to a RCPT TO command.
+            Invoked when a recipient is accepted by the SMTP server.
             </summary>
             <remarks>
-            <para>Processes the response to a RCPT TO command.</para>
-            <para>By default, this method no-op when the <paramref name="response"/>
-            <see cref="P:MailKit.Net.Smtp.SmtpResponse.StatusCode"/> property has a value of
-            <see cref="F:MailKit.Net.Smtp.SmtpStatusCode.Ok"/> or
-            <see cref="F:MailKit.Net.Smtp.SmtpStatusCode.UserNotLocalWillForward"/> and will throw
-            an appropriate exception for all other status codes.</para>
+            The default implementation does nothing.
             </remarks>
-            <param name="response">The response to an RCPT TO command.</param>
-            <param name="mailbox">The mailbox used in the RCPT TO command.</param>
+            <param name="message">The message being sent.</param>
+            <param name="mailbox">The mailbox used in the <c>RCPT TO</c> command.</param>
+            <param name="response">The response to the <c>RCPT TO</c> command.</param>
+        </member>
+        <member name="M:MailKit.Net.Smtp.SmtpClient.OnRecipientNotAccepted(MimeKit.MimeMessage,MimeKit.MailboxAddress,MailKit.Net.Smtp.SmtpResponse)">
+            <summary>
+            Invoked when a recipient is not accepted by the SMTP server.
+            </summary>
+            <remarks>
+            The default implementation throws an appropriate <see cref="T:MailKit.Net.Smtp.SmtpCommandException"/>.
+            </remarks>
+            <param name="message">The message being sent.</param>
+            <param name="mailbox">The mailbox used in the <c>RCPT TO</c> command.</param>
+            <param name="response">The response to the <c>RCPT TO</c> command.</param>
         </member>
         <member name="M:MailKit.Net.Smtp.SmtpClient.GetDeliveryStatusNotifications(MimeKit.MimeMessage,MimeKit.MailboxAddress)">
             <summary>
@@ -11955,6 +11999,11 @@
             The "transaction failed" status code.
             </summary>
         </member>
+        <member name="F:MailKit.Net.Smtp.SmtpStatusCode.MailFromOrRcptToParametersNotRecognizedOrNotImplemented">
+            <summary>
+            The "mail from/rcpt to parameters not recognized or not implemented" status code.
+            </summary>
+        </member>
         <member name="T:MailKit.Net.Smtp.SmtpStream">
             <summary>
             A stream for communicating with an SMTP server.
@@ -12326,6 +12375,17 @@
             A binary search query such as an AND or OR expression.
             </remarks>
         </member>
+        <member name="M:MailKit.Search.BinarySearchQuery.#ctor(MailKit.Search.SearchTerm,MailKit.Search.SearchQuery,MailKit.Search.SearchQuery)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MailKit.Search.BinarySearchQuery"/> class.
+            </summary>
+            <remarks>
+            Creates a new binary search query.
+            </remarks>
+            <param name="term">THe search term.</param>
+            <param name="left">The left expression.</param>
+            <param name="right">The right expression.</param>
+        </member>
         <member name="P:MailKit.Search.BinarySearchQuery.Left">
             <summary>
             Gets the left operand of the expression.
@@ -12352,6 +12412,16 @@
             A date-based search query.
             </remarks>
         </member>
+        <member name="M:MailKit.Search.DateSearchQuery.#ctor(MailKit.Search.SearchTerm,System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MailKit.Search.DateSearchQuery"/> class.
+            </summary>
+            <remarks>
+            Creates a new date-based search query.
+            </remarks>
+            <param name="term">The search term.</param>
+            <param name="date">The date.</param>
+        </member>
         <member name="P:MailKit.Search.DateSearchQuery.Date">
             <summary>
             Gets the date value of the search query.
@@ -12368,6 +12438,16 @@
             <remarks>
             A header-based search query.
             </remarks>
+        </member>
+        <member name="M:MailKit.Search.HeaderSearchQuery.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MailKit.Search.HeaderSearchQuery"/> class.
+            </summary>
+            <remarks>
+            Creates a new header search query.
+            </remarks>
+            <param name="field">The header field name.</param>
+            <param name="value">The value to match against.</param>
         </member>
         <member name="P:MailKit.Search.HeaderSearchQuery.Field">
             <summary>
@@ -12394,6 +12474,16 @@
             <remarks>
             A numeric search query.
             </remarks>
+        </member>
+        <member name="M:MailKit.Search.NumericSearchQuery.#ctor(MailKit.Search.SearchTerm,System.UInt64)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MailKit.Search.NumericSearchQuery"/> class.
+            </summary>
+            <remarks>
+            Creates a new numeric search query.
+            </remarks>
+            <param name="term">The search term.</param>
+            <param name="value">The numeric value.</param>
         </member>
         <member name="P:MailKit.Search.NumericSearchQuery.Value">
             <summary>
@@ -12679,6 +12769,31 @@
             <remarks>
             A specialized query for searching messages in a <see cref="T:MailKit.IMailFolder"/>.
             </remarks>
+        </member>
+        <member name="M:MailKit.Search.SearchQuery.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MailKit.Search.SearchQuery"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:MailKit.Search.SearchQuery"/> that matches all messages.
+            </remarks>
+        </member>
+        <member name="M:MailKit.Search.SearchQuery.#ctor(MailKit.Search.SearchTerm)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MailKit.Search.SearchQuery"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:MailKit.Search.SearchQuery"/> with the specified search term.
+            </remarks>
+        </member>
+        <member name="P:MailKit.Search.SearchQuery.Term">
+            <summary>
+            Get the search term used by the search query.
+            </summary>
+            <remarks>
+            Gets the search term used by the search query.
+            </remarks>
+            <value>The term.</value>
         </member>
         <member name="F:MailKit.Search.SearchQuery.All">
             <summary>
@@ -13360,6 +13475,255 @@
             </remarks>
             <value>The mod-sequence identifier.</value>
         </member>
+        <member name="T:MailKit.Search.SearchTerm">
+            <summary>
+            A search term.
+            </summary>
+            <remarks>
+            The search term as used by <see cref="T:MailKit.Search.SearchQuery"/>.
+            </remarks>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.All">
+            <summary>
+            A search term that matches all messages.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.And">
+            <summary>
+            A search term that logically combines 2 or more other
+            search expressions such that messages must match both
+            expressions.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.Answered">
+            <summary>
+            A search term that matches answered messages.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.BccContains">
+            <summary>
+            A search term that matches messages that contain a specified
+            string within the <c>Bcc</c> header.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.BodyContains">
+            <summary>
+            A search term that matches messages that contain a specified
+            string within the body of the message.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.CcContains">
+            <summary>
+            A search term that matches messages that contain a specified
+            string within the <c>Cc</c> header.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.Deleted">
+            <summary>
+            A search term that matches deleted messages.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.DeliveredAfter">
+            <summary>
+            A search term that matches messages delivered after a specified date.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.DeliveredBefore">
+            <summary>
+            A search term that matches messages delivered before a specified date.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.DeliveredOn">
+            <summary>
+            A search term that matches messages delivered on a specified date.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.Draft">
+            <summary>
+            A search term that matches draft messages.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.Flagged">
+            <summary>
+            A search term that matches flagged messages.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.FromContains">
+            <summary>
+            A search term that matches messages that contain a specified
+            string within the <c>From</c> header.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.Fuzzy">
+            <summary>
+            A search term that modifies another search expression to allow
+            fuzzy matching.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.HeaderContains">
+            <summary>
+            A search term that matches messages that contain a specified
+            string within a particular header.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.Keyword">
+            <summary>
+            A search term that matches messages that contain a specified
+            keyword.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.LargerThan">
+            <summary>
+            A search term that matches messages that are larger than a
+            specified number of bytes.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.MessageContains">
+            <summary>
+            A search term that matches messages that contain a specified
+            string anywhere within the message.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.ModSeq">
+            <summary>
+            A search term that matches messages that have the specified
+            modification sequence value.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.New">
+            <summary>
+            A search term that matches new messages.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.Not">
+            <summary>
+            A search term that modifies another search expression such that
+            messages must match the logical inverse of the expression.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.NotAnswered">
+            <summary>
+            A search term that matches messages that have not been answered.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.NotDeleted">
+            <summary>
+            A search term that matches messages that have not been deleted.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.NotDraft">
+            <summary>
+            A search term that matches messages that are not drafts.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.NotFlagged">
+            <summary>
+            A search term that matches messages that have not been flagged.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.NotKeyword">
+            <summary>
+            A search term that matches messages that do not contain a specified
+            keyword.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.NotRecent">
+            <summary>
+            A search term that matches messages that are not recent.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.NotSeen">
+            <summary>
+            A search term that matches messages that have not been seen.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.Older">
+            <summary>
+            A search term that matches messages that are older than a specified date.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.Or">
+            <summary>
+            A search term that logically combines 2 or more other
+            search expressions such that messages only need to match
+            one of the expressions.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.Recent">
+            <summary>
+            A search term that matches messages that are recent.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.Seen">
+            <summary>
+            A search term that matches messages that have been seen.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.SentAfter">
+            <summary>
+            A search term that matches messages that were sent after a specified date.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.SentBefore">
+            <summary>
+            A search term that matches messages that were sent before a specified date.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.SentOn">
+            <summary>
+            A search term that matches messages that were sent on a specified date.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.SmallerThan">
+            <summary>
+            A search term that matches messages that are smaller than a
+            specified number of bytes.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.SubjectContains">
+            <summary>
+            A search term that matches messages that contain a specified
+            string within the <c>Subject</c> header.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.ToContains">
+            <summary>
+            A search term that matches messages that contain a specified
+            string within the <c>To</c> header.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.Uid">
+            <summary>
+            A search term that matches messages included within a specified
+            set of unique identifiers.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.Younger">
+            <summary>
+            A search term that matches messages that are younger than a specified date.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.GMailMessageId">
+            <summary>
+            A search term that matches messages with a specified GMail message identifier.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.GMailThreadId">
+            <summary>
+            A search term that matches messages with a specified GMail thread (conversation)
+            identifier.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.GMailLabels">
+            <summary>
+            A search term that matches messages with the specified GMail labels.
+            </summary>
+        </member>
+        <member name="F:MailKit.Search.SearchTerm.GMailRaw">
+            <summary>
+            A search term that uses the GMail search syntax.
+            </summary>
+        </member>
         <member name="T:MailKit.Search.SortOrder">
             <summary>
             An enumeration of sort orders.
@@ -13391,6 +13755,16 @@
             A text-based search query.
             </remarks>
         </member>
+        <member name="M:MailKit.Search.TextSearchQuery.#ctor(MailKit.Search.SearchTerm,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MailKit.Search.TextSearchQuery"/> class.
+            </summary>
+            <remarks>
+            Creates a new text-based search query.
+            </remarks>
+            <param name="term">The search term.</param>
+            <param name="text">The text to match against.</param>
+        </member>
         <member name="P:MailKit.Search.TextSearchQuery.Text">
             <summary>
             Gets the text to match against.
@@ -13408,6 +13782,16 @@
             A unary search query such as a NOT expression.
             </remarks>
         </member>
+        <member name="M:MailKit.Search.UnarySearchQuery.#ctor(MailKit.Search.SearchTerm,MailKit.Search.SearchQuery)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MailKit.Search.UnarySearchQuery"/> class.
+            </summary>
+            <remarks>
+            Creates a new unary search query.
+            </remarks>
+            <param name="term">The search term.</param>
+            <param name="operand">The operand.</param>
+        </member>
         <member name="P:MailKit.Search.UnarySearchQuery.Operand">
             <summary>
             Gets the inner operand.
@@ -13423,6 +13807,7 @@
             </summary>
             <remarks>
             More details here: http://davenport.sourceforge.net/ntlm.html#theNtlmMessageHeaderLayout
+            and at https://msdn.microsoft.com/en-us/library/cc236650.aspx
             </remarks>
         </member>
         <member name="F:MailKit.Security.Ntlm.NtlmFlags.NegotiateUnicode">
@@ -13440,7 +13825,7 @@
             Requests that the server's authentication realm be included in the Type 2 message.
             </summary>
         </member>
-        <member name="F:MailKit.Security.Ntlm.NtlmFlags.UnknownFlag1">
+        <member name="F:MailKit.Security.Ntlm.NtlmFlags.R10">
             <summary>
             This flag's usage has not been identified.
             </summary>
@@ -13466,9 +13851,9 @@
             and sealing authenticated communications.
             </summary>
         </member>
-        <member name="F:MailKit.Security.Ntlm.NtlmFlags.NegotiateNetware">
+        <member name="F:MailKit.Security.Ntlm.NtlmFlags.R9">
             <summary>
-            This flag's usage has not been identified.
+            This flag is unused and MUST be zero. (r8)
             </summary>
         </member>
         <member name="F:MailKit.Security.Ntlm.NtlmFlags.NegotiateNtlm">
@@ -13476,9 +13861,9 @@
             Indicates that NTLM authentication is being used.
             </summary>
         </member>
-        <member name="F:MailKit.Security.Ntlm.NtlmFlags.UnknownFlag2">
+        <member name="F:MailKit.Security.Ntlm.NtlmFlags.R8">
             <summary>
-            This flag's usage has not been identified.
+            This flag is unused and MUST be zero. (r8)
             </summary>
         </member>
         <member name="F:MailKit.Security.Ntlm.NtlmFlags.NegotiateAnonymous">
@@ -13543,19 +13928,19 @@
             response calculations.
             </summary>
         </member>
-        <member name="F:MailKit.Security.Ntlm.NtlmFlags.RequestInitResponse">
+        <member name="F:MailKit.Security.Ntlm.NtlmFlags.NegotiateIdentify">
             <summary>
             This flag's usage has not been identified.
             </summary>
         </member>
-        <member name="F:MailKit.Security.Ntlm.NtlmFlags.RequestAcceptResponse">
+        <member name="F:MailKit.Security.Ntlm.NtlmFlags.R5">
             <summary>
-            This flag's usage has not been identified.
+            This flag is unused and MUST be zero. (r5)
             </summary>
         </member>
         <member name="F:MailKit.Security.Ntlm.NtlmFlags.RequestNonNTSessionKey">
             <summary>
-            This flag's usage has not been identified.
+            Indicates that the LMOWF function should be used to generate a session key.
             </summary>
         </member>
         <member name="F:MailKit.Security.Ntlm.NtlmFlags.NegotiateTargetInfo">
@@ -13565,29 +13950,29 @@
             is used in the calculation of the NTLMv2 response.
             </summary>
         </member>
-        <member name="F:MailKit.Security.Ntlm.NtlmFlags.UnknownFlag3">
+        <member name="F:MailKit.Security.Ntlm.NtlmFlags.R4">
             <summary>
-            This flag's usage has not been identified.
+            This flag is unused and MUST be zero. (r4)
             </summary>
         </member>
-        <member name="F:MailKit.Security.Ntlm.NtlmFlags.UnknownFlag4">
+        <member name="F:MailKit.Security.Ntlm.NtlmFlags.NegotiateVersion">
             <summary>
-            This flag's usage has not been identified.
+            Indicates that the version field is present.
             </summary>
         </member>
-        <member name="F:MailKit.Security.Ntlm.NtlmFlags.UnknownFlag5">
+        <member name="F:MailKit.Security.Ntlm.NtlmFlags.R3">
             <summary>
-            This flag's usage has not been identified.
+            This flag is unused and MUST be zero. (r3)
             </summary>
         </member>
-        <member name="F:MailKit.Security.Ntlm.NtlmFlags.UnknownFlag6">
+        <member name="F:MailKit.Security.Ntlm.NtlmFlags.R2">
             <summary>
-            This flag's usage has not been identified.
+            This flag is unused and MUST be zero. (r2)
             </summary>
         </member>
-        <member name="F:MailKit.Security.Ntlm.NtlmFlags.UnknownFlag7">
+        <member name="F:MailKit.Security.Ntlm.NtlmFlags.R1">
             <summary>
-            This flag's usage has not been identified.
+            This flag is unused and MUST be zero. (r1)
             </summary>
         </member>
         <member name="F:MailKit.Security.Ntlm.NtlmFlags.Negotiate128">
@@ -14743,7 +15128,9 @@
             <param name="name">The identifier name.</param>
             <param name="rights">The access rights.</param>
             <exception cref="T:System.ArgumentNullException">
-            <paramref name="name"/> is <c>null</c>.
+            <para><paramref name="name"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="rights"/> is <c>null</c>.</para>
             </exception>
         </member>
         <member name="M:MailKit.AccessControl.#ctor(System.String,System.String)">
@@ -14757,7 +15144,9 @@
             <param name="name">The identifier name.</param>
             <param name="rights">The access rights.</param>
             <exception cref="T:System.ArgumentNullException">
-            <paramref name="name"/> is <c>null</c>.
+            <para><paramref name="name"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="rights"/> is <c>null</c>.</para>
             </exception>
         </member>
         <member name="M:MailKit.AccessControl.#ctor(System.String)">
@@ -15022,6 +15411,9 @@
             Creates a new set of access rights.
             </remarks>
             <param name="rights">The access rights.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="rights"/> is <c>null</c>.
+            </exception>
         </member>
         <member name="M:MailKit.AccessRights.#ctor(System.String)">
             <summary>
@@ -15031,6 +15423,9 @@
             Creates a new set of access rights.
             </remarks>
             <param name="rights">The access rights.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="rights"/> is <c>null</c>.
+            </exception>
         </member>
         <member name="M:MailKit.AccessRights.#ctor">
             <summary>
@@ -21511,6 +21906,77 @@
             </remarks>
             <value>The timeout in milliseconds.</value>
         </member>
+        <member name="M:MailKit.IMailService.Connect(System.String,System.Int32,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Establish a connection to the specified mail server.
+            </summary>
+            <remarks>
+            <para>Establish a connection to the specified mail server.</para>
+            <para>If a successful connection is made, the <see cref="P:MailKit.IMailService.AuthenticationMechanisms"/>
+            property will be populated.</para>
+            </remarks>
+            <param name="host">The host name to connect to.</param>
+            <param name="port">The port to connect to. If the specified port is <c>0</c>, then the default port will be used.</param>
+            <param name="useSsl"><value>true</value> if the client should make an SSL-wrapped connection to the server; otherwise, <value>false</value>.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="host"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="port"/> is not between <c>0</c> and <c>65535</c>.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:MailKit.IMailService"/> is already connected.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            The operation was canceled via the cancellation token.
+            </exception>
+            <exception cref="T:System.IO.IOException">
+            An I/O error occurred.
+            </exception>
+            <exception cref="T:MailKit.CommandException">
+            The command was rejected by the mail server.
+            </exception>
+            <exception cref="T:MailKit.ProtocolException">
+            The server responded with an unexpected token.
+            </exception>
+        </member>
+        <member name="M:MailKit.IMailService.ConnectAsync(System.String,System.Int32,System.Boolean,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously establish a connection to the specified mail server.
+            </summary>
+            <remarks>
+            <para>Asynchronously establishes a connection to the specified mail server.</para>
+            <para>If a successful connection is made, the <see cref="P:MailKit.IMailService.AuthenticationMechanisms"/>
+            property will be populated.</para>
+            </remarks>
+            <returns>An asynchronous task context.</returns>
+            <param name="host">The host name to connect to.</param>
+            <param name="port">The port to connect to. If the specified port is <c>0</c>, then the default port will be used.</param>
+            <param name="useSsl"><value>true</value> if the client should make an SSL-wrapped connection to the server; otherwise, <value>false</value>.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <exception cref="T:System.ArgumentNullException">
+            The <paramref name="host"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="port"/> is not between <c>0</c> and <c>65535</c>.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:MailKit.IMailService"/> has been disposed.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:MailKit.IMailService"/> is already connected.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            The operation was canceled via the cancellation token.
+            </exception>
+            <exception cref="T:System.IO.IOException">
+            An I/O error occurred.
+            </exception>
+            <exception cref="T:MailKit.ProtocolException">
+            A protocol error occurred.
+            </exception>
+        </member>
         <member name="M:MailKit.IMailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">
             <summary>
             Establish a connection to the specified mail server.
@@ -21749,6 +22215,201 @@
             </exception>
             <exception cref="T:System.InvalidOperationException">
             The <see cref="T:MailKit.IMailService"/> is already authenticated.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            The operation was canceled via the cancellation token.
+            </exception>
+            <exception cref="T:MailKit.Security.AuthenticationException">
+            Authentication using the supplied credentials has failed.
+            </exception>
+            <exception cref="T:MailKit.Security.SaslException">
+            A SASL authentication error occurred.
+            </exception>
+            <exception cref="T:System.IO.IOException">
+            An I/O error occurred.
+            </exception>
+            <exception cref="T:MailKit.ProtocolException">
+            A protocol error occurred.
+            </exception>
+        </member>
+        <member name="M:MailKit.IMailService.Authenticate(System.Text.Encoding,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Authenticates using the specified user name and password.
+            </summary>
+            <remarks>
+            <para>If the server supports one or more SASL authentication mechanisms,
+            then the SASL mechanisms that both the client and server support are tried
+            in order of greatest security to weakest security. Once a SASL
+            authentication mechanism is found that both client and server support,
+            the credentials are used to authenticate.</para>
+            <para>If the server does not support SASL or if no common SASL mechanisms
+            can be found, then the default login command is used as a fallback.</para>
+            <note type="tip">To prevent the usage of certain authentication mechanisms,
+            simply remove them from the <see cref="P:MailKit.IMailService.AuthenticationMechanisms"/> hash set
+            before calling this method.</note>
+            </remarks>
+            <param name="encoding">The encoding to use for the user's credentials.</param>
+            <param name="userName">The user name.</param>
+            <param name="password">The password.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="encoding"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="userName"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="password"/> is <c>null</c>.</para>
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:MailKit.MailService"/> has been disposed.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:MailKit.MailService"/> is not connected or is already authenticated.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            The operation was canceled via the cancellation token.
+            </exception>
+            <exception cref="T:MailKit.Security.AuthenticationException">
+            Authentication using the supplied credentials has failed.
+            </exception>
+            <exception cref="T:MailKit.Security.SaslException">
+            A SASL authentication error occurred.
+            </exception>
+            <exception cref="T:System.IO.IOException">
+            An I/O error occurred.
+            </exception>
+            <exception cref="T:MailKit.ProtocolException">
+            A protocol error occurred.
+            </exception>
+        </member>
+        <member name="M:MailKit.IMailService.AuthenticateAsync(System.Text.Encoding,System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously authenticates using the specified user name and password.
+            </summary>
+            <remarks>
+            <para>If the server supports one or more SASL authentication mechanisms,
+            then the SASL mechanisms that both the client and server support are tried
+            in order of greatest security to weakest security. Once a SASL
+            authentication mechanism is found that both client and server support,
+            the credentials are used to authenticate.</para>
+            <para>If the server does not support SASL or if no common SASL mechanisms
+            can be found, then the default login command is used as a fallback.</para>
+            <note type="tip">To prevent the usage of certain authentication mechanisms,
+            simply remove them from the <see cref="P:MailKit.IMailService.AuthenticationMechanisms"/> hash set
+            before calling this method.</note>
+            </remarks>
+            <returns>An asynchronous task context.</returns>
+            <param name="encoding">The encoding to use for the user's credentials.</param>
+            <param name="userName">The user name.</param>
+            <param name="password">The password.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="encoding"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="userName"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="password"/> is <c>null</c>.</para>
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:MailKit.MailService"/> has been disposed.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:MailKit.MailService"/> is not connected or is already authenticated.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            The operation was canceled via the cancellation token.
+            </exception>
+            <exception cref="T:MailKit.Security.AuthenticationException">
+            Authentication using the supplied credentials has failed.
+            </exception>
+            <exception cref="T:MailKit.Security.SaslException">
+            A SASL authentication error occurred.
+            </exception>
+            <exception cref="T:System.IO.IOException">
+            An I/O error occurred.
+            </exception>
+            <exception cref="T:MailKit.ProtocolException">
+            A protocol error occurred.
+            </exception>
+        </member>
+        <member name="M:MailKit.IMailService.Authenticate(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Authenticates using the specified user name and password.
+            </summary>
+            <remarks>
+            <para>If the server supports one or more SASL authentication mechanisms,
+            then the SASL mechanisms that both the client and server support are tried
+            in order of greatest security to weakest security. Once a SASL
+            authentication mechanism is found that both client and server support,
+            the credentials are used to authenticate.</para>
+            <para>If the server does not support SASL or if no common SASL mechanisms
+            can be found, then the default login command is used as a fallback.</para>
+            <note type="tip">To prevent the usage of certain authentication mechanisms,
+            simply remove them from the <see cref="P:MailKit.IMailService.AuthenticationMechanisms"/> hash set
+            before calling this method.</note>
+            </remarks>
+            <example>
+            <code language="c#" source="Examples\SmtpExamples.cs" region="SendMessage"/>
+            </example>
+            <param name="userName">The user name.</param>
+            <param name="password">The password.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="userName"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="password"/> is <c>null</c>.</para>
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:MailKit.MailService"/> has been disposed.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:MailKit.MailService"/> is not connected or is already authenticated.
+            </exception>
+            <exception cref="T:System.OperationCanceledException">
+            The operation was canceled via the cancellation token.
+            </exception>
+            <exception cref="T:MailKit.Security.AuthenticationException">
+            Authentication using the supplied credentials has failed.
+            </exception>
+            <exception cref="T:MailKit.Security.SaslException">
+            A SASL authentication error occurred.
+            </exception>
+            <exception cref="T:System.IO.IOException">
+            An I/O error occurred.
+            </exception>
+            <exception cref="T:MailKit.ProtocolException">
+            A protocol error occurred.
+            </exception>
+        </member>
+        <member name="M:MailKit.IMailService.AuthenticateAsync(System.String,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Asynchronously authenticates using the specified user name and password.
+            </summary>
+            <remarks>
+            <para>If the server supports one or more SASL authentication mechanisms,
+            then the SASL mechanisms that both the client and server support are tried
+            in order of greatest security to weakest security. Once a SASL
+            authentication mechanism is found that both client and server support,
+            the credentials are used to authenticate.</para>
+            <para>If the server does not support SASL or if no common SASL mechanisms
+            can be found, then the default login command is used as a fallback.</para>
+            <note type="tip">To prevent the usage of certain authentication mechanisms,
+            simply remove them from the <see cref="P:MailKit.IMailService.AuthenticationMechanisms"/> hash set
+            before calling this method.</note>
+            </remarks>
+            <returns>An asynchronous task context.</returns>
+            <param name="userName">The user name.</param>
+            <param name="password">The password.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="userName"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="password"/> is <c>null</c>.</para>
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:MailKit.MailService"/> has been disposed.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:MailKit.MailService"/> is not connected or is already authenticated.
             </exception>
             <exception cref="T:System.OperationCanceledException">
             The operation was canceled via the cancellation token.
@@ -37549,6 +38210,24 @@
             </remarks>
             <value>The timeout in milliseconds.</value>
         </member>
+        <member name="M:MailKit.MailService.DefaultServerCertificateValidationCallback(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            The default server certificate validation callback used when connecting via SSL or TLS.
+            </summary>
+            <remarks>
+            <para>The default server certificate validation callback considers self-signed certificates to be
+            valid so long as the only error in the certificate chain is an untrusted root.</para>
+            <note type="security">It should be noted that self-signed certificates may be an indication of
+            a man-in-the-middle (MITM) attack and so it is recommended that the client implement a custom
+            server certificate validation callback that presents the certificate to the user in some way,
+            allowing the user to confirm or deny its validity.</note>
+            </remarks>
+            <returns><c>true</c> if the certificate is deemed valid; otherwise, <c>false</c>.</returns>
+            <param name="sender">The object that is connecting via SSL or TLS.</param>
+            <param name="certificate">The server's SSL certificate.</param>
+            <param name="chain">The server's SSL certificate chain.</param>
+            <param name="sslPolicyErrors">The SSL policy errors.</param>
+        </member>
         <member name="M:MailKit.MailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">
             <summary>
             Establish a connection to the specified mail server.
@@ -37696,7 +38375,18 @@
             Establish a connection to the specified mail server.
             </summary>
             <remarks>
-            Establishes a connection to the specified mail server.
+            <para>Establishes a connection to the specified mail server.</para>
+            <note type="note">
+            <para>The <paramref name="useSsl"/> argument only controls whether or
+            not the client makes an SSL-wrapped connection. In other words, even if the
+            <paramref name="useSsl"/> parameter is <c>false</c>, SSL/TLS may still be used if
+            the mail server supports the STARTTLS extension.</para>
+            <para>To disable all use of SSL/TLS, use the
+            <see cref="M:MailKit.MailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)"/>
+            overload with a value of
+            <see cref="F:MailKit.Security.SecureSocketOptions.None">SecureSocketOptions.None</see>
+            instead.</para>
+            </note>
             </remarks>
             <param name="host">The host to connect to.</param>
             <param name="port">The port to connect to. If the specified port is <c>0</c>, then the default port will be used.</param>
@@ -37732,7 +38422,18 @@
             Asynchronously establish a connection to the specified mail server.
             </summary>
             <remarks>
-            Asynchronously establishes a connection to the specified mail server.
+            <para>Asynchronously establishes a connection to the specified mail server.</para>
+            <note type="note">
+            <para>The <paramref name="useSsl"/> argument only controls whether or
+            not the client makes an SSL-wrapped connection. In other words, even if the
+            <paramref name="useSsl"/> parameter is <c>false</c>, SSL/TLS may still be used if
+            the mail server supports the STARTTLS extension.</para>
+            <para>To disable all use of SSL/TLS, use the
+            <see cref="M:MailKit.MailService.ConnectAsync(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)"/>
+            overload with a value of
+            <see cref="F:MailKit.Security.SecureSocketOptions.None">SecureSocketOptions.None</see>
+            instead.</para>
+            </note>
             </remarks>
             <returns>An asynchronous task context.</returns>
             <param name="host">The host to connect to.</param>
@@ -43279,6 +43980,7 @@
             <remarks>
             Checks if the specified unique identifier has been remapped.
             </remarks>
+            <returns><c>true</c> if the unique identifier has been remapped; otherwise, <c>false</c>.</returns>
             <param name="key">The unique identifier.</param>
         </member>
         <member name="M:MailKit.UniqueIdMap.TryGetValue(MailKit.UniqueId,MailKit.UniqueId@)">

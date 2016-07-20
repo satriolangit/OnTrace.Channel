@@ -67,9 +67,6 @@ namespace OnTrace.Channel.Infrastructure.Services
             {
                 throw new Exception($"Sending mail failed, to=[{to}], subject=[{subject}] ", ex);
             }
-            
-            
-            
         }
     }
 }

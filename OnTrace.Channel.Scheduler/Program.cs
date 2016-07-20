@@ -27,11 +27,10 @@ namespace OnTrace.Channel.Scheduler
     class Program
     {
         private static bool _start;
-        private static ModemSetting _modemSetting;
-        
         private static readonly ILogger Logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static readonly IScheduler OutboundScheduler = StdSchedulerFactory.GetDefaultScheduler();
         private static readonly IScheduler InboundScheduler = StdSchedulerFactory.GetDefaultScheduler();
+        
 
         static void Main(string[] args)
         {
@@ -51,20 +50,16 @@ namespace OnTrace.Channel.Scheduler
                 }
             }
 
-            _modemSetting = new ModemSetting();
-            _modemSetting.Port = 6;
-            _modemSetting.BaudRate = 460800;
-            _modemSetting.Timeout = 300;
-
+       
             while (_start)
             {
                 Console.WriteLine("Select one of the following options : ");
-                Console.WriteLine("0. Start all scheduler");
-                Console.WriteLine("1. Start outbound scheduler");
-                Console.WriteLine("2. Stop outbound scheduler");
-                Console.WriteLine("3. Start inbound scheduler");
-                Console.WriteLine("4. Stop inbound scheduler");
-                Console.WriteLine("5. Stop all scheduler");
+                Console.WriteLine("0. Start");
+                Console.WriteLine("1. Stop");
+                Console.WriteLine("2. Start outbound only");
+                Console.WriteLine("3. Stop outbound");
+                Console.WriteLine("4. Start inbound only");
+                Console.WriteLine("5. Stop inbound");
                 Console.WriteLine("x. Exit");
                 Console.WriteLine();
                 
@@ -77,26 +72,26 @@ namespace OnTrace.Channel.Scheduler
                         case "0":
                             Start();
                             break;
-                        case "1":
+                        case "2":
                             StartOutbound();
                             break;
-                        case "2":
+                        case "3":
                             StopOutbound();
                             break;
-                        case "3":
+                        case "4":
                             StartInbound();
                             break;
-                        case "4":
+                        case "5":
                             StopInbound();
                             break;
-                        case "5":
+                        case "1":
                             Stop();
                             break;
                         case "6":
                             TwitterTest();
                             break;
                         case "x":
-                            _start = false;
+                            Exit();
                          break;
                     }
                 }
@@ -120,6 +115,13 @@ namespace OnTrace.Channel.Scheduler
         {
             StopOutbound();
             StopInbound();
+        }
+
+        private static void Exit()
+        {
+            _start = false;
+            if(!OutboundScheduler.IsShutdown) OutboundScheduler.Shutdown(true);
+            if (!InboundScheduler.IsShutdown) InboundScheduler.Shutdown(true);
         }
 
         private static void StartOutbound()
@@ -146,10 +148,10 @@ namespace OnTrace.Channel.Scheduler
 
                 //pass services to job 
                 OutboundScheduler.Context.Put("ModemSetting", repo.GetModemSetting());
-                OutboundScheduler.Context.Put("MailAccount", repo.GetMailAccount("outgoing"));
                 OutboundScheduler.Context.Put("FileProcessor", new FileProcessor());
                 OutboundScheduler.Context.Put("ConnectionString", GetDbConstring());
                 OutboundScheduler.Context.Put("OutboundTempPath", OutboundTempPath);
+                OutboundScheduler.Context.Put("MailSender", new MailSender(repo.GetMailAccount("outgoing"), new FileProcessor()));
 
                 //start trigger
                 OutboundScheduler.ScheduleJob(job, trigger);
@@ -160,13 +162,13 @@ namespace OnTrace.Channel.Scheduler
                 Logger.Write("Failed to process outbound, please contact your Administrator !", ex, EventSeverity.Error);
             }
         }
-
+       
         private static void StopOutbound()
         {
             try
             {
                 Logger.Write("Stoping outbound scheduler...", EventSeverity.Information);
-                if(OutboundScheduler.IsStarted) OutboundScheduler.Shutdown(true);
+                if(OutboundScheduler.IsStarted) OutboundScheduler.Standby();
                 Logger.Write("Outbound scheduler stopped.", EventSeverity.Information);
             }
             catch (Exception ex)
@@ -183,8 +185,7 @@ namespace OnTrace.Channel.Scheduler
                 string connectionString = GetDbConstring();
                 var repo = new AdoMasterDataRepository(connectionString);
 
-                IScheduler scheduler = StdSchedulerFactory.GetDefaultScheduler();
-                scheduler.Start();
+                if (!InboundScheduler.IsStarted || InboundScheduler.InStandbyMode) InboundScheduler.Start();
 
                 IJobDetail job = JobBuilder.Create<InboundJob>()
                     .WithIdentity("Inbound", "job")
@@ -199,14 +200,13 @@ namespace OnTrace.Channel.Scheduler
                     .Build();
 
                 //pass services to job 
-                scheduler.Context.Put("ModemSetting", repo.GetModemSetting());
-                scheduler.Context.Put("MailAccount", repo.GetMailAccount("incoming"));
-                scheduler.Context.Put("FileProcessor", new FileProcessor());
-                scheduler.Context.Put("ConnectionString", connectionString);
+                InboundScheduler.Context.Put("ModemSetting", repo.GetModemSetting());
+                InboundScheduler.Context.Put("MailAccount", repo.GetMailAccount("incoming"));
+                InboundScheduler.Context.Put("FileProcessor", new FileProcessor());
+                InboundScheduler.Context.Put("ConnectionString", connectionString);
 
                 //run schedule
-                scheduler.ScheduleJob(job, trigger);
-                
+                InboundScheduler.ScheduleJob(job, trigger);
 
             }
             catch (SchedulerException se)
@@ -219,9 +219,9 @@ namespace OnTrace.Channel.Scheduler
         {
             try
             {
-                Logger.Write("Stoping outbound scheduler...", EventSeverity.Information);
-                if (InboundScheduler.IsStarted) InboundScheduler.Shutdown(true);
-                Logger.Write("Outbound scheduler stopped.", EventSeverity.Information);
+                Logger.Write("Stoping inbound scheduler...", EventSeverity.Information);
+                if (InboundScheduler.IsStarted) InboundScheduler.Standby();
+                Logger.Write("Inbound scheduler stopped.", EventSeverity.Information);
             }
             catch (Exception ex)
             {

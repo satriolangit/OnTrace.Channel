@@ -1009,3 +1009,454 @@ System.Exception: Sending mail failed, to=[florensia.fd@gmail.com], subject=[New
    --- End of inner exception stack trace ---
    at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
    at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 11:56:23,636 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-19 11:56:23,685 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-19 11:56:31,871 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 11:56:32,220 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:56:32,233 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[a0cbab769dec458499b3e3c5a838acbc]
+2016-07-19 11:56:32,237 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.fd@gmail.com], subject=[New subject]
+2016-07-19 11:56:37,656 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[fb26004c5a104530894c729b8909d19d], agentId=[7], channel=[1], subject=[New subject]
+2016-07-19 11:56:37,664 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[fb26004c5a104530894c729b8909d19d], AgentId=[7], Account=[florensia.fd@gmail.com], channel=[1]
+2016-07-19 11:56:37,683 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[a0cbab769dec458499b3e3c5a838acbc]
+2016-07-19 11:56:37,685 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[a0cbab769dec458499b3e3c5a838acbc]
+2016-07-19 11:57:01,908 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:57:31,908 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:58:01,905 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:58:01,919 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[789cf1e56cb6418d8ecc50b81e819a09]
+2016-07-19 11:58:01,949 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[achmad.pradekso@sinergymediaintegrasi.com], subject=[ini subject]
+2016-07-19 11:58:04,902 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[9f9ba7daa4a343bab72eecec8ecb91cc], agentId=[7], channel=[1], subject=[ini subject]
+2016-07-19 11:58:04,903 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[9f9ba7daa4a343bab72eecec8ecb91cc], AgentId=[7], Account=[achmad.pradekso@sinergymediaintegrasi.com], channel=[1]
+2016-07-19 11:58:04,919 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[9f9ba7daa4a343bab72eecec8ecb91cc], Filename=[HOW TO APPLY.txt]
+2016-07-19 11:58:04,925 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[789cf1e56cb6418d8ecc50b81e819a09]
+2016-07-19 11:58:04,926 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[789cf1e56cb6418d8ecc50b81e819a09]
+2016-07-19 11:58:31,905 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:59:01,906 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 11:59:31,904 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:00:01,906 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:00:31,905 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:01:01,905 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:01:01,909 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[697b68c7d09943e7afe5f5251322cc63]
+2016-07-19 12:01:01,912 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[wahyu.hw@gmail.com], subject=[halo]
+2016-07-19 12:01:04,793 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[b0eafc831f9c48ec98f4138e82358516], agentId=[7], channel=[1], subject=[halo]
+2016-07-19 12:01:04,794 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[b0eafc831f9c48ec98f4138e82358516], AgentId=[7], Account=[wahyu.hw@gmail.com], channel=[1]
+2016-07-19 12:01:04,823 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[697b68c7d09943e7afe5f5251322cc63]
+2016-07-19 12:01:04,824 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[697b68c7d09943e7afe5f5251322cc63]
+2016-07-19 12:01:31,906 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:02:01,905 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:02:31,906 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:03:01,914 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:03:01,917 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[d6cbd76ef3a94bca93984210ec9be316]
+2016-07-19 12:03:01,920 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[pradekso.a@gmail.com], subject=[balas]
+2016-07-19 12:03:05,129 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[3cf612c0fedd432f96de646cb0adc833], agentId=[7], channel=[1], subject=[balas]
+2016-07-19 12:03:05,129 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[3cf612c0fedd432f96de646cb0adc833], AgentId=[7], Account=[pradekso.a@gmail.com], channel=[1]
+2016-07-19 12:03:05,142 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[d6cbd76ef3a94bca93984210ec9be316]
+2016-07-19 12:03:05,142 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[d6cbd76ef3a94bca93984210ec9be316]
+2016-07-19 12:03:31,904 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:04:01,904 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:04:10,467 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-19 12:04:10,962 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-19 12:04:14,440 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:04:14,443 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to process outbound, please contact your Administrator !
+Quartz.SchedulerException: The Scheduler cannot be restarted after Shutdown() has been called.
+   at Quartz.Core.QuartzScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Core\QuartzScheduler.cs:line 422
+   at Quartz.Impl.StdScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Impl\StdScheduler.cs:line 222
+   at OnTrace.Channel.Scheduler.Program.StartOutbound() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 133
+2016-07-19 12:04:14,572 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-19 12:04:14,597 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 12:04:17,403 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create mail inbound queue, [address=florensia.fd@gmail.com]
+2016-07-19 12:04:17,408 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[Mail], QueueId=[babd07ad29084d2593ed8053ce78eb9c], address=[florensia.fd@gmail.com], subject=[ini tolong harap dibalas]
+2016-07-19 12:04:44,586 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 12:05:04,324 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-19 12:05:04,326 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-19 12:05:04,327 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-19 12:05:04,335 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-19 12:05:10,908 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:05:10,910 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to process outbound, please contact your Administrator !
+Quartz.SchedulerException: The Scheduler cannot be restarted after Shutdown() has been called.
+   at Quartz.Core.QuartzScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Core\QuartzScheduler.cs:line 422
+   at Quartz.Impl.StdScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Impl\StdScheduler.cs:line 222
+   at OnTrace.Channel.Scheduler.Program.StartOutbound() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 133
+2016-07-19 12:05:10,915 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-19 12:05:10,923 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to process inbound, please contact your Administrator !
+Quartz.ObjectAlreadyExistsException: Unable to store Job: 'job.Inbound', because one already exists with this identification.
+   at Quartz.Simpl.RAMJobStore.StoreJob(IJobDetail newJob, Boolean replaceExisting) in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Simpl\RAMJobStore.cs:line 256
+   at Quartz.Simpl.RAMJobStore.StoreJobAndTrigger(IJobDetail newJob, IOperableTrigger newTrigger) in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Simpl\RAMJobStore.cs:line 212
+   at Quartz.Core.QuartzScheduler.ScheduleJob(IJobDetail jobDetail, ITrigger trigger) in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Core\QuartzScheduler.cs:line 718
+   at Quartz.Impl.StdScheduler.ScheduleJob(IJobDetail jobDetail, ITrigger trigger) in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Impl\StdScheduler.cs:line 262
+   at OnTrace.Channel.Scheduler.Program.StartInbound() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 208
+2016-07-19 12:05:14,585 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 12:05:30,524 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:05:30,773 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-19 12:05:30,865 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 12:05:30,869 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:06:00,592 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:06:00,608 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[3529040c1d9d43d49a1cc94732036898]
+2016-07-19 12:06:00,613 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[balas from agent2]
+2016-07-19 12:06:00,776 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 12:06:00,969 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.damayanti@gmail.com], subject=[balas from agent2]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 12:06:30,591 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:06:30,595 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[3529040c1d9d43d49a1cc94732036898]
+2016-07-19 12:06:30,598 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[balas from agent2]
+2016-07-19 12:06:30,777 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 12:06:30,866 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.damayanti@gmail.com], subject=[balas from agent2]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 12:07:00,592 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:07:00,596 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[3529040c1d9d43d49a1cc94732036898]
+2016-07-19 12:07:00,599 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[balas from agent2]
+2016-07-19 12:07:00,777 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 12:07:00,864 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[florensia.damayanti@gmail.com], subject=[balas from agent2]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-19 12:07:30,484 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-19 12:07:30,933 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-19 12:07:30,934 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-19 12:07:30,935 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-19 12:07:38,906 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:07:38,908 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to process outbound, please contact your Administrator !
+Quartz.SchedulerException: The Scheduler cannot be restarted after Shutdown() has been called.
+   at Quartz.Core.QuartzScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Core\QuartzScheduler.cs:line 422
+   at Quartz.Impl.StdScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Impl\StdScheduler.cs:line 222
+   at OnTrace.Channel.Scheduler.Program.StartOutbound() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 133
+2016-07-19 12:07:54,219 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-19 12:07:54,237 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 12:08:24,233 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 12:08:54,233 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 12:09:24,234 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 12:09:30,209 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-19 12:09:30,210 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-19 12:09:35,159 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:09:35,160 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to process outbound, please contact your Administrator !
+Quartz.SchedulerException: The Scheduler cannot be restarted after Shutdown() has been called.
+   at Quartz.Core.QuartzScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Core\QuartzScheduler.cs:line 422
+   at Quartz.Impl.StdScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Impl\StdScheduler.cs:line 222
+   at OnTrace.Channel.Scheduler.Program.StartOutbound() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 133
+2016-07-19 12:09:54,234 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 12:10:08,952 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:10:09,325 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:10:09,336 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[3529040c1d9d43d49a1cc94732036898]
+2016-07-19 12:10:09,340 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.damayanti@gmail.com], subject=[balas from agent2]
+2016-07-19 12:10:14,219 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[665901d5f921413097787df3708a99a6], agentId=[7], channel=[1], subject=[balas from agent2]
+2016-07-19 12:10:14,224 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[665901d5f921413097787df3708a99a6], AgentId=[7], Account=[florensia.damayanti@gmail.com], channel=[1]
+2016-07-19 12:10:14,242 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[3529040c1d9d43d49a1cc94732036898]
+2016-07-19 12:10:14,244 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[3529040c1d9d43d49a1cc94732036898]
+2016-07-19 12:10:39,009 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:11:09,009 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:11:39,009 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:12:09,009 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:12:39,009 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:12:50,028 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-19 12:12:50,547 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-19 12:12:50,548 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-19 12:12:50,549 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-19 12:12:57,452 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-19 12:12:57,475 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 12:13:00,035 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create mail inbound queue, [address=raymond.tan790@gmail.com]
+2016-07-19 12:13:00,040 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[Mail], QueueId=[d603fa2476fe40e0bb82352bf9a7789d], address=[raymond.tan790@gmail.com], subject=[test from me]
+2016-07-19 12:13:27,464 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 12:13:57,465 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-19 12:14:09,649 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-19 12:14:09,651 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-19 12:14:09,653 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-19 12:14:09,654 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-19 12:14:15,607 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:14:15,610 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to process outbound, please contact your Administrator !
+Quartz.SchedulerException: The Scheduler cannot be restarted after Shutdown() has been called.
+   at Quartz.Core.QuartzScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Core\QuartzScheduler.cs:line 422
+   at Quartz.Impl.StdScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Impl\StdScheduler.cs:line 222
+   at OnTrace.Channel.Scheduler.Program.StartOutbound() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 133
+2016-07-19 12:14:18,304 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:14:18,306 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to process outbound, please contact your Administrator !
+Quartz.SchedulerException: The Scheduler cannot be restarted after Shutdown() has been called.
+   at Quartz.Core.QuartzScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Core\QuartzScheduler.cs:line 422
+   at Quartz.Impl.StdScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Impl\StdScheduler.cs:line 222
+   at OnTrace.Channel.Scheduler.Program.StartOutbound() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 133
+2016-07-19 12:14:23,434 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:14:23,437 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to process outbound, please contact your Administrator !
+Quartz.SchedulerException: The Scheduler cannot be restarted after Shutdown() has been called.
+   at Quartz.Core.QuartzScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Core\QuartzScheduler.cs:line 422
+   at Quartz.Impl.StdScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Impl\StdScheduler.cs:line 222
+   at OnTrace.Channel.Scheduler.Program.StartOutbound() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 133
+2016-07-19 12:14:23,980 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:14:23,982 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to process outbound, please contact your Administrator !
+Quartz.SchedulerException: The Scheduler cannot be restarted after Shutdown() has been called.
+   at Quartz.Core.QuartzScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Core\QuartzScheduler.cs:line 422
+   at Quartz.Impl.StdScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Impl\StdScheduler.cs:line 222
+   at OnTrace.Channel.Scheduler.Program.StartOutbound() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 133
+2016-07-19 12:14:24,426 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:14:24,428 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to process outbound, please contact your Administrator !
+Quartz.SchedulerException: The Scheduler cannot be restarted after Shutdown() has been called.
+   at Quartz.Core.QuartzScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Core\QuartzScheduler.cs:line 422
+   at Quartz.Impl.StdScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Impl\StdScheduler.cs:line 222
+   at OnTrace.Channel.Scheduler.Program.StartOutbound() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 133
+2016-07-19 12:14:24,904 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:14:24,905 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to process outbound, please contact your Administrator !
+Quartz.SchedulerException: The Scheduler cannot be restarted after Shutdown() has been called.
+   at Quartz.Core.QuartzScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Core\QuartzScheduler.cs:line 422
+   at Quartz.Impl.StdScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Impl\StdScheduler.cs:line 222
+   at OnTrace.Channel.Scheduler.Program.StartOutbound() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 133
+2016-07-19 12:14:25,406 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:14:25,408 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to process outbound, please contact your Administrator !
+Quartz.SchedulerException: The Scheduler cannot be restarted after Shutdown() has been called.
+   at Quartz.Core.QuartzScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Core\QuartzScheduler.cs:line 422
+   at Quartz.Impl.StdScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Impl\StdScheduler.cs:line 222
+   at OnTrace.Channel.Scheduler.Program.StartOutbound() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 133
+2016-07-19 12:14:33,302 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:14:33,635 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:14:33,646 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[25e5440ba5094455b30d1e07c44464e6]
+2016-07-19 12:14:33,654 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[95568a1d8a3c457988df83038bc0e768]
+2016-07-19 12:14:33,657 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[c49f0f14936b413bafe94e24f994ef08]
+2016-07-19 12:14:33,661 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[raymond.tan790@gmail.com], subject=[ok lah]
+2016-07-19 12:14:37,448 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[ad077016a1e54c218da1ab3d912455a0], agentId=[8], channel=[1], subject=[ok lah]
+2016-07-19 12:14:37,453 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[ad077016a1e54c218da1ab3d912455a0], AgentId=[8], Account=[raymond.tan790@gmail.com], channel=[1]
+2016-07-19 12:14:37,483 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[25e5440ba5094455b30d1e07c44464e6]
+2016-07-19 12:14:37,486 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[25e5440ba5094455b30d1e07c44464e6]
+2016-07-19 12:14:37,516 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[florensia.fd@gmail.com], subject=[balasan subject]
+2016-07-19 12:14:40,343 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[88c134d499bc49b99d0d2b566a4bd53a], agentId=[7], channel=[1], subject=[balasan subject]
+2016-07-19 12:14:40,344 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[88c134d499bc49b99d0d2b566a4bd53a], AgentId=[7], Account=[florensia.fd@gmail.com], channel=[1]
+2016-07-19 12:14:40,359 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[95568a1d8a3c457988df83038bc0e768]
+2016-07-19 12:14:40,360 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[95568a1d8a3c457988df83038bc0e768]
+2016-07-19 12:14:40,374 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[pradekso_a@yahoo.com], subject=[cihuuyyyy]
+2016-07-19 12:14:43,129 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[0a4cb2d364dd4d078ca9bfa7f5caf1ec], agentId=[8], channel=[1], subject=[cihuuyyyy]
+2016-07-19 12:14:43,130 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[0a4cb2d364dd4d078ca9bfa7f5caf1ec], AgentId=[8], Account=[pradekso_a@yahoo.com], channel=[1]
+2016-07-19 12:14:43,140 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[c49f0f14936b413bafe94e24f994ef08]
+2016-07-19 12:14:43,141 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[c49f0f14936b413bafe94e24f994ef08]
+2016-07-19 12:15:03,365 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:15:33,365 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:16:03,368 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:16:33,366 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:16:57,086 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:16:57,095 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to process outbound, please contact your Administrator !
+Quartz.ObjectAlreadyExistsException: Unable to store Job: 'job.Outbound', because one already exists with this identification.
+   at Quartz.Simpl.RAMJobStore.StoreJob(IJobDetail newJob, Boolean replaceExisting) in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Simpl\RAMJobStore.cs:line 256
+   at Quartz.Simpl.RAMJobStore.StoreJobAndTrigger(IJobDetail newJob, IOperableTrigger newTrigger) in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Simpl\RAMJobStore.cs:line 212
+   at Quartz.Core.QuartzScheduler.ScheduleJob(IJobDetail jobDetail, ITrigger trigger) in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Core\QuartzScheduler.cs:line 718
+   at Quartz.Impl.StdScheduler.ScheduleJob(IJobDetail jobDetail, ITrigger trigger) in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Impl\StdScheduler.cs:line 262
+   at OnTrace.Channel.Scheduler.Program.StartOutbound() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 155
+2016-07-19 12:17:03,365 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:17:39,146 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-19 12:17:39,467 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:18:09,209 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:18:39,209 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:19:09,208 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:19:39,209 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:20:09,209 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:20:39,208 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:21:09,208 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:21:39,209 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-19 12:22:09,209 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-20 10:10:43,258 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-20 10:10:43,737 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:11:13,420 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:11:43,410 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:12:13,410 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:12:43,410 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:13:13,409 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:13:43,410 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:14:13,410 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:14:43,410 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:15:13,410 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:15:43,410 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:16:13,410 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:16:32,473 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-20 10:16:32,976 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-20 10:16:32,978 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-20 10:16:32,978 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-20 10:28:14,985 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-20 10:28:15,348 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:29:58,545 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create mail inbound queue, [address=krisna.n.w.a@gmail.com]
+2016-07-20 10:29:58,552 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[Mail], QueueId=[37af69d6d38d40e08953c3371fd9b921], address=[krisna.n.w.a@gmail.com], subject=[kriirman ke 2]
+2016-07-20 10:29:58,585 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[37af69d6d38d40e08953c3371fd9b921], filename=[tombolLike_Facebook.txt]
+2016-07-20 10:29:58,605 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[37af69d6d38d40e08953c3371fd9b921], filename=[DSC_0047-7.jpg]
+2016-07-20 10:29:58,647 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[37af69d6d38d40e08953c3371fd9b921], filename=[Bab 11 Fungsi Fungsi SQL Server.pdf]
+2016-07-20 10:30:15,054 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:30:45,055 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:31:15,055 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:31:45,054 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:32:15,055 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:32:45,055 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:33:15,054 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:33:45,054 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 10:34:15,055 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 11:05:02,517 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-20 11:09:09,825 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-20 11:09:10,785 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 11:09:39,885 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 11:21:19,615 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-20 11:21:20,012 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 11:21:23,611 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create mail inbound queue, [address=wahyu.hw@gmail.com]
+2016-07-20 11:21:23,616 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[Mail], QueueId=[46b60931e8ba4d969c5be12b75aea12d], address=[wahyu.hw@gmail.com], subject=[attachment lagi bro]
+2016-07-20 11:21:23,636 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[46b60931e8ba4d969c5be12b75aea12d], filename=[invisage-technology-header.jpg]
+2016-07-20 11:21:49,705 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 11:22:19,704 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 11:22:49,704 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 11:23:19,704 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 11:23:49,704 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 11:24:19,704 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 11:50:54,772 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-20 11:50:54,953 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-20 11:50:55,027 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 11:50:55,032 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-20 11:50:55,044 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[d228843db80b42afb1d9d0ff2415dd57]
+2016-07-20 11:50:55,053 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[f6c60b8519e6451c9a7e42aa77ab5e35]
+2016-07-20 11:50:55,154 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[krisna.n.w.a@gmail.com], subject=[RE kirim email ke 3]
+2016-07-20 11:50:55,577 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[krisna.n.w.a@gmail.com], subject=[RE kirim email ke 3]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-20 11:50:58,295 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create mail inbound queue, [address=wahyu.hw@gmail.com]
+2016-07-20 11:50:58,300 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[Mail], QueueId=[bbf3ac9f0fd24561a92c1a6205234ed1], address=[wahyu.hw@gmail.com], subject=[tes concurrent scheduler]
+2016-07-20 11:51:24,832 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-20 11:51:24,836 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[d228843db80b42afb1d9d0ff2415dd57]
+2016-07-20 11:51:24,841 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[f6c60b8519e6451c9a7e42aa77ab5e35]
+2016-07-20 11:51:24,864 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[krisna.n.w.a@gmail.com], subject=[RE kirim email ke 3]
+2016-07-20 11:51:24,953 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 11:51:25,251 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[krisna.n.w.a@gmail.com], subject=[RE kirim email ke 3]  ---> MailKit.Net.Smtp.SmtpProtocolException: Unable to parse status code returned by the server.
+   at MailKit.Net.Smtp.SmtpStream.ReadResponse(CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Connect(String host, Int32 port, SecureSocketOptions options, CancellationToken cancellationToken)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 34
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 81
+2016-07-20 11:51:43,401 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-20 11:51:43,846 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-20 11:51:43,848 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping inbound scheduler...
+2016-07-20 11:51:43,849 [OnTrace.Channel.Scheduler.Program] [INFO] Inbound scheduler stopped.
+2016-07-20 11:51:56,841 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-20 11:51:56,842 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to process outbound, please contact your Administrator !
+Quartz.SchedulerException: The Scheduler cannot be restarted after Shutdown() has been called.
+   at Quartz.Core.QuartzScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Core\QuartzScheduler.cs:line 422
+   at Quartz.Impl.StdScheduler.Start() in c:\Program Files (x86)\Jenkins\workspace\Quartz.NET\src\Quartz\Impl\StdScheduler.cs:line 222
+   at OnTrace.Channel.Scheduler.Program.StartOutbound() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 135
+2016-07-20 12:13:47,734 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-20 12:13:47,965 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-20 12:13:48,068 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 12:13:48,076 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-20 12:13:48,094 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[d228843db80b42afb1d9d0ff2415dd57]
+2016-07-20 12:13:48,104 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[f6c60b8519e6451c9a7e42aa77ab5e35]
+2016-07-20 12:13:48,132 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[krisna.n.w.a@gmail.com], subject=[RE kirim email ke 3]
+2016-07-20 12:14:17,966 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 12:14:37,046 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[0c3625439bc945da993a31a1e60c97ac], agentId=[7], channel=[1], subject=[RE kirim email ke 3]
+2016-07-20 12:14:37,052 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[0c3625439bc945da993a31a1e60c97ac], AgentId=[7], Account=[krisna.n.w.a@gmail.com], channel=[1]
+2016-07-20 12:14:37,375 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[0c3625439bc945da993a31a1e60c97ac], Filename=[icon-full-youth.png]
+2016-07-20 12:14:38,730 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[0c3625439bc945da993a31a1e60c97ac], Filename=[mic.ico]
+2016-07-20 12:14:47,967 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 12:15:13,740 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Failed to create outbound log. ---> System.Exception: Failed to create outbound log file. ---> System.Data.SqlClient.SqlException: Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ---> System.ComponentModel.Win32Exception: The wait operation timed out
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at System.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at System.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at System.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at CommonDataAccess.CDA.ExecuteNonQueryWithTransaction(SqlCommand cmd) in D:\Wahyu\Kantor\Development\OnTrace.Channel\CDA\CDA.cs:line 222
+   at OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository.CreateFileLog(OutboundQueueFile model, String logId) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoOutboundLogRepository.cs:line 100
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository.CreateFileLog(OutboundQueueFile model, String logId) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoOutboundLogRepository.cs:line 105
+   at OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository.CreateLog(OutboundLog model) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoOutboundLogRepository.cs:line 47
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository.CreateLog(OutboundLog model) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoOutboundLogRepository.cs:line 54
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 122
+2016-07-20 12:15:13,813 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-20 12:15:14,130 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[d228843db80b42afb1d9d0ff2415dd57]
+2016-07-20 12:15:14,438 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[f6c60b8519e6451c9a7e42aa77ab5e35]
+2016-07-20 12:15:14,461 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[krisna.n.w.a@gmail.com], subject=[RE kirim email ke 3]
+2016-07-20 12:15:17,966 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 12:15:45,798 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [ERROR] Failed to execute outbound job.
+System.Exception: Sending mail failed, to=[krisna.n.w.a@gmail.com], subject=[RE kirim email ke 3]  ---> System.IO.IOException: Unable to write data to the transport connection: An existing connection was forcibly closed by the remote host. ---> System.Net.Sockets.SocketException: An existing connection was forcibly closed by the remote host
+   at System.Net.Sockets.Socket.Send(Byte[] buffer, Int32 offset, Int32 size, SocketFlags socketFlags)
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- End of inner exception stack trace ---
+   at System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Net.Security._SslStream.StartWriting(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security._SslStream.ProcessWrite(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslStream.Write(Byte[] buffer, Int32 offset, Int32 count)
+   at MailKit.Net.Smtp.SmtpStream.Flush(CancellationToken cancellationToken)
+   at MimeKit.IO.FilteredStream.Flush(CancellationToken cancellationToken)
+   at MimeKit.IO.FilteredStream.Flush(CancellationToken cancellationToken)
+   at MimeKit.IO.FilteredStream.Flush(CancellationToken cancellationToken)
+   at MimeKit.ContentObject.DecodeTo(Stream stream, CancellationToken cancellationToken)
+   at MimeKit.MimePart.WriteTo(FormatOptions options, Stream stream, Boolean contentOnly, CancellationToken cancellationToken)
+   at MimeKit.Multipart.WriteTo(FormatOptions options, Stream stream, Boolean contentOnly, CancellationToken cancellationToken)
+   at MimeKit.MimeMessage.WriteTo(FormatOptions options, Stream stream, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.Data(FormatOptions options, MimeMessage message, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.Send(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.Send(FormatOptions options, MimeMessage message, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.MailTransport.Send(MimeMessage message, CancellationToken cancellationToken, ITransferProgress progress)
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 62
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.MailSender.SendEmail(String to, String subject, String textMessage, List`1 attachments) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\MailSender.cs:line 68
+   at OnTrace.Channel.Scheduler.Jobs.OutboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\OutboundJob.cs:line 83
+2016-07-20 12:15:45,904 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-20 12:15:45,916 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[d228843db80b42afb1d9d0ff2415dd57]
+2016-07-20 12:15:45,922 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[f6c60b8519e6451c9a7e42aa77ab5e35]
+2016-07-20 12:15:45,945 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[krisna.n.w.a@gmail.com], subject=[RE kirim email ke 3]
+2016-07-20 12:15:47,967 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 12:16:00,693 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-20 12:16:00,696 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-20 12:16:00,697 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping inbound scheduler...
+2016-07-20 12:16:00,697 [OnTrace.Channel.Scheduler.Program] [INFO] Inbound scheduler stopped.
+2016-07-20 13:42:26,073 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-20 13:42:27,656 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-20 13:42:27,854 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-20 13:42:27,861 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 13:42:27,897 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[d228843db80b42afb1d9d0ff2415dd57]
+2016-07-20 13:42:27,916 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[f6c60b8519e6451c9a7e42aa77ab5e35]
+2016-07-20 13:42:27,947 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[krisna.n.w.a@gmail.com], subject=[RE kirim email ke 3]
+2016-07-20 13:42:36,087 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[52988ff6311e4bc38cd2c70829d48ce4]
+2016-07-20 13:42:36,096 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[52988ff6311e4bc38cd2c70829d48ce4], AgentId=[7], Account=[krisna.n.w.a@gmail.com], channel=[1]
+2016-07-20 13:42:36,234 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[52988ff6311e4bc38cd2c70829d48ce4], Filename=[icon-full-youth.png]
+2016-07-20 13:42:36,256 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[52988ff6311e4bc38cd2c70829d48ce4], Filename=[mic.ico]
+2016-07-20 13:42:36,272 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[52988ff6311e4bc38cd2c70829d48ce4], Filename=[mic16x16.ico]
+2016-07-20 13:42:36,291 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[d228843db80b42afb1d9d0ff2415dd57]
+2016-07-20 13:42:36,293 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[d228843db80b42afb1d9d0ff2415dd57]
+2016-07-20 13:42:36,453 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Sending mail to=[wahyu.hw@gmail.com], subject=[RE attachment lagi bro]
+2016-07-20 13:42:41,711 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[ce0b956edf25410c8d66a1971bffa5e2]
+2016-07-20 13:42:41,712 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[ce0b956edf25410c8d66a1971bffa5e2], AgentId=[7], Account=[wahyu.hw@gmail.com], channel=[1]
+2016-07-20 13:42:41,731 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[ce0b956edf25410c8d66a1971bffa5e2], Filename=[blue-earth-icon-2 (1).jpg]
+2016-07-20 13:42:41,748 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[ce0b956edf25410c8d66a1971bffa5e2], Filename=[mic-36-000000.png]
+2016-07-20 13:42:41,764 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[ce0b956edf25410c8d66a1971bffa5e2], Filename=[Saviourmachine-Chat-Online.ico]
+2016-07-20 13:42:41,799 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[f6c60b8519e6451c9a7e42aa77ab5e35]
+2016-07-20 13:42:41,800 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[f6c60b8519e6451c9a7e42aa77ab5e35]
+2016-07-20 13:42:56,198 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-20 13:42:57,658 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 13:43:26,198 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-20 13:43:27,658 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 13:43:56,195 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-20 13:43:57,658 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 13:44:26,197 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-20 13:44:27,658 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-20 13:44:42,152 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-20 13:44:42,158 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-20 13:44:42,161 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping inbound scheduler...
+2016-07-20 13:44:42,165 [OnTrace.Channel.Scheduler.Program] [INFO] Inbound scheduler stopped.

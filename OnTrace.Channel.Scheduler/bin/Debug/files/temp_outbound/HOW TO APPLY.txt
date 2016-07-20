@@ -1,0 +1,7 @@
+1. Execute MSGENReportHeader
+2. Execute SP
+3. Upload Module
+4. Mapping kan Menu baru Report Cpg Analysis ke Class CampaignAnalysisReportForm
+5. Interface terdapat Parameter Tanggal dan Campaign serta tempat hasil generate excel bisa di ubah sesuai lokasi 
+yang ditentukan oleh user
+6. untuk lebih enaknya lagi gunakan data baru  untuk testing dari upload sampai test call dll

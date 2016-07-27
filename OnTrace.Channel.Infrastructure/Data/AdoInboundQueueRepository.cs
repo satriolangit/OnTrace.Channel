@@ -152,7 +152,9 @@ namespace OnTrace.Channel.Infrastructure.Data
                         QueueID = queue.QueueId,
                         IsAttachment = file.IsAttachment,
                         Filename = file.Filename,
-                        FileData = file.FileData
+                        FileData = file.FileData,
+                        Url = file.Url,
+                        FileType = file.FileType
                     };
 
                     InsertMediaFile(media);
@@ -216,7 +218,7 @@ namespace OnTrace.Channel.Infrastructure.Data
                 {
                     return new TwitterSyncTime()
                     {
-                        ActivityTime = DateTime.MinValue,
+                        ActivityTime = DateTime.Now.AddDays(-30),
                         Source = "127.0.0.1"
                     };
                 }
@@ -244,6 +246,45 @@ namespace OnTrace.Channel.Infrastructure.Data
                 throw new Exception($"Failed to update twitter sync time. [ip : {source}]", ex);
             }
         }
-        
+
+        public bool QueueAlreadyExist(string accountName, string message, DateTime since, DateTime until)
+        {
+            try
+            {
+                var cmd = new SqlCommand("sp_OC_VerifyInboundQueue");
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Message", message);
+                cmd.Parameters.AddWithValue("@AccountName", accountName);
+                cmd.Parameters.AddWithValue("@Since", since);
+                cmd.Parameters.AddWithValue("@Until", until);
+
+                var result = Convert.ToBoolean(_cda.ExecuteScalar(cmd));
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Failed to verify inbound queue.", ex);
+            }
+        }
+
+        public bool LogAlreadyExist(string accountName, string message, DateTime since, DateTime until)
+        {
+            try
+            {
+                var cmd = new SqlCommand("sp_OC_VerifyInboundLog");
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Message", message);
+                cmd.Parameters.AddWithValue("@AccountName", accountName);
+                cmd.Parameters.AddWithValue("@Since", since);
+                cmd.Parameters.AddWithValue("@Until", until);
+
+                var result = Convert.ToBoolean(_cda.ExecuteScalar(cmd));
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Failed to verify inbound log.", ex);
+            }
+        }
     }
 }

@@ -340,26 +340,21 @@ namespace OnTrace.Channel.Infrastructure.Services
 
             var tweetIds = Search.SearchTweets(param).Select(x => x.Id);
 
+            
             foreach (long id in tweetIds)
             {
                 Console.WriteLine($"tweetid : {id}");
             }
 
-            /*
+            
             Console.WriteLine("---------------------------");
 
-            var tweeets = tweetIds.ToArray();
-            foreach (long t in tweeets)
-            {
-                Console.WriteLine($"tweetid : {t}");
-            }
-
-            
+           
             var tweets = Tweet.GetTweets(tweetIds.ToArray());
             foreach (var tweet in tweets)
             {
                 Console.WriteLine($"id : {tweet.Id} - text : {tweet.FullText} - createdAt : {tweet.CreatedAt}");
-            }*/
+            }
         }
         
     }

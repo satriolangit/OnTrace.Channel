@@ -51,7 +51,7 @@ namespace OnTrace.Channel.Scheduler.Jobs
                 {
                     ProcessSms(queue, modemSetting);
                 }
-                else if (channelId == 3)
+                else if (channelId == 5)
                 {
                     //twitter
                     ProcessTwitter(queue, twitterHelper);

@@ -103,12 +103,13 @@ namespace OnTrace.Channel.Scheduler.Jobs
             {
                 var syncTime = repo.GetTwitterSyncTime();
 
-                Logger.Write($"Retrieve twitter data betweeen {syncTime.ActivityTime} and {DateTime.Now}", EventSeverity.Information);
+                Logger.Write($"Retrieve twitter data since {syncTime.ActivityTime} until {DateTime.Now.AddDays(1)}", EventSeverity.Information);
 
                 var channelType = repoMaster.GetChannelType("twitter");
+                int tweetRetrieved = 0;
 
                 #region Tweets
-                var tweets = twitterHelper.GetMentionsTimeline(syncTime.ActivityTime, DateTime.Now);
+                var tweets = twitterHelper.GetMentionsTimeline(syncTime.ActivityTime, DateTime.Now.AddDays(1));
 
                 foreach (var tweet in tweets)
                 {
@@ -134,9 +135,19 @@ namespace OnTrace.Channel.Scheduler.Jobs
                     queue.MediaFiles = media;
                     queue.MessageType = media.Count == 0 ? 0 : mediaType != null && mediaType.Contains("mp4") ? 2 : 1;
 
-                    Logger.Write($"Create twitter inbound queue, [address={queue.AccountName}, text={queue.Message}]", EventSeverity.Information);
+                    bool queueAlreadyExist = repo.QueueAlreadyExist(queue.AccountName, queue.Message,
+                        syncTime.ActivityTime, DateTime.Now);
 
-                    repo.CreateInboundQueue(queue);
+                    bool logAlreadyExist = repo.LogAlreadyExist(queue.AccountName, queue.Message,
+                        syncTime.ActivityTime, DateTime.Now);
+
+                    if (!queueAlreadyExist && !logAlreadyExist)
+                    {
+                        tweetRetrieved++;
+                        repo.CreateInboundQueue(queue);
+
+                        Logger.Write($"Create twitter inbound queue, [address={queue.AccountName}, text={queue.Message}]", EventSeverity.Information);
+                    }
                 }
                 #endregion
 
@@ -160,12 +171,17 @@ namespace OnTrace.Channel.Scheduler.Jobs
                     
                     //delete server message 
                     twitterHelper.DestroyMessage(message.Id);
-                    
+
+                    tweetRetrieved++;
                 }
                 #endregion
 
                 //update sync time
-                repo.UpdateTwitterSyncTime(Guid.NewGuid().ToString("N"), DateTime.Now, ipAddress);
+                if (tweetRetrieved > 0 && syncTime.ActivityTime.Date <= DateTime.Now.Date)
+                {
+                    repo.UpdateTwitterSyncTime(Guid.NewGuid().ToString("N"), DateTime.Now, ipAddress);
+                }
+               
             }
             catch (Exception ex)
             {

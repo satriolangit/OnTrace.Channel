@@ -130,6 +130,13 @@ namespace OnTrace.Channel.Scheduler
 
             helper.SearchTimeline(new DateTime(1753,1,1), new DateTime(2016,7,28));
 
+            Console.WriteLine("Download image...");
+            string url = "https://pbs.twimg.com/media/CoXDCI8UsAA1Pbq.jpg";
+            string extension = Path.GetExtension(url);
+            string filename = $"download_test_{Guid.NewGuid().ToString("N")}{extension}";
+
+            fileProcessor.DownloadAndWriteMedia("https://pbs.twimg.com/media/CoXDCI8UsAA1Pbq.jpg", InboundTempPath + filename);
+
         }
 
 

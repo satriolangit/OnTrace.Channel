@@ -1460,3 +1460,810 @@ System.Exception: Sending mail failed, to=[krisna.n.w.a@gmail.com], subject=[RE 
 2016-07-20 13:44:42,158 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
 2016-07-20 13:44:42,161 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping inbound scheduler...
 2016-07-20 13:44:42,165 [OnTrace.Channel.Scheduler.Program] [INFO] Inbound scheduler stopped.
+2016-07-21 15:36:48,824 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to publish video.
+System.Exception: Unexpected error has occured ---> System.InvalidOperationException: Upload STATUS can only be invoked on uploads with processing metadata. Set the `media_category` to `amplify_video` to solve this isue.
+   at Tweetinvi.Controllers.Upload.UploadQueryExecutor.GetMediaStatus(IMedia media, Boolean autoWait)
+   at Tweetinvi.Upload.GetMediaStatus(IMedia media, Boolean waitForStatusToBeAvailable)
+   at OnTrace.Channel.Infrastructure.Services.TwitterHelper.PublishTweetWithVideo(String text, String videoPath) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\TwitterHelper.cs:line 167
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.TwitterHelper.PublishTweetWithVideo(String text, String videoPath) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\TwitterHelper.cs:line 198
+   at OnTrace.Channel.Scheduler.Program.TwitterTest() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 117
+2016-07-21 15:41:43,987 [OnTrace.Channel.Scheduler.Program] [ERROR] Failed to publish video.
+System.Exception: Unexpected error has occured ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at Tweetinvi.Controllers.Upload.UploadQueryExecutor.GetMediaStatus(IMedia media, Boolean autoWait)
+   at Tweetinvi.Upload.GetMediaStatus(IMedia media, Boolean waitForStatusToBeAvailable)
+   at OnTrace.Channel.Infrastructure.Services.TwitterHelper.PublishTweetWithVideo(String text, String videoPath) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\TwitterHelper.cs:line 167
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Services.TwitterHelper.PublishTweetWithVideo(String text, String videoPath) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\TwitterHelper.cs:line 199
+   at OnTrace.Channel.Scheduler.Program.TwitterTest() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Program.cs:line 117
+2016-07-26 14:18:25,969 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-26 14:18:31,310 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 14:18:31,433 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:18:31,461 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:18:37,276 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:18:57,451 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:19:01,311 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:19:03,083 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:19:27,450 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:19:31,311 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:19:33,167 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:19:57,450 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:20:01,311 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:20:03,088 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:24:25,327 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-26 14:24:26,384 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 14:24:26,508 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:24:26,515 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:24:28,523 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:24:55,398 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:24:56,385 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:24:58,194 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:25:24,155 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-26 14:25:24,158 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-26 14:25:24,160 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping inbound scheduler...
+2016-07-26 14:25:24,160 [OnTrace.Channel.Scheduler.Program] [INFO] Inbound scheduler stopped.
+2016-07-26 14:30:33,056 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-26 14:30:38,157 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 14:30:38,412 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:30:38,483 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:30:40,723 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:32:22,353 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-26 14:32:22,400 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-26 14:32:22,401 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping inbound scheduler...
+2016-07-26 14:32:22,402 [OnTrace.Channel.Scheduler.Program] [INFO] Inbound scheduler stopped.
+2016-07-26 14:32:29,668 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-26 14:32:30,595 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 14:32:30,727 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:32:30,737 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:32:32,728 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:32:32,741 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [ERROR] Failed to create twitter inbound queue.
+System.Exception: Failed to retrieve twitter sync time. ---> System.Data.SqlClient.SqlException: Invalid object name 'TR_OC_TwitterSyncState'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at CommonDataAccess.CDA.GetDataTable(SqlCommand cmd) in D:\Wahyu\Kantor\Development\OnTrace.Channel\CDA\CDA.cs:line 281
+   at OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository.GetTwitterSyncTime() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoInboundQueueRepository.cs:line 191
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository.GetTwitterSyncTime() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoInboundQueueRepository.cs:line 213
+   at OnTrace.Channel.Scheduler.Jobs.InboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\InboundJob.cs:line 63
+2016-07-26 14:32:59,691 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:33:00,598 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:33:02,444 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:33:02,450 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [ERROR] Failed to create twitter inbound queue.
+System.Exception: Failed to retrieve twitter sync time. ---> System.Data.SqlClient.SqlException: Invalid object name 'TR_OC_TwitterSyncState'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at CommonDataAccess.CDA.GetDataTable(SqlCommand cmd) in D:\Wahyu\Kantor\Development\OnTrace.Channel\CDA\CDA.cs:line 281
+   at OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository.GetTwitterSyncTime() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoInboundQueueRepository.cs:line 191
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository.GetTwitterSyncTime() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoInboundQueueRepository.cs:line 213
+   at OnTrace.Channel.Scheduler.Jobs.InboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\InboundJob.cs:line 63
+2016-07-26 14:38:53,288 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-26 14:38:54,274 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 14:38:54,414 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:38:54,417 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:38:56,374 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:39:05,002 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 10
+2016-07-26 14:39:05,010 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:39:05,015 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[b961910d479343e8b6b6f516a762785a], address=[idris_maulana], subject=[]
+2016-07-26 14:39:05,030 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:39:05,031 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[63bf0dc5e3e04419bb324b95ef78259b], address=[aurunisbi], subject=[]
+2016-07-26 14:39:05,046 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:39:05,047 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[71fb33d4bd634107ae369199945b23ed], address=[aurunisbi], subject=[]
+2016-07-26 14:39:05,063 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:39:05,064 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[f2ad19188917498babea7c0c75b3ee09], address=[idris_maulana], subject=[]
+2016-07-26 14:39:05,079 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=rocks_sonny]
+2016-07-26 14:39:05,080 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[5d1c9a4f99844fa5bc366f354dfb9bbd], address=[rocks_sonny], subject=[]
+2016-07-26 14:39:05,097 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:39:05,098 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[61041328ae284cbf88e37fa402ea04c7], address=[wahyuhari], subject=[]
+2016-07-26 14:39:05,113 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:39:05,114 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[6fcb4d257bf94e598df32078f4ea31ff], address=[aurunisbi], subject=[]
+2016-07-26 14:39:05,130 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=rocks_sonny]
+2016-07-26 14:39:05,131 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[85cf78fde76c482a962bdf73f13cc261], address=[rocks_sonny], subject=[]
+2016-07-26 14:39:05,146 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:39:05,147 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[762a13bb266a4d4b80381794a2458bf2], address=[idris_maulana], subject=[]
+2016-07-26 14:39:05,154 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:39:05,155 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[65f60e49713946869fb916d62838e580], address=[idris_maulana], subject=[]
+2016-07-26 14:39:06,045 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:39:06,047 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[e48f94352e2d4801a3ecff5c762747fb], address=[wahyuhari], subject=[]
+2016-07-26 14:39:06,063 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:39:06,064 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[1e31dc71773c40ab8518eb9dbc085012], address=[wahyuhari], subject=[]
+2016-07-26 14:39:06,080 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:39:06,081 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[ed1b288555ca4731a06a75146e714103], address=[idris_maulana], subject=[]
+2016-07-26 14:39:06,096 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:39:06,097 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[85ab86195b4d45a39f7873ef954cad7e], address=[idris_maulana], subject=[]
+2016-07-26 14:39:23,344 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:39:24,285 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:39:26,189 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:39:30,563 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 10
+2016-07-26 14:39:30,564 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:39:30,565 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[59f26806fbe543b0926432f4cf9f3d5c], address=[idris_maulana], subject=[]
+2016-07-26 14:39:30,594 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:39:30,595 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[4dd618e090834ba1980f553e7cf085e4], address=[aurunisbi], subject=[]
+2016-07-26 14:39:30,611 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:39:30,612 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[5e9f58127d3442a9b55d25dde83c3d96], address=[aurunisbi], subject=[]
+2016-07-26 14:39:30,627 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:39:30,628 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[7f20680bc9374628b9d2f33ec3f64aa1], address=[idris_maulana], subject=[]
+2016-07-26 14:39:30,644 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=rocks_sonny]
+2016-07-26 14:39:30,645 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[534c529422684182a07c44731a0bf89a], address=[rocks_sonny], subject=[]
+2016-07-26 14:39:30,671 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:39:30,672 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[51468ae5745a4464b2c7c2713539f7e0], address=[wahyuhari], subject=[]
+2016-07-26 14:39:30,685 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:39:30,686 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[2f3844c05b8a4706944fabdac40e1ffd], address=[aurunisbi], subject=[]
+2016-07-26 14:39:30,702 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=rocks_sonny]
+2016-07-26 14:39:30,703 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[ea626a48b1a44af695cf59246ba1ee7f], address=[rocks_sonny], subject=[]
+2016-07-26 14:39:30,719 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:39:30,720 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[7fd9cbdf435f4f168d83b24a4a477d8f], address=[idris_maulana], subject=[]
+2016-07-26 14:39:30,736 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:39:30,737 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[330e20c6b65f4ae0a3816714e6d37f80], address=[idris_maulana], subject=[]
+2016-07-26 14:39:31,956 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:39:31,957 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[da3b9f745ea64c92af954d96d8b5efcb], address=[wahyuhari], subject=[]
+2016-07-26 14:39:31,969 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:39:31,969 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[a4ae8e7e77d04c9fa0230232f7b087a1], address=[wahyuhari], subject=[]
+2016-07-26 14:39:31,977 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:39:31,977 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[fd11229ed6774ce7971a4145dc7af745], address=[idris_maulana], subject=[]
+2016-07-26 14:39:31,986 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:39:31,987 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[e72ab5425fc047bc925e46c297827df9], address=[idris_maulana], subject=[]
+2016-07-26 14:39:53,344 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:39:54,275 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:39:56,225 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:40:07,513 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 10
+2016-07-26 14:40:07,514 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:40:07,515 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[86bc8857093947d8b41978b811fb5d03], address=[idris_maulana], subject=[]
+2016-07-26 14:40:07,533 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:40:07,534 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[95935285c20f4cc8be4a38ad11640bba], address=[aurunisbi], subject=[]
+2016-07-26 14:40:07,549 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:40:07,550 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[a616a4fdd9c34415a8f019e516816ee3], address=[aurunisbi], subject=[]
+2016-07-26 14:40:07,566 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:40:07,567 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[eb25b5c101b04c3fab3712140a8ac0cf], address=[idris_maulana], subject=[]
+2016-07-26 14:40:07,574 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=rocks_sonny]
+2016-07-26 14:40:07,575 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[2eab45bd9d474c27b2780cdcf5cb54f8], address=[rocks_sonny], subject=[]
+2016-07-26 14:40:07,583 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:40:07,583 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[3fd0089f94914047aa7fd29aaf20c8bf], address=[wahyuhari], subject=[]
+2016-07-26 14:40:07,600 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:40:07,600 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[561a400ab66a4685b7f5a079aff72cec], address=[aurunisbi], subject=[]
+2016-07-26 14:40:07,618 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=rocks_sonny]
+2016-07-26 14:40:07,619 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[1f6fcb9c0804434f976210c3ed83ab2d], address=[rocks_sonny], subject=[]
+2016-07-26 14:40:07,634 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:40:07,634 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[ea39dd0d4ad34d12bfb0ac7067bcd953], address=[idris_maulana], subject=[]
+2016-07-26 14:40:07,649 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:40:07,651 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[1a3c0379c4954b70888c6d62b808d941], address=[idris_maulana], subject=[]
+2016-07-26 14:40:08,471 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:40:08,472 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[b5ab18e5220b43efbbc772050ca0697f], address=[wahyuhari], subject=[]
+2016-07-26 14:40:08,483 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:40:08,484 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[20b943af6b494632a6af7977c3d3499e], address=[wahyuhari], subject=[]
+2016-07-26 14:40:08,500 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:40:08,500 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[50a0cfd6259d45a295f0f5ff16bd7949], address=[idris_maulana], subject=[]
+2016-07-26 14:40:08,516 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:40:08,517 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[71092f2ddcee46b68fda8facad396e5c], address=[idris_maulana], subject=[]
+2016-07-26 14:40:23,344 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:40:24,275 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:40:26,096 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:40:40,154 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 10
+2016-07-26 14:40:40,155 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:40:40,156 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[596b818fa86444d9b0cd4644dfcaa9b4], address=[idris_maulana], subject=[]
+2016-07-26 14:40:40,172 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:40:40,173 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[c0f8f90a26a54413813c9b35e8372313], address=[aurunisbi], subject=[]
+2016-07-26 14:40:40,189 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:40:40,190 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[30d8f658ffb8496daafde26bd85f5574], address=[aurunisbi], subject=[]
+2016-07-26 14:40:40,197 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:40:40,198 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[7d436ab462f74568b796c9d492848019], address=[idris_maulana], subject=[]
+2016-07-26 14:40:40,214 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=rocks_sonny]
+2016-07-26 14:40:40,215 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[e460eac24eb4412db9b5789816921d3f], address=[rocks_sonny], subject=[]
+2016-07-26 14:40:40,230 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:40:40,231 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[4f11b0d1fbfb481284f3eb69b770fb4b], address=[wahyuhari], subject=[]
+2016-07-26 14:40:40,247 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:40:40,248 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[4bc4f2a55dd54ca9aa7fe68eaeca1953], address=[aurunisbi], subject=[]
+2016-07-26 14:40:40,265 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=rocks_sonny]
+2016-07-26 14:40:40,266 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[afc18966b8b84a8fbdd2a29ff92a7b36], address=[rocks_sonny], subject=[]
+2016-07-26 14:40:40,280 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:40:40,281 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[b9b75f22bc614d9382e24ad03431dada], address=[idris_maulana], subject=[]
+2016-07-26 14:40:40,289 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:40:40,290 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[55fa0c5d1f6f4321a4774741bd63a60d], address=[idris_maulana], subject=[]
+2016-07-26 14:40:41,122 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:40:41,123 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[cd39c6b84dea4e668fb4a3b560e81de7], address=[wahyuhari], subject=[]
+2016-07-26 14:40:41,138 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:40:41,139 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[cb6eba8972de47ae80cf020cc94da6b0], address=[wahyuhari], subject=[]
+2016-07-26 14:40:41,147 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:40:41,148 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[3f2bb8a7762c49ebabc04248613c03a0], address=[idris_maulana], subject=[]
+2016-07-26 14:40:41,156 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:40:41,157 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[e6b4e4eac77b4ac6b4ebd10920af938b], address=[idris_maulana], subject=[]
+2016-07-26 14:40:53,345 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:40:54,275 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:40:56,111 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:41:13,344 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 10
+2016-07-26 14:41:13,344 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:41:13,345 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[8785abdb5402422d9e6e716c5a2b1715], address=[idris_maulana], subject=[]
+2016-07-26 14:41:13,361 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:41:13,362 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[8cc507cbd3904ee8b6e93d9e7f762f94], address=[aurunisbi], subject=[]
+2016-07-26 14:41:13,370 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:41:13,371 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[5b9d39cb59504e65b878cb65f3f173f6], address=[aurunisbi], subject=[]
+2016-07-26 14:41:13,387 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:41:13,388 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[c6898d67fdc743eb8002e5ebb479b6d8], address=[idris_maulana], subject=[]
+2016-07-26 14:41:13,403 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=rocks_sonny]
+2016-07-26 14:41:13,404 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[d04e7557bbe84486a12fc5a4feca471a], address=[rocks_sonny], subject=[]
+2016-07-26 14:41:13,411 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:41:13,412 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[74613e21accb48ef99eed511e126c943], address=[wahyuhari], subject=[]
+2016-07-26 14:41:13,437 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:41:13,437 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[2057f25dad9d478ea026d78f6e6aa2bc], address=[aurunisbi], subject=[]
+2016-07-26 14:41:13,453 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=rocks_sonny]
+2016-07-26 14:41:13,454 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[4b5fc393166f4bb5b0853248834071bf], address=[rocks_sonny], subject=[]
+2016-07-26 14:41:13,461 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:41:13,462 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[4968867a26c5471e9fc3cbbc5ecf487a], address=[idris_maulana], subject=[]
+2016-07-26 14:41:13,478 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:41:13,479 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[0d481aaae13c4f0c8c075c6dda4c52b6], address=[idris_maulana], subject=[]
+2016-07-26 14:41:15,410 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:41:15,411 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[d14f529763284f8ba5f95ea3661d0d7b], address=[wahyuhari], subject=[]
+2016-07-26 14:41:15,428 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:41:15,429 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[9019040d52184217910aa914ed4ec759], address=[wahyuhari], subject=[]
+2016-07-26 14:41:15,444 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:41:15,445 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[47663a2d7d214af9937f8ec9c06abace], address=[idris_maulana], subject=[]
+2016-07-26 14:41:15,461 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:41:15,462 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[2b9b322aa87f46988765b686f86d9d16], address=[idris_maulana], subject=[]
+2016-07-26 14:41:23,344 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:41:24,276 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:41:26,025 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:41:34,817 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 10
+2016-07-26 14:41:34,818 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:41:34,818 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[a59c5218ce394491a869b8fcab8d604a], address=[idris_maulana], subject=[]
+2016-07-26 14:41:34,834 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:41:34,835 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[3baaa45e8d8743c788236b127908c25f], address=[aurunisbi], subject=[]
+2016-07-26 14:41:34,842 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:41:34,843 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[02ce489f9f5441d09ab058d1abbb5872], address=[aurunisbi], subject=[]
+2016-07-26 14:41:34,859 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:41:34,861 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[8d7d4c50842c411f845c756c0b462218], address=[idris_maulana], subject=[]
+2016-07-26 14:41:34,868 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=rocks_sonny]
+2016-07-26 14:41:34,868 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[8eff132e3daf47aeabe55b5a3070052f], address=[rocks_sonny], subject=[]
+2016-07-26 14:41:34,884 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:41:34,884 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[757d4904112f4229b5f963822545c6c5], address=[wahyuhari], subject=[]
+2016-07-26 14:41:34,893 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=aurunisbi]
+2016-07-26 14:41:34,894 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[c4e0e2bda0f04e5ebf20528574395fcc], address=[aurunisbi], subject=[]
+2016-07-26 14:41:34,901 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=rocks_sonny]
+2016-07-26 14:41:34,902 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[4574b7bc736e4a7895ef2d19712577c1], address=[rocks_sonny], subject=[]
+2016-07-26 14:41:34,909 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:41:34,910 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[1f3f191227184492b8edbdbba4d1d790], address=[idris_maulana], subject=[]
+2016-07-26 14:41:34,928 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:41:34,929 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[202a7dd188c242c0992b3657194404a9], address=[idris_maulana], subject=[]
+2016-07-26 14:41:35,986 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:41:35,986 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[773698f8f5024ed3ab1a4174f3ee1b55], address=[wahyuhari], subject=[]
+2016-07-26 14:41:36,002 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=wahyuhari]
+2016-07-26 14:41:36,002 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[50292054225e4ab1a748845252c7a576], address=[wahyuhari], subject=[]
+2016-07-26 14:41:36,009 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:41:36,011 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[c36961c81601481d9c9278265b103d8b], address=[idris_maulana], subject=[]
+2016-07-26 14:41:36,019 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=idris_maulana]
+2016-07-26 14:41:36,020 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[5694237bef784278b2e356cbcd1ff477], address=[idris_maulana], subject=[]
+2016-07-26 14:41:50,267 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-26 14:41:50,270 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-26 14:41:50,271 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping inbound scheduler...
+2016-07-26 14:41:50,272 [OnTrace.Channel.Scheduler.Program] [INFO] Inbound scheduler stopped.
+2016-07-26 14:46:45,354 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-26 14:46:46,303 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 14:46:46,430 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:46:46,434 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:46:48,462 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:47:01,170 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 10
+2016-07-26 14:47:01,176 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:47:01,180 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[292cada38d4841e29ebcde5166f8665e], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:47:01,199 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 14:47:01,200 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[15368760447b40589e171fa3307564ba], address=[@aurunisbi], subject=[tweet]
+2016-07-26 14:47:01,215 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 14:47:01,216 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[213ff5a1ec3e4dba8f40847d449aec27], address=[@aurunisbi], subject=[tweet]
+2016-07-26 14:47:01,232 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:47:01,233 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[1ef2e27da218408c849b38f706921904], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:47:01,249 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny]
+2016-07-26 14:47:01,249 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[a281d135596f40eb9e154bd65951a9bf], address=[@rocks_sonny], subject=[tweet]
+2016-07-26 14:47:01,265 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:47:01,267 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[66185ebe5bfe4ccc90a46adcf3962736], address=[@wahyuhari], subject=[tweet]
+2016-07-26 14:47:01,281 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 14:47:01,283 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[d0eb171aea054aa782c0ba3e3a7574b3], address=[@aurunisbi], subject=[tweet]
+2016-07-26 14:47:01,302 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny]
+2016-07-26 14:47:01,303 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[5841f24484b2466bb9ddddf77f89acb9], address=[@rocks_sonny], subject=[tweet]
+2016-07-26 14:47:01,314 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:47:01,316 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[642e83d08cd44270b6a026537e05ea81], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:47:01,338 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:47:01,340 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[4d85d8f0413c4b9585f2e99a011da596], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:47:02,230 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:47:02,232 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[171286da3dba4670a1c5a93ec6c01ab1], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:47:02,248 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:47:02,249 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[e59ce970f55645668b2f6d80b8611ffa], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:47:02,265 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:47:02,266 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[257eb1cc955d41cbac539d7cbbd4aee0], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:47:02,282 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:47:02,283 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[cbdafcf6e4fa49fa909c97f2ffb515bd], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:47:15,415 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:47:16,303 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:47:18,075 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:47:30,190 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 10
+2016-07-26 14:47:30,191 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:47:30,193 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[a42b8736bbf84908803e2e75cac9bffd], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:47:30,204 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 14:47:30,205 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[f9e6d8ce14b549a09f4bdb6c4b76494f], address=[@aurunisbi], subject=[tweet]
+2016-07-26 14:47:30,221 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 14:47:30,222 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[f4f4191c40cd4d61938e3812c4c19300], address=[@aurunisbi], subject=[tweet]
+2016-07-26 14:47:30,230 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:47:30,231 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[7174466cd79a4e70ba4e4ac16e585c0a], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:47:30,247 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny]
+2016-07-26 14:47:30,248 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[aba2a837d5fb48e285f9fa4361cd9f0e], address=[@rocks_sonny], subject=[tweet]
+2016-07-26 14:47:30,263 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:47:30,264 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[5ce764821dc9452288f68c85376f5ad4], address=[@wahyuhari], subject=[tweet]
+2016-07-26 14:47:30,280 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 14:47:30,281 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[dd09e06b8be84c3f8000b98abfe8dc57], address=[@aurunisbi], subject=[tweet]
+2016-07-26 14:47:30,297 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny]
+2016-07-26 14:47:30,298 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[12d7dba783bd41b88042db9470cc4fe1], address=[@rocks_sonny], subject=[tweet]
+2016-07-26 14:47:30,313 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:47:30,314 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[630781bc07bb4e6ba6580bc18f6ea55b], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:47:30,321 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:47:30,322 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[575d02cadb0c41a48ea389883bf0b5ca], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:47:31,160 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:47:31,161 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[106ec5ae6fb249baa5a3ac9d6fecd824], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:47:31,180 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:47:31,181 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[33e2b255f0d74ee0ad25f3be77b027b2], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:47:31,221 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:47:31,222 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[80ab079438f34d78b25efaf7605cc919], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:47:31,238 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:47:31,239 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[8967d69f7e43432eae24366a1009df85], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:47:45,415 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:47:46,304 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:47:48,067 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:48:15,415 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:48:17,688 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 10
+2016-07-26 14:48:17,689 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:48:17,689 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[d32941e6d902402d8c56f4f26c777737], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:48:17,700 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 14:48:17,701 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[7e05eed4a7db43609edd610aaaaef561], address=[@aurunisbi], subject=[tweet]
+2016-07-26 14:48:17,717 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 14:48:17,717 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[e9aada977a0243a29c092e4100b48459], address=[@aurunisbi], subject=[tweet]
+2016-07-26 14:48:17,733 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:48:17,734 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[92da0f7e2ff24bf5817a763f669c3611], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:48:17,750 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny]
+2016-07-26 14:48:17,751 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[47ca0932538f41029b89ae29bce0d1be], address=[@rocks_sonny], subject=[tweet]
+2016-07-26 14:48:17,767 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:48:17,767 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[03cd540ec26f427797421fa05adce6ce], address=[@wahyuhari], subject=[tweet]
+2016-07-26 14:48:17,775 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 14:48:17,776 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[a2161e3bb33f41ae8f9f6a86b0b7f252], address=[@aurunisbi], subject=[tweet]
+2016-07-26 14:48:17,792 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny]
+2016-07-26 14:48:17,793 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[871e6329a9974b12b8f58b6cc5f2b166], address=[@rocks_sonny], subject=[tweet]
+2016-07-26 14:48:17,800 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:48:17,801 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[270242c122b84bd38d22835ed3156dd9], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:48:17,817 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:48:17,818 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[0cfe7ce1231d4276b7e19d04bfb2a945], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:48:18,650 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:48:18,651 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[2cf0e4811d3a4568b88f4687b68d0372], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:48:18,667 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:48:18,668 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[5fb6379e22fa4562ae92ff91a01506db], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:48:18,683 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:48:18,685 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[861bf64ba9ce4831bc64e6ada0e7165b], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:48:18,700 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:48:18,701 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[abfe5754448b4f938c96cc9f1e27f390], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:48:18,718 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:48:20,445 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:48:25,947 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping outbound scheduler...
+2016-07-26 14:48:25,950 [OnTrace.Channel.Scheduler.Program] [INFO] Outbound scheduler stopped.
+2016-07-26 14:48:25,951 [OnTrace.Channel.Scheduler.Program] [INFO] Stoping inbound scheduler...
+2016-07-26 14:48:25,952 [OnTrace.Channel.Scheduler.Program] [INFO] Inbound scheduler stopped.
+2016-07-26 14:48:29,176 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 10
+2016-07-26 14:48:29,176 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:48:29,178 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[29239c2be3514935af7cd1838cbc5ae6], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:48:29,191 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 14:48:29,192 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[bd77847c275a478994fb191c68173f2c], address=[@aurunisbi], subject=[tweet]
+2016-07-26 14:48:29,208 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 14:48:29,209 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[8e437c4d33bc4d35ba632841cd418345], address=[@aurunisbi], subject=[tweet]
+2016-07-26 14:48:29,224 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:48:29,226 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[ab48e5a716914b3b8fad1f3fef355357], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:48:29,241 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny]
+2016-07-26 14:48:29,242 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[d65c6a3c7f29461c9192e638fcf15a78], address=[@rocks_sonny], subject=[tweet]
+2016-07-26 14:48:29,258 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:48:29,259 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[93768692f92e4676acef43116b46f743], address=[@wahyuhari], subject=[tweet]
+2016-07-26 14:48:29,274 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 14:48:29,276 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[43dec89cc86249e9a77a80b6a58ae63d], address=[@aurunisbi], subject=[tweet]
+2016-07-26 14:48:29,291 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny]
+2016-07-26 14:48:29,292 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[5d459ba1e55648ff85b589fb533ccd3e], address=[@rocks_sonny], subject=[tweet]
+2016-07-26 14:48:29,309 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:48:29,310 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[73ce18caa5054a7daa79591048d2e698], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:48:29,324 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:48:29,325 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[bd77a83be2fa42c0994425250d50fee5], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:48:30,188 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:48:30,189 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[4fb9409a6cc541ea97ef8885db3a9d32], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:48:30,224 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:48:30,225 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[9a6fd123191047e48bcf2b231f7e951e], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:48:30,284 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:48:30,285 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[e0c0da7d20ee4ce1ac054e4906c55db6], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:48:30,323 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:48:30,324 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[b902a393b0004ac58bed2ce63cb7b3a2], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:53:30,157 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-26 14:53:31,171 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 14:53:31,310 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:53:31,324 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:53:33,416 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:53:42,840 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 10
+2016-07-26 14:53:42,846 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:53:42,849 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[2d51761ee07847688be18b480c7d8ffb], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:53:42,865 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 14:53:42,865 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[f4ac4cc819c44be0aa2a928a22a28c90], address=[@aurunisbi], subject=[tweet]
+2016-07-26 14:53:42,883 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 14:53:42,883 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[db0bb839223144798de8d368363ead65], address=[@aurunisbi], subject=[tweet]
+2016-07-26 14:53:42,898 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:53:42,898 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[e69453503e9b4872b2369d6d5828b5cb], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:53:42,907 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny]
+2016-07-26 14:53:42,908 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[430c5702422a47b4b17becd6d82da5c3], address=[@rocks_sonny], subject=[tweet]
+2016-07-26 14:53:42,924 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:53:42,924 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[a1fa262de3e34f0da7ce5c48cbb2cfff], address=[@wahyuhari], subject=[tweet]
+2016-07-26 14:53:42,940 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 14:53:42,941 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[75dab09d8cff4c419f5bbe3f5564e64a], address=[@aurunisbi], subject=[tweet]
+2016-07-26 14:53:42,956 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny]
+2016-07-26 14:53:42,957 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[6e28b0b219d143edb6cfb242465b6549], address=[@rocks_sonny], subject=[tweet]
+2016-07-26 14:53:42,965 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:53:42,965 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[27ee630c9b8d4e79a3309e21f3debe01], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:53:42,974 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:53:42,976 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[a062ffdc420742508bc3ab74fc8d8273], address=[@idris_maulana], subject=[tweet]
+2016-07-26 14:53:43,920 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:53:43,922 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[d599a959fcdb4715aefc570aa42118c9], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:53:43,956 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:53:43,957 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[340cd495ea114b32b6279c4b8e1e70d8], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:53:43,999 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:53:44,034 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[051f7b89c2e04c5a828d1a58ae66d4dc], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:53:44,074 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:53:44,082 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[80af3dac1cdf4826a956989e491ed00c], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:54:00,219 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:54:01,173 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:54:02,890 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:54:02,914 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [ERROR] Failed to create twitter inbound queue.
+System.Exception: Failed to retrieve twitter sync time. ---> System.ArgumentException: Column 'StateID' does not belong to table .
+   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository.<>c.<GetTwitterSyncTime>b__8_0(DataRow row) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoInboundQueueRepository.cs:line 194
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository.GetTwitterSyncTime() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoInboundQueueRepository.cs:line 194
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository.GetTwitterSyncTime() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoInboundQueueRepository.cs:line 213
+   at OnTrace.Channel.Scheduler.Jobs.InboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\InboundJob.cs:line 64
+2016-07-26 14:54:30,218 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:54:31,172 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:54:33,019 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:54:33,023 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [ERROR] Failed to create twitter inbound queue.
+System.Exception: Failed to retrieve twitter sync time. ---> System.ArgumentException: Column 'StateID' does not belong to table .
+   at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository.<>c.<GetTwitterSyncTime>b__8_0(DataRow row) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoInboundQueueRepository.cs:line 194
+   at System.Linq.Enumerable.WhereSelectEnumerableIterator`2.MoveNext()
+   at System.Linq.Enumerable.FirstOrDefault[TSource](IEnumerable`1 source)
+   at OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository.GetTwitterSyncTime() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoInboundQueueRepository.cs:line 194
+   --- End of inner exception stack trace ---
+   at OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository.GetTwitterSyncTime() in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Data\AdoInboundQueueRepository.cs:line 213
+   at OnTrace.Channel.Scheduler.Jobs.InboundJob.Execute(IJobExecutionContext context) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\InboundJob.cs:line 64
+2016-07-26 14:57:23,593 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-26 14:57:24,586 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 14:57:24,716 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:57:24,725 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:57:26,704 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:57:29,380 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 0
+2016-07-26 14:57:30,546 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:57:30,551 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[69a984a7629a4e06b598ac010c885cef], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:57:30,578 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:57:30,579 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[b7f5214955d7448c9225930f768c22e7], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:57:30,595 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:57:30,595 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[80e1f14f62b94825ba5367d0d4cb390b], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:57:30,628 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:57:30,629 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[bb66508e476449e5abee16bf2647823b], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:57:53,667 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:57:54,587 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:57:56,438 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:57:57,046 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 0
+2016-07-26 14:57:57,905 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:57:57,906 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[d509916d328a4ababf674134827defbf], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:57:57,935 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:57:57,936 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[df76a857a1dd4f64bdbfbceef36ac421], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:57:57,959 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:57:57,960 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[fa5ca16d04104e99bccb6ec8a40032ea], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:57:57,985 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:57:57,986 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[82856cb3fdd1410a82ce222ee8e1bcd5], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:58:23,667 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:58:24,588 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:58:26,384 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:58:26,992 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 0
+2016-07-26 14:58:28,027 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:58:28,028 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[28344c75f2414eeaada7cdf5489ceaee], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:58:28,048 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:58:28,049 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[d0cc9d43087c406e8d4615c1f7f51531], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:58:28,074 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:58:28,075 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[7e79e0e6a91147d6b2d73d386f463900], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:58:28,090 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:58:28,091 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[4c0ff3825dab4ce8ac187b3ae3017ee4], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:58:53,667 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:58:54,587 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:58:56,394 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:58:57,254 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 0
+2016-07-26 14:58:58,066 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:58:58,067 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[8633b5c819b14cb4977ef319b4977ba2], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:58:58,088 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:58:58,089 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[2271599d3f0342298b13cf7fe5051f36], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:58:58,113 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:58:58,115 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[ce905064e2b7412196db8ec538538026], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:58:58,138 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:58:58,139 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[e97f3e46503541e8894c4fff7bca5ae3], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:59:23,667 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:59:24,588 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:59:26,377 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:59:27,007 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 0
+2016-07-26 14:59:28,275 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:59:28,277 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[1687df2f5b90475f9f09b309d4dfa9a3], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:59:28,302 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:59:28,303 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[95024d08fce245c29cb808baba0533dc], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:59:28,344 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:59:28,345 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[ecfebb7f72d941a68304fde3870fd3f6], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:59:28,369 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:59:28,371 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[c3c4677a80a4474e82e7f205f60dda31], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:59:53,668 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 14:59:54,587 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 14:59:56,412 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 14:59:57,054 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 0
+2016-07-26 14:59:58,315 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:59:58,316 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[cf73cfe72c12491e90d1554792042a98], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:59:58,341 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 14:59:58,342 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[7668a01a2f6f4210b0ce5c42ef52bb0e], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 14:59:58,367 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:59:58,368 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[b4c18bb70ba0454ea0303f58f820b441], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 14:59:58,391 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 14:59:58,392 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[81762d8ac20e4c148990ca552b3266b8], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 15:00:23,667 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-26 15:00:24,587 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:00:26,295 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 15:00:27,140 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] tweets.count : 0
+2016-07-26 15:00:27,952 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 15:00:27,953 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[b9dc94254ee740b088c5f005caa06b78], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 15:00:27,981 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 15:00:27,982 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[339e0718aacc42be9948b132fc4561d0], address=[@wahyuhari], subject=[Private Message]
+2016-07-26 15:00:27,997 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:00:27,998 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[045920d6c7d24eb48f14991688e66be0], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 15:00:28,022 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:00:28,023 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Creating inbound queue=[General], QueueId=[f9868230aa194e55a80a2fd4948930de], address=[@idris_maulana], subject=[Private Message]
+2016-07-26 15:11:52,177 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 15:11:53,270 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:11:55,411 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 15:12:22,248 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:12:23,973 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 15:14:41,877 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 15:14:42,938 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:14:45,508 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 15:15:11,934 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:15:13,674 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 15:15:41,933 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:15:43,690 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 15:16:11,933 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:16:13,618 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data..
+2016-07-26 15:18:45,091 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 15:18:46,185 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:18:48,228 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 3:16:14 PM and 7/26/2016 3:18:48 PM
+2016-07-26 15:18:53,663 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 15:18:53,678 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 15:18:53,687 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:18:53,696 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:19:15,155 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:19:17,119 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 3:18:53 PM and 7/26/2016 3:19:17 PM
+2016-07-26 15:19:19,311 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 15:19:19,327 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 15:19:19,352 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:19:19,368 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:21:58,620 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 15:21:59,789 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:22:24,528 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 15:22:25,603 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:22:54,588 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:26:25,927 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 15:26:26,927 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:26:55,986 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:27:25,986 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:28:19,969 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 15:28:21,038 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:28:24,992 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 3:27:29 PM and 7/26/2016 3:28:24 PM
+2016-07-26 15:28:26,801 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 15:28:26,822 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 15:28:26,830 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:28:26,839 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:28:50,056 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:28:52,598 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 3:28:26 PM and 7/26/2016 3:28:52 PM
+2016-07-26 15:28:54,037 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 15:28:54,053 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 15:28:54,061 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:28:54,070 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:31:30,088 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 15:31:31,136 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:32:00,162 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:32:30,162 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:33:00,161 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:38:48,778 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 15:38:49,935 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:39:18,860 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:41:49,412 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 15:41:50,602 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:42:19,468 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:42:49,467 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:43:19,468 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:57:19,035 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 15:57:19,955 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:57:21,979 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 1/1/0001 12:00:00 AM and 7/26/2016 3:57:21 PM
+2016-07-26 15:57:25,827 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:57:25,850 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 15:57:25,857 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 15:57:25,867 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:57:25,883 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny]
+2016-07-26 15:57:25,891 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 15:57:25,900 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi]
+2016-07-26 15:57:25,908 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny]
+2016-07-26 15:57:25,917 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:57:25,925 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:57:26,778 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 15:57:27,501 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari]
+2016-07-26 15:57:28,126 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:57:28,758 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana]
+2016-07-26 15:57:49,085 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:57:50,859 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 3:57:29 PM and 7/26/2016 3:57:50 PM
+2016-07-26 15:58:19,085 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:58:20,820 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 3:57:52 PM and 7/26/2016 3:58:20 PM
+2016-07-26 15:58:49,085 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:58:50,865 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 3:58:22 PM and 7/26/2016 3:58:50 PM
+2016-07-26 15:59:19,085 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:59:20,915 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 3:58:52 PM and 7/26/2016 3:59:20 PM
+2016-07-26 15:59:49,085 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 15:59:50,899 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 3:59:22 PM and 7/26/2016 3:59:50 PM
+2016-07-26 16:05:03,807 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-26 16:05:04,869 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:05:06,930 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 1/1/0001 12:00:00 AM and 7/26/2016 4:05:06 PM
+2016-07-26 16:05:14,556 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@aurunisbi @smi_dev @krisnanugroho @rocks_sonny nih lg ngetren ]
+2016-07-26 16:05:14,584 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[9e0f8ab31b8940f79663de616da324da], filename=[Cn35lZcVUAA-TSu.mp4]
+2016-07-26 16:05:14,614 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi, text=@idris_maulana @wahyuhari @smi_dev  
+
+Coba ikutan nimbrung.. Bueheheh]
+2016-07-26 16:05:14,638 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi, text=Polbek dong qaqa... 
+@smi_dev]
+2016-07-26 16:05:14,647 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@smi_dev @wahyuhari watzaaaaaaaaaaap??]
+2016-07-26 16:05:14,655 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=@smi_dev testing omnichannel ]
+2016-07-26 16:05:14,663 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[9e222103275346a888ac960480fafa17], filename=[Cn3v1rSUEAI7YnU.jpg]
+2016-07-26 16:05:14,689 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=gan @idris_maulana si @smi_dev lagi testing, be brave dibanjiri mention &amp; pm :D]
+2016-07-26 16:05:14,747 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi, text=@smi_dev @idris_maulana @krisnanugroho @rocks_sonny 
+Wow Such a cool video (though I hv nt watchd it till the end) ?? ]
+2016-07-26 16:05:14,755 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[a90a9998dd864a1a97a879e7b68af36d], filename=[Cn3489PUsAAOVYI.mp4]
+2016-07-26 16:05:14,773 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=@smi_dev ...let's rocks]
+2016-07-26 16:05:14,781 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=Nah ini baru kantor.. @smi_dev ]
+2016-07-26 16:05:14,789 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[c83e08de899c4986b7119a16bc077d02], filename=[Cn81gMuVUAAdTcY.jpg]
+2016-07-26 16:05:15,140 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@wahyuhari @smi_dev lanjutkan gan!]
+2016-07-26 16:05:33,883 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:05:35,629 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:05:15 PM and 7/26/2016 4:05:35 PM
+2016-07-26 16:06:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:06:05,691 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:05:36 PM and 7/26/2016 4:06:05 PM
+2016-07-26 16:06:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:06:35,702 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:06:06 PM and 7/26/2016 4:06:35 PM
+2016-07-26 16:07:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:07:05,634 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:06:36 PM and 7/26/2016 4:07:05 PM
+2016-07-26 16:07:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:07:35,748 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:07:06 PM and 7/26/2016 4:07:35 PM
+2016-07-26 16:08:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:08:05,600 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:07:36 PM and 7/26/2016 4:08:05 PM
+2016-07-26 16:08:33,883 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:08:36,607 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:08:06 PM and 7/26/2016 4:08:36 PM
+2016-07-26 16:09:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:09:05,712 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:08:38 PM and 7/26/2016 4:09:05 PM
+2016-07-26 16:09:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:09:35,637 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:09:06 PM and 7/26/2016 4:09:35 PM
+2016-07-26 16:10:03,883 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:10:05,634 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:09:36 PM and 7/26/2016 4:10:05 PM
+2016-07-26 16:10:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:10:35,696 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:10:06 PM and 7/26/2016 4:10:35 PM
+2016-07-26 16:11:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:11:05,730 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:10:36 PM and 7/26/2016 4:11:05 PM
+2016-07-26 16:11:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:11:35,643 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:11:06 PM and 7/26/2016 4:11:35 PM
+2016-07-26 16:12:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:12:05,672 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:11:37 PM and 7/26/2016 4:12:05 PM
+2016-07-26 16:12:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:12:35,629 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:12:06 PM and 7/26/2016 4:12:35 PM
+2016-07-26 16:13:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:13:05,645 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:12:36 PM and 7/26/2016 4:13:05 PM
+2016-07-26 16:13:33,925 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:13:35,741 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:13:06 PM and 7/26/2016 4:13:35 PM
+2016-07-26 16:14:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:14:05,645 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:13:36 PM and 7/26/2016 4:14:05 PM
+2016-07-26 16:14:33,883 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:14:35,654 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:14:07 PM and 7/26/2016 4:14:35 PM
+2016-07-26 16:15:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:15:05,689 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:14:36 PM and 7/26/2016 4:15:05 PM
+2016-07-26 16:15:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:15:35,660 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:15:06 PM and 7/26/2016 4:15:35 PM
+2016-07-26 16:16:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:16:05,690 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:15:36 PM and 7/26/2016 4:16:05 PM
+2016-07-26 16:16:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:16:35,736 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:16:06 PM and 7/26/2016 4:16:35 PM
+2016-07-26 16:17:03,883 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:17:05,942 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:16:36 PM and 7/26/2016 4:17:05 PM
+2016-07-26 16:17:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:17:35,783 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:17:07 PM and 7/26/2016 4:17:35 PM
+2016-07-26 16:18:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:18:05,645 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:17:37 PM and 7/26/2016 4:18:05 PM
+2016-07-26 16:18:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:18:35,677 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:18:06 PM and 7/26/2016 4:18:35 PM
+2016-07-26 16:19:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:19:05,653 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:18:36 PM and 7/26/2016 4:19:05 PM
+2016-07-26 16:19:33,883 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:19:35,725 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:19:06 PM and 7/26/2016 4:19:35 PM
+2016-07-26 16:20:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:20:05,678 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:19:36 PM and 7/26/2016 4:20:05 PM
+2016-07-26 16:20:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:20:35,649 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:20:06 PM and 7/26/2016 4:20:35 PM
+2016-07-26 16:21:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:21:05,828 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:20:36 PM and 7/26/2016 4:21:05 PM
+2016-07-26 16:21:33,893 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:21:35,758 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:21:07 PM and 7/26/2016 4:21:35 PM
+2016-07-26 16:22:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:22:05,740 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:21:36 PM and 7/26/2016 4:22:05 PM
+2016-07-26 16:22:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:22:35,634 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:22:06 PM and 7/26/2016 4:22:35 PM
+2016-07-26 16:23:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:23:05,870 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:22:36 PM and 7/26/2016 4:23:05 PM
+2016-07-26 16:23:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:23:35,748 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:23:07 PM and 7/26/2016 4:23:35 PM
+2016-07-26 16:24:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:24:05,690 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:23:36 PM and 7/26/2016 4:24:05 PM
+2016-07-26 16:24:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:24:36,854 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:24:06 PM and 7/26/2016 4:24:36 PM
+2016-07-26 16:25:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:25:05,681 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:24:38 PM and 7/26/2016 4:25:05 PM
+2016-07-26 16:25:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:25:35,610 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:25:06 PM and 7/26/2016 4:25:35 PM
+2016-07-26 16:26:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:26:05,714 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:25:36 PM and 7/26/2016 4:26:05 PM
+2016-07-26 16:26:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:26:35,619 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:26:06 PM and 7/26/2016 4:26:35 PM
+2016-07-26 16:27:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:27:05,671 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:26:36 PM and 7/26/2016 4:27:05 PM
+2016-07-26 16:27:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:27:35,636 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:27:06 PM and 7/26/2016 4:27:35 PM
+2016-07-26 16:28:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:28:05,701 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:27:37 PM and 7/26/2016 4:28:05 PM
+2016-07-26 16:28:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:28:35,698 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:28:06 PM and 7/26/2016 4:28:35 PM
+2016-07-26 16:29:03,883 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:29:05,683 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:28:36 PM and 7/26/2016 4:29:05 PM
+2016-07-26 16:29:33,890 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:29:35,689 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:29:06 PM and 7/26/2016 4:29:35 PM
+2016-07-26 16:30:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:30:05,645 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:29:36 PM and 7/26/2016 4:30:05 PM
+2016-07-26 16:30:33,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:30:35,597 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:30:06 PM and 7/26/2016 4:30:35 PM
+2016-07-26 16:31:03,889 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:31:05,636 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:30:37 PM and 7/26/2016 4:31:05 PM
+2016-07-26 16:31:33,888 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:31:35,662 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:31:06 PM and 7/26/2016 4:31:35 PM
+2016-07-26 16:32:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:32:05,641 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:31:36 PM and 7/26/2016 4:32:05 PM
+2016-07-26 16:32:33,888 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:32:35,734 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:32:06 PM and 7/26/2016 4:32:35 PM
+2016-07-26 16:33:03,882 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-26 16:33:05,754 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data betweeen 7/26/2016 4:32:36 PM and 7/26/2016 4:33:05 PM

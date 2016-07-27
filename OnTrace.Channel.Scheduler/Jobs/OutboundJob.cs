@@ -31,6 +31,7 @@ namespace OnTrace.Channel.Scheduler.Jobs
             var outboundTempPath = schedulerContext.Get("OutboundTempPath").ToString();
             var connectionString = schedulerContext.Get("ConnectionString").ToString();
             var mailSender = (MailSender)schedulerContext.Get("MailSender");
+            var twitterHelper = (TwitterHelper) schedulerContext.Get("TwitterHelper");
 
             //get queues
             var repo = new AdoOutboundQueueRepository(connectionString);
@@ -53,6 +54,7 @@ namespace OnTrace.Channel.Scheduler.Jobs
                 else if (channelId == 3)
                 {
                     //twitter
+                    ProcessTwitter(queue, twitterHelper);
                 }
                 else if (channelId == 4)
                 {
@@ -108,6 +110,35 @@ namespace OnTrace.Channel.Scheduler.Jobs
 
             var sender = new SmsSender(modemSetting);
             //sender.SendMessage(queue.Message, queue.AccountName);
+        }
+
+        private void ProcessTwitter(OutboundQueue queue, TwitterHelper helper)
+        {
+            if (queue.MessageType == 0)
+            {
+                Logger.Write($"Publish tweet, {queue.Message}", EventSeverity.Information);
+                helper.PublishTweet(queue.Message);
+            }
+            else if (queue.MessageType == 1)
+            {
+                var images = (from file in queue.MediaFiles where file.FileType.ToLower() != ".mp4" select file.FileData).ToList();
+
+                Logger.Write($"Publish tweet with image, {queue.Message}", EventSeverity.Information);
+                helper.PublishTweetWithImage(queue.Message, images);
+            }
+            else if (queue.MessageType == 2)
+            {
+                var video = (from file in queue.MediaFiles where file.FileType.ToLower() == ".mp4" select file.FileData).FirstOrDefault();
+
+                Logger.Write($"Publish tweet with video, {queue.Message}", EventSeverity.Information);
+                helper.PublishTweetWithVideo(queue.Message, video);
+            }
+            else if(queue.MessageType == 3)
+            {
+                Logger.Write($"Send private message to {queue.AccountName}, {queue.Message}", EventSeverity.Information);
+                helper.PublishMessage(queue.Message, queue.AccountName);
+            }
+         
         }
 
         private void CreateLog(OutboundQueue queue, AdoOutboundLogRepository logRepo, AdoOutboundQueueRepository repo)

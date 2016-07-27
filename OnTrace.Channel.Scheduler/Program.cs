@@ -5,8 +5,10 @@ using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Net.Sockets;
 using System.Reflection;
 using System.Text;
 using System.Threading;
@@ -54,8 +56,8 @@ namespace OnTrace.Channel.Scheduler
             while (_start)
             {
                 Console.WriteLine("Select one of the following options : ");
-                Console.WriteLine("0. Start");
-                Console.WriteLine("1. Stop");
+                Console.WriteLine("0. Stop");
+                Console.WriteLine("1. Start");
                 Console.WriteLine("2. Start outbound only");
                 Console.WriteLine("3. Stop outbound");
                 Console.WriteLine("4. Start inbound only");
@@ -70,7 +72,7 @@ namespace OnTrace.Channel.Scheduler
                     switch (entry)
                     {
                         case "0":
-                            Start();
+                            Stop();
                             break;
                         case "2":
                             StartOutbound();
@@ -85,7 +87,7 @@ namespace OnTrace.Channel.Scheduler
                             StopInbound();
                             break;
                         case "1":
-                            Stop();
+                            Start();
                             break;
                         case "6":
                             TwitterTest();
@@ -100,8 +102,34 @@ namespace OnTrace.Channel.Scheduler
 
         private static void TwitterTest()
         {
-            var helper = new TwitterHelper();
-            helper.TweetTest();
+            var repo = new AdoMasterDataRepository(GetDbConstring());
+            var fileProcessor = new FileProcessor();
+            var account = repo.GetTwitterAccount();
+
+            var helper = new TwitterHelper(account, fileProcessor);
+            //helper.PublishTweet("Morning guys...today we gonna do some test tweet, be brave :)");
+            //helper.PublishTweet("@wahyuhari check this out bro...");
+            //helper.PublishMessage("bro, we need your response regarding this message test :)", "@wahyuhari");
+            //helper.PublishTweet("@wahyuhari, @idris_maulana check this out guys...");
+            //string imagePath = OutboundTempPath + "kresna.png";
+            //helper.PublishTweetWithImage("@idris_maulana, @wahyuhari.. sebutkan 3 dari sekian dasanama tokoh ini !", imagePath);
+            string videoPath = OutboundTempPath + "ionic_introduction.1.mp4";
+            try
+            {
+                //helper.PublishTweetWithVideo("Sample video", videoPath);
+                //helper.PublishTweetWithVideo("binary video", fileProcessor.StreamToBytes(videoPath));
+            }
+            catch (Exception ex)
+            {
+                Logger.Write("Failed to publish video.", ex, EventSeverity.Error);
+            }
+            
+            //helper.GetMentionsTimeline(DateTime.MinValue, DateTime.Now);
+            //helper.GetPrivateMessages();
+            //            helper.SearchMentionsTimeline();
+
+            
+
         }
 
 
@@ -130,8 +158,6 @@ namespace OnTrace.Channel.Scheduler
             {
                 Logger.Write("Processing outbound...", EventSeverity.Information);
 
-                var repo = new AdoMasterDataRepository(GetDbConstring());
-
                 if(!OutboundScheduler.IsStarted || OutboundScheduler.IsShutdown) OutboundScheduler.Start();
 
                 IJobDetail job = JobBuilder.Create<OutboundJob>()
@@ -147,12 +173,19 @@ namespace OnTrace.Channel.Scheduler
                     .Build();
 
                 //pass services to job 
+                var repo = new AdoMasterDataRepository(GetDbConstring());
+                var twitterHelper = new TwitterHelper(repo.GetTwitterAccount(), new FileProcessor())
+                {
+                    MediaStorageLocationPath = OutboundTempPath
+                };
+
                 OutboundScheduler.Context.Put("ModemSetting", repo.GetModemSetting());
                 OutboundScheduler.Context.Put("FileProcessor", new FileProcessor());
                 OutboundScheduler.Context.Put("ConnectionString", GetDbConstring());
                 OutboundScheduler.Context.Put("OutboundTempPath", OutboundTempPath);
                 OutboundScheduler.Context.Put("MailSender", new MailSender(repo.GetMailAccount("outgoing"), new FileProcessor()));
-
+                OutboundScheduler.Context.Put("TwitterHelper", twitterHelper);
+                
                 //start trigger
                 OutboundScheduler.ScheduleJob(job, trigger);
                 
@@ -182,8 +215,7 @@ namespace OnTrace.Channel.Scheduler
             try
             {
                 Logger.Write("Processing inbound..", EventSeverity.Information);
-                string connectionString = GetDbConstring();
-                var repo = new AdoMasterDataRepository(connectionString);
+              
 
                 if (!InboundScheduler.IsStarted || InboundScheduler.InStandbyMode) InboundScheduler.Start();
 
@@ -199,12 +231,21 @@ namespace OnTrace.Channel.Scheduler
                         .RepeatForever())
                     .Build();
 
-                //pass services to job 
+                //pass services to job
+                string connectionString = GetDbConstring();
+                var repo = new AdoMasterDataRepository(connectionString);
+
+                var twitterHelper = new TwitterHelper(repo.GetTwitterAccount(), new FileProcessor())
+                {
+                    MediaStorageLocationPath = InboundTempPath
+                };
                 InboundScheduler.Context.Put("ModemSetting", repo.GetModemSetting());
                 InboundScheduler.Context.Put("MailAccount", repo.GetMailAccount("incoming"));
                 InboundScheduler.Context.Put("FileProcessor", new FileProcessor());
                 InboundScheduler.Context.Put("ConnectionString", connectionString);
-
+                InboundScheduler.Context.Put("TwitterHelper", twitterHelper);
+                InboundScheduler.Context.Put("IPAddress", GetIPAddress());
+                
                 //run schedule
                 InboundScheduler.ScheduleJob(job, trigger);
 
@@ -260,6 +301,28 @@ namespace OnTrace.Channel.Scheduler
             }
             
         }
-      
+
+        private static string InboundTempPath
+        {
+            get
+            {
+                return CurrentPath + "/files/temp_inbound/";
+            }
+
+        }
+
+        private static string GetIPAddress()
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+            throw new Exception("Local IP Address Not Found!");
+        }
+
     }
 }

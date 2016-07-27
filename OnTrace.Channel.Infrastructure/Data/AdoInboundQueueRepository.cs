@@ -143,8 +143,21 @@ namespace OnTrace.Channel.Infrastructure.Data
 
             try
             {
-                Logger.Write($"Creating inbound queue=[General], QueueId=[{queue.QueueId}], address=[{model.AccountName}], subject=[{model.Subject}]", EventSeverity.Information);
                 _cda.ExecuteNonQueryWithTransaction(cmd);
+
+                foreach (var file in model.MediaFiles)
+                {
+                    var media = new InboundQueueFile
+                    {
+                        QueueID = queue.QueueId,
+                        IsAttachment = file.IsAttachment,
+                        Filename = file.Filename,
+                        FileData = file.FileData
+                    };
+
+                    InsertMediaFile(media);
+                }
+
 
             }
             catch (SqlException ex)
@@ -181,6 +194,56 @@ namespace OnTrace.Channel.Infrastructure.Data
             }
         }
 
+        public TwitterSyncTime GetTwitterSyncTime()
+        {
+            try
+            {
+                var cmd =  new SqlCommand("sp_OC_TwitterSyncTime");
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                var dt = _cda.GetDataTable(cmd);
+                if (dt.Rows.Count > 0)
+                {
+                    return dt.AsEnumerable().Select(row => new TwitterSyncTime()
+                    {
+                        RecordId = row["RecordID"].ToString(),
+                        ActivityTime = Convert.ToDateTime(row["ActivityTime"]),
+                        Source = row["Source"].ToString()
+                    }).FirstOrDefault();
+
+                }
+                else
+                {
+                    return new TwitterSyncTime()
+                    {
+                        ActivityTime = DateTime.MinValue,
+                        Source = "127.0.0.1"
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Failed to retrieve twitter sync time.", ex);
+            }
+        }
+
+        public void UpdateTwitterSyncTime(string recordId, DateTime activityTime, string source)
+        {
+            try
+            {
+                var cmd = new SqlCommand("sp_OC_TwitterSyncTimeInsert");
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@RecordID", recordId);
+                cmd.Parameters.AddWithValue("@ActivityTime", activityTime);
+                cmd.Parameters.AddWithValue("@Source", source);
+
+                _cda.ExecuteNonQueryWithTransaction(cmd);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Failed to update twitter sync time. [ip : {source}]", ex);
+            }
+        }
         
     }
 }

@@ -48,6 +48,11 @@
     <Compile Include="Domain\ModemSetting.cs" />
     <Compile Include="Domain\ResultMessage.cs" />
     <Compile Include="Domain\SmsMessage.cs" />
+    <Compile Include="Domain\TweetMedia.cs" />
+    <Compile Include="Domain\TwitterSyncTime.cs" />
+    <Compile Include="Domain\TwitterTweet.cs" />
+    <Compile Include="Domain\TwitterAccount.cs" />
+    <Compile Include="Domain\TwitterMessage.cs" />
     <Compile Include="Domain\WhatsappInboundResult.cs" />
     <Compile Include="Domain\WhatsappMessage.cs" />
     <Compile Include="Domain\WhatsappAccount.cs" />

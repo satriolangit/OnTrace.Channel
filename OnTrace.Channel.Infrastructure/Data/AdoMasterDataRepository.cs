@@ -110,6 +110,36 @@ namespace OnTrace.Channel.Infrastructure.Data
                 throw new Exception($"Failed to retrieve channel type, type=[{code}]", ex);
             }
         }
-        
+
+        public TwitterAccount GetTwitterAccount()
+        {
+            try
+            {
+                var cmd = new SqlCommand("sp_OC_GetTwitterAccount");
+                cmd.CommandType = CommandType.StoredProcedure;
+                
+                var dt = _cda.GetDataTable(cmd);
+                var account = new TwitterAccount();
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    account.RecordId = Convert.ToInt32(row["RecordID"]);
+                    account.Email = row["Email"].ToString();
+                    account.Password = row["Password"].ToString();
+                    account.Username = row["Username"].ToString();
+                    account.ConsumerKey = row["ConsumerKey"].ToString();
+                    account.ConsumerSecret = row["ConsumerSecret"].ToString();
+                    account.AccessToken = row["AccessToken"].ToString();
+                    account.AccessTokenSecret = row["AccessTokenSecret"].ToString();
+                }
+
+                return account;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Failed to retrive mail account.", ex);
+            }
+        }
+
     }
 }

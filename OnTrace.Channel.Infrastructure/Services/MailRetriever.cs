@@ -125,7 +125,6 @@ namespace OnTrace.Channel.Infrastructure.Services
             }
             catch (Exception ex)
             {
-                
                 throw new Exception($"Failed to retrieve mail attachment or medias", ex);
             }
             

@@ -43,7 +43,7 @@ namespace OnTrace.Channel.Scheduler.Jobs
             CreateMailQueue(mailAccount, fileProcessor, repo);
             
             //twitter
-            CreateTwitterQueue(twitterHelper, repo, repoMaster, ipAddress);
+            CreateTwitterQueue(twitterHelper, repo, repoMaster, ipAddress, fileProcessor);
                
             //sms
             //CreateSmsQueue(modemSetting, repoMaster, repo);
@@ -97,59 +97,66 @@ namespace OnTrace.Channel.Scheduler.Jobs
             }
         }
 
-        private void CreateTwitterQueue(TwitterHelper twitterHelper, AdoInboundQueueRepository repo, AdoMasterDataRepository repoMaster, string ipAddress)
+        private void CreateTwitterQueue(TwitterHelper twitterHelper, AdoInboundQueueRepository repo, AdoMasterDataRepository repoMaster, string ipAddress, FileProcessor fileProcessor)
         {
+            var syncTime = repo.GetTwitterSyncTime();
+            var channelType = repoMaster.GetChannelType("twitter");
+            int tweetRetrieved = 0;
+
+            Logger.Write($"Retrieve twitter data since {syncTime.ActivityTime} until {DateTime.Now.AddDays(1)}", EventSeverity.Information);
+
+            #region Tweets
+            var tweets = twitterHelper.SearchMentionsTimeline(syncTime.ActivityTime, DateTime.Now.AddDays(1), 200);
+
+            foreach (var tweet in tweets)
+            {
+
+                bool queueAlreadyExist = repo.QueueAlreadyExist(tweet.CreatedBy, tweet.Text,
+                   syncTime.ActivityTime, DateTime.Now);
+
+                bool logAlreadyExist = repo.LogAlreadyExist(tweet.CreatedBy, tweet.Text,
+                   syncTime.ActivityTime, DateTime.Now);
+
+                //skip loop
+                if (logAlreadyExist || queueAlreadyExist) continue;
+
+                var queue = new InboundQueue();
+
+                //download media
+                var mediaList = new List<TweetMedia>();
+                foreach (var tweetMedia in tweet.Media)
+                {
+                    string pathToWrite = twitterHelper.MediaStorageLocationPath + fileProcessor.GetFilename(tweetMedia.Url);
+                    fileProcessor.DownloadAndWriteMedia(tweetMedia.Url, pathToWrite);
+                    tweetMedia.Filedata = fileProcessor.StreamToBytes(pathToWrite);
+
+                    mediaList.Add(tweetMedia);
+                }
+
+                string mediaType = mediaList.Select(x => x.Type).FirstOrDefault();
+
+                queue.Subject = "tweet";
+                queue.AccountName = "@" + tweet.CreatedBy;
+                queue.InteractionChannelTypeID = channelType.InteractionChannelTypeId;
+                queue.LastAgentID = 0;
+                queue.Message = tweet.Text;
+                queue.MediaFiles = mediaList;
+                queue.MessageType = mediaList.Count == 0 ? 0 : mediaType != null && mediaType.Contains("mp4") ? 2 : 1;
+                
+
+                if (!queueAlreadyExist && !logAlreadyExist)
+                {
+                    tweetRetrieved++;
+                    repo.CreateInboundQueue(queue);
+
+                    Logger.Write($"Create twitter inbound queue, [address={queue.AccountName}, text={queue.Message}]", EventSeverity.Information);
+                }
+            }
+            #endregion
+
             try
             {
-                var syncTime = repo.GetTwitterSyncTime();
-
-                Logger.Write($"Retrieve twitter data since {syncTime.ActivityTime} until {DateTime.Now.AddDays(1)}", EventSeverity.Information);
-
-                var channelType = repoMaster.GetChannelType("twitter");
-                int tweetRetrieved = 0;
-
-                #region Tweets
-                var tweets = twitterHelper.GetMentionsTimeline(syncTime.ActivityTime, DateTime.Now.AddDays(1));
-
-                foreach (var tweet in tweets)
-                {
-                    var queue = new InboundQueue();
-
-                    var media = tweet.Media.Select(item => new InboundQueueFile()
-                    {
-                        Filename = item.Filename,
-                        Url = item.Url,
-                        FileData = item.Filedata,
-                        FileType = item.Type,
-                        IsAttachment = true,
-                        QueueID = queue.QueueId
-                    }).ToList();
-
-                    string mediaType = media.Select(x => x.FileType).FirstOrDefault();
-
-                    queue.Subject = "tweet";
-                    queue.AccountName = "@" + tweet.CreatedBy;
-                    queue.InteractionChannelTypeID = channelType.InteractionChannelTypeId;
-                    queue.LastAgentID = 0;
-                    queue.Message = tweet.Text;
-                    queue.MediaFiles = media;
-                    queue.MessageType = media.Count == 0 ? 0 : mediaType != null && mediaType.Contains("mp4") ? 2 : 1;
-
-                    bool queueAlreadyExist = repo.QueueAlreadyExist(queue.AccountName, queue.Message,
-                        syncTime.ActivityTime, DateTime.Now);
-
-                    bool logAlreadyExist = repo.LogAlreadyExist(queue.AccountName, queue.Message,
-                        syncTime.ActivityTime, DateTime.Now);
-
-                    if (!queueAlreadyExist && !logAlreadyExist)
-                    {
-                        tweetRetrieved++;
-                        repo.CreateInboundQueue(queue);
-
-                        Logger.Write($"Create twitter inbound queue, [address={queue.AccountName}, text={queue.Message}]", EventSeverity.Information);
-                    }
-                }
-                #endregion
+               
 
                 #region Private Messages
                 var messages = twitterHelper.GetPrivateMessages();

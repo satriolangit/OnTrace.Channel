@@ -310,6 +310,61 @@ namespace OnTrace.Channel.Infrastructure.Services
             }
         }
 
+        public List<TwitterTweet> SearchMentionsTimeline(DateTime since, DateTime until, int maxTweet)
+        {
+            try
+            {
+                var param = new SearchTweetsParameters(_account.Username)
+                {
+                    Since = since,
+                    Until = until,
+                    MaximumNumberOfResults = maxTweet
+                };
+                
+                var tweetIds = Search.SearchTweets(param).Select(x => x.Id).ToArray();
+                var tweets = Tweet.GetTweets(tweetIds);
+
+                List<TwitterTweet> result = new List<TwitterTweet>();
+
+                foreach (ITweet tweet in tweets)
+                {
+                    List<TweetMedia> mediaList = new List<TweetMedia>();
+                    foreach (var entity in tweet.Media)
+                    {
+                        string mediaUrl = entity.MediaURL;
+                        if (entity.MediaType != "photo") mediaUrl = entity.VideoDetails.Variants[0].URL;
+
+                        var media = new TweetMedia()
+                        {
+                            Filename = _fileProcessor.GetFilename(mediaUrl),
+                            Type = _fileProcessor.GetExtension(mediaUrl),
+                            Url = mediaUrl
+                        };
+
+                        mediaList.Add(media);
+                    }
+
+                    var item = new TwitterTweet()
+                    {
+                        Id = tweet.Id,
+                        CreatedBy = tweet.CreatedBy.ScreenName,
+                        CreatedAt = tweet.CreatedAt,
+                        Text = Regex.Replace(tweet.FullText, @"http[^\s]+", ""),
+                        Media = mediaList,
+                        Type = mediaList.Any() ? 1 : 0
+                    };
+
+                    result.Add(item);
+                }
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Failed to retrieve mentions timeline.", ex);
+            }
+        }
+        
 
         public List<TwitterMessage> GetPrivateMessages()
         {
@@ -339,7 +394,6 @@ namespace OnTrace.Channel.Infrastructure.Services
             Console.WriteLine($"Search tweet between {since} and {until}");
 
             var tweetIds = Search.SearchTweets(param).Select(x => x.Id);
-
             
             foreach (long id in tweetIds)
             {

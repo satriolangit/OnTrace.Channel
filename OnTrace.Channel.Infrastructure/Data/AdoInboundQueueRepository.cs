@@ -159,12 +159,10 @@ namespace OnTrace.Channel.Infrastructure.Data
 
                     InsertMediaFile(media);
                 }
-
-
             }
             catch (SqlException ex)
             {
-                throw new Exception($"Failed to create inbound queue..", ex);
+                throw new Exception($"Failed to create inbound queue..[acc={queue.AccountName}, msg={queue.Message}]", ex);
             }
         }
 

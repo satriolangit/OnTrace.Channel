@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?><MPD xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:full:2011" type="static" mediaPresentationDuration="PT10S" minBufferTime="PT1.5S" xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <BaseURL>https://video.twimg.com</BaseURL>
+        <Period start="PT0S">
+          <AdaptationSet segmentAlignment="true">
+            <ContentComponent contentType="video" id="1"/> <Representation id="1" mimeType="video/mp4" codecs="avc1.42001f" bandwidth="256000" width="320" height="176">
+      <SegmentList timescale="1000" duration="3000">
+        <Initialization sourceURL="/ext_tw_video/758308226760712192/pu/vid/320x176/i/IrfZePFW4i9S2Krr.m4s"/> <SegmentURL media="/ext_tw_video/758308226760712192/pu/vid/0/3000/320x176/prfWfkb78IJi8mR9.m4s"/><SegmentURL media="/ext_tw_video/758308226760712192/pu/vid/3000/6000/320x176/9lKtUSH2cTRYs_ta.m4s"/><SegmentURL media="/ext_tw_video/758308226760712192/pu/vid/6000/10000/320x176/jIZjdY1jznSsXzpc.m4s"/>
+      </SegmentList>
+    </Representation>
+          </AdaptationSet>
+          <AdaptationSet segmentAlignment="true">
+            <ContentComponent contentType="audio" id="2"/> <Representation id="2" mimeType="audio/mp4" codecs="mp4a.40.2" bandwidth="64000" audioSamplingRate="48000">
+      <SegmentList timescale="1000" duration="3000">
+        <Initialization sourceURL="/ext_tw_video/758308226760712192/pu/aud/64000/i/hEoqi-iHhc7lgeEc.m4s"/> <SegmentURL media="/ext_tw_video/758308226760712192/pu/aud/0/3000/64000/JAQQ8ZOv7Lz3c_il.m4s"/><SegmentURL media="/ext_tw_video/758308226760712192/pu/aud/3000/6000/64000/OsSMHxlgOk5Jby8K.m4s"/><SegmentURL media="/ext_tw_video/758308226760712192/pu/aud/6000/10000/64000/CV-Si0OezC8CABe0.m4s"/>
+      </SegmentList>
+    </Representation>
+          </AdaptationSet>
+        </Period>
+      </MPD>

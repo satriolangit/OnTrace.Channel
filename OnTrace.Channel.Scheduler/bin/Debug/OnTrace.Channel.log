@@ -4168,3 +4168,707 @@ System.Exception: Failed to retrieve mentions timeline. ---> System.AggregateExc
    at OnTrace.Channel.Infrastructure.Services.TwitterHelper.GetMentionsTimeline(DateTime since, DateTime until, Int32 maxTweet) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\TwitterHelper.cs:line 271
    at OnTrace.Channel.Infrastructure.Services.TwitterHelper.GetMentionsTimeline(DateTime since, DateTime until) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Infrastructure\Services\TwitterHelper.cs:line 277
    at OnTrace.Channel.Scheduler.Jobs.InboundJob.CreateTwitterQueue(TwitterHelper twitterHelper, AdoInboundQueueRepository repo, AdoMasterDataRepository repoMaster, String ipAddress) in D:\Wahyu\Kantor\Development\OnTrace.Channel\OnTrace.Channel.Scheduler\Jobs\InboundJob.cs:line 112
+2016-07-27 19:40:58,933 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-27 19:41:00,273 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-27 19:41:00,377 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 19:41:00,387 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 19:41:05,532 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:08:54 PM until 7/28/2016 7:41:05 PM
+2016-07-27 19:41:20,064 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[eb5f0e037ab64ae4bf07757de84e9607], filename=[CoWiJLHUEAAEx7P.mp4]
+2016-07-27 19:41:20,231 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=@smi_dev @idris_maulana @wahyuhari @krisnanugroho @aurunisbi @Richards_Rix ]
+2016-07-27 19:41:20,271 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@rocks_sonny @smi_dev @aurunisbi @wahyuhari @Richards_Rix @krisnanugroho @indrasg @ita501 well let's celebrate then??????????]
+2016-07-27 19:41:20,393 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=omnichannel @smi_dev is on testing phase 1, yaay !]
+2016-07-27 19:41:20,472 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@Richards_Rix, text=Let go @smi_dev @wahyuhari]
+2016-07-27 19:41:20,577 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=@idris_maulana @smi_dev @aurunisbi @wahyuhari @Richards_Rix @krisnanugroho @indrasg @ita501 just softlaunch]
+2016-07-27 19:41:20,660 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=its working, time to lunch :D @smi_dev @idris_maulana]
+2016-07-27 19:41:20,729 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=hello @smi_dev]
+2016-07-27 19:41:20,777 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@smi_dev @idris_maulana uhuy nice]
+2016-07-27 19:41:21,090 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[6f6ae3db0b98414c8c8a5b68a491292e], filename=[CoWo-YyVUAIYQnZ.mp4]
+2016-07-27 19:41:21,254 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@smi_dev @rocks_sonny @wahyuhari @krisnanugroho @aurunisbi @Richards_Rix wihiiuuu ]
+2016-07-27 19:41:21,296 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@smi_dev come on guys !]
+2016-07-27 19:41:21,372 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=nice guys \m/ @smi_dev @rocks_sonny @idris_maulana @krisnanugroho @aurunisbi @Richards_Rix]
+2016-07-27 19:41:21,489 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@smi_dev @aurunisbi @wahyuhari @Richards_Rix @krisnanugroho @indrasg @ita501 @rocks_sonny isn't this classified guys?]
+2016-07-27 19:41:21,590 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@smi_dev laper bro, maksi yook eh makso ini harusnya]
+2016-07-27 19:41:21,626 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@Richards_Rix, text=@smi_dev @idris_maulana @aurunisbi @wahyuhari @krisnanugroho @indrasg @ita501 Wow keren]
+2016-07-27 19:41:21,683 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=not working huh @smi_dev]
+2016-07-27 19:41:21,723 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=let mention @smi_dev \m/]
+2016-07-27 19:41:21,957 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[c25229c4c7fe4334985f81d7d99af5fe], filename=[CoWxgZ1VYAE48os.mp4]
+2016-07-27 19:41:22,157 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi, text=@smi_dev @rocks_sonny @idris_maulana @wahyuhari @krisnanugroho @Richards_Rix ]
+2016-07-27 19:41:22,239 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[7127a2c74958494b9be1e2ec64306c30], filename=[CoWqc8JVYAQBzh_.mp4]
+2016-07-27 19:41:22,291 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@smi_dev watzaaaaaaap ]
+2016-07-27 19:41:22,313 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@Richards_Rix, text=Hi follow me @smi_dev]
+2016-07-27 19:41:22,339 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=haha lol @rocks_sonny @smi_dev @idris_maulana @krisnanugroho @aurunisbi @Richards_Rix]
+2016-07-27 19:41:22,455 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[324894cbbf3744e5a5068261c5e8aa30], filename=[CoWBrCtW8AE8ULl.jpg]
+2016-07-27 19:41:22,491 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=test omnichannel @smi_dev ]
+2016-07-27 19:41:28,992 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 19:41:30,274 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 19:41:32,368 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:41:23 PM until 7/28/2016 7:41:32 PM
+2016-07-27 19:41:36,288 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[4b647d9ac86d47bda47f8279a773cf77], filename=[CoWiJLHUEAAEx7P.mp4]
+2016-07-27 19:41:36,380 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=@smi_dev @idris_maulana @wahyuhari @krisnanugroho @aurunisbi @Richards_Rix ]
+2016-07-27 19:41:36,438 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@rocks_sonny @smi_dev @aurunisbi @wahyuhari @Richards_Rix @krisnanugroho @indrasg @ita501 well let's celebrate then??????????]
+2016-07-27 19:41:36,463 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=omnichannel @smi_dev is on testing phase 1, yaay !]
+2016-07-27 19:41:36,488 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@Richards_Rix, text=Let go @smi_dev @wahyuhari]
+2016-07-27 19:41:36,513 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=@idris_maulana @smi_dev @aurunisbi @wahyuhari @Richards_Rix @krisnanugroho @indrasg @ita501 just softlaunch]
+2016-07-27 19:41:36,538 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=its working, time to lunch :D @smi_dev @idris_maulana]
+2016-07-27 19:41:36,555 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=hello @smi_dev]
+2016-07-27 19:41:36,599 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@smi_dev @idris_maulana uhuy nice]
+2016-07-27 19:41:36,690 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[45ed1dd21f2d40d8a33c0d3d707f5440], filename=[CoWo-YyVUAIYQnZ.mp4]
+2016-07-27 19:41:36,748 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@smi_dev @rocks_sonny @wahyuhari @krisnanugroho @aurunisbi @Richards_Rix wihiiuuu ]
+2016-07-27 19:41:36,764 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@smi_dev come on guys !]
+2016-07-27 19:41:36,789 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=nice guys \m/ @smi_dev @rocks_sonny @idris_maulana @krisnanugroho @aurunisbi @Richards_Rix]
+2016-07-27 19:41:36,814 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@smi_dev @aurunisbi @wahyuhari @Richards_Rix @krisnanugroho @indrasg @ita501 @rocks_sonny isn't this classified guys?]
+2016-07-27 19:41:36,839 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@smi_dev laper bro, maksi yook eh makso ini harusnya]
+2016-07-27 19:41:36,881 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@Richards_Rix, text=@smi_dev @idris_maulana @aurunisbi @wahyuhari @krisnanugroho @indrasg @ita501 Wow keren]
+2016-07-27 19:41:36,906 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=not working huh @smi_dev]
+2016-07-27 19:41:36,931 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=let mention @smi_dev \m/]
+2016-07-27 19:41:37,165 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[cd4addc935f549a6a56a77f4a3cc25c9], filename=[CoWxgZ1VYAE48os.mp4]
+2016-07-27 19:41:37,229 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi, text=@smi_dev @rocks_sonny @idris_maulana @wahyuhari @krisnanugroho @Richards_Rix ]
+2016-07-27 19:41:37,299 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[6c38c3a0f67443b3be96a9a537610184], filename=[CoWqc8JVYAQBzh_.mp4]
+2016-07-27 19:41:37,342 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@smi_dev watzaaaaaaap ]
+2016-07-27 19:41:37,366 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@Richards_Rix, text=Hi follow me @smi_dev]
+2016-07-27 19:41:37,391 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=haha lol @rocks_sonny @smi_dev @idris_maulana @krisnanugroho @aurunisbi @Richards_Rix]
+2016-07-27 19:41:44,610 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[2f9e985e080a462d819ff714c5eb434f], filename=[CoWBrCtW8AE8ULl.jpg]
+2016-07-27 19:41:44,643 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=test omnichannel @smi_dev ]
+2016-07-27 19:41:58,991 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 19:42:00,275 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 19:42:02,476 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:41:45 PM until 7/28/2016 7:42:02 PM
+2016-07-27 19:42:06,056 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[3a7e6fb04e354cc4844e41e801d7c7d6], filename=[CoWiJLHUEAAEx7P.mp4]
+2016-07-27 19:42:06,164 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=@smi_dev @idris_maulana @wahyuhari @krisnanugroho @aurunisbi @Richards_Rix ]
+2016-07-27 19:42:06,182 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@rocks_sonny @smi_dev @aurunisbi @wahyuhari @Richards_Rix @krisnanugroho @indrasg @ita501 well let's celebrate then??????????]
+2016-07-27 19:42:06,216 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=omnichannel @smi_dev is on testing phase 1, yaay !]
+2016-07-27 19:42:06,232 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@Richards_Rix, text=Let go @smi_dev @wahyuhari]
+2016-07-27 19:42:06,318 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=@idris_maulana @smi_dev @aurunisbi @wahyuhari @Richards_Rix @krisnanugroho @indrasg @ita501 just softlaunch]
+2016-07-27 19:42:06,340 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=its working, time to lunch :D @smi_dev @idris_maulana]
+2016-07-27 19:42:06,375 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=hello @smi_dev]
+2016-07-27 19:42:06,423 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@smi_dev @idris_maulana uhuy nice]
+2016-07-27 19:42:06,556 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[53a925f105454e0e956f537dd86572fe], filename=[CoWo-YyVUAIYQnZ.mp4]
+2016-07-27 19:42:06,610 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@smi_dev @rocks_sonny @wahyuhari @krisnanugroho @aurunisbi @Richards_Rix wihiiuuu ]
+2016-07-27 19:42:06,641 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@smi_dev come on guys !]
+2016-07-27 19:42:06,657 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=nice guys \m/ @smi_dev @rocks_sonny @idris_maulana @krisnanugroho @aurunisbi @Richards_Rix]
+2016-07-27 19:42:06,691 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@smi_dev @aurunisbi @wahyuhari @Richards_Rix @krisnanugroho @indrasg @ita501 @rocks_sonny isn't this classified guys?]
+2016-07-27 19:42:06,736 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@smi_dev laper bro, maksi yook eh makso ini harusnya]
+2016-07-27 19:42:06,798 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@Richards_Rix, text=@smi_dev @idris_maulana @aurunisbi @wahyuhari @krisnanugroho @indrasg @ita501 Wow keren]
+2016-07-27 19:42:06,832 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=not working huh @smi_dev]
+2016-07-27 19:42:06,865 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=let mention @smi_dev \m/]
+2016-07-27 19:42:07,000 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[cc2db22e9f924be48155f8088e7ff7f8], filename=[CoWxgZ1VYAE48os.mp4]
+2016-07-27 19:42:07,165 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi, text=@smi_dev @rocks_sonny @idris_maulana @wahyuhari @krisnanugroho @Richards_Rix ]
+2016-07-27 19:42:07,430 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[250b20e7d3234c2fa6aef07e40c90c76], filename=[CoWqc8JVYAQBzh_.mp4]
+2016-07-27 19:42:07,509 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@smi_dev watzaaaaaaap ]
+2016-07-27 19:42:07,549 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@Richards_Rix, text=Hi follow me @smi_dev]
+2016-07-27 19:42:07,574 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=haha lol @rocks_sonny @smi_dev @idris_maulana @krisnanugroho @aurunisbi @Richards_Rix]
+2016-07-27 19:42:07,674 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[8f918dd49d8f4f40a3a7afa285fa38d2], filename=[CoWBrCtW8AE8ULl.jpg]
+2016-07-27 19:42:07,699 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=test omnichannel @smi_dev ]
+2016-07-27 19:47:32,779 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-27 19:47:34,786 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 19:47:39,534 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:42:08 PM until 7/28/2016 7:47:39 PM
+2016-07-27 19:49:32,857 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 19:49:34,937 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:42:08 PM until 7/28/2016 7:49:34 PM
+2016-07-27 19:50:45,501 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-27 19:50:46,949 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 19:50:50,585 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:42:08 PM until 7/28/2016 7:50:50 PM
+2016-07-27 20:00:56,748 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-27 20:00:57,833 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:01:01,147 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:42:08 PM until 7/28/2016 8:01:01 PM
+2016-07-27 20:03:06,148 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-27 20:03:07,413 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:03:09,840 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:42:08 PM until 7/28/2016 8:03:09 PM
+2016-07-27 20:03:36,183 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:03:40,885 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:42:08 PM until 7/28/2016 8:03:40 PM
+2016-07-27 20:04:06,182 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:04:08,404 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:42:08 PM until 7/28/2016 8:04:08 PM
+2016-07-27 20:04:36,181 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:04:38,198 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:42:08 PM until 7/28/2016 8:04:38 PM
+2016-07-27 20:05:06,182 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:05:10,894 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:42:08 PM until 7/28/2016 8:05:10 PM
+2016-07-27 20:05:36,181 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:05:40,356 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:42:08 PM until 7/28/2016 8:05:40 PM
+2016-07-27 20:06:06,181 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:06:10,868 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:42:08 PM until 7/28/2016 8:06:10 PM
+2016-07-27 20:15:35,258 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-27 20:15:36,073 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:15:42,234 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:42:08 PM until 7/28/2016 8:15:42 PM
+2016-07-27 20:18:36,213 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=@smi_dev @idris_maulana @wahyuhari @krisnanugroho @aurunisbi @Richards_Rix ]
+2016-07-27 20:19:53,110 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@rocks_sonny @smi_dev @aurunisbi @wahyuhari @Richards_Rix @krisnanugroho @indrasg @ita501 well let's celebrate then??????????]
+2016-07-27 20:32:10,715 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-27 20:32:12,277 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:32:15,717 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:42:08 PM until 7/28/2016 8:32:15 PM
+2016-07-27 20:34:47,766 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=@smi_dev @idris_maulana @wahyuhari @krisnanugroho @aurunisbi @Richards_Rix ]
+2016-07-27 20:37:17,493 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@rocks_sonny @smi_dev @aurunisbi @wahyuhari @Richards_Rix @krisnanugroho @indrasg @ita501 well let's celebrate then??????????]
+2016-07-27 20:39:01,574 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=omnichannel @smi_dev is on testing phase 1, yaay !]
+2016-07-27 20:44:28,025 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-27 20:44:29,694 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:44:34,106 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:42:08 PM until 7/28/2016 8:44:34 PM
+2016-07-27 20:45:50,502 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-27 20:45:51,648 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-27 20:45:51,791 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:45:51,794 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 20:45:51,814 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[df85c73b06a24142a5f29d8884f81104]
+2016-07-27 20:45:51,829 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Publish tweet, @rocks_sonny ok
+2016-07-27 20:45:54,822 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 7:42:08 PM until 7/28/2016 8:45:54 PM
+2016-07-27 20:45:57,212 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[e21783b7f09e49d78016881e81d86d5d]
+2016-07-27 20:45:57,220 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[e21783b7f09e49d78016881e81d86d5d], AgentId=[7], Account=[@rocks_sonny], channel=[5]
+2016-07-27 20:45:57,242 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[df85c73b06a24142a5f29d8884f81104]
+2016-07-27 20:45:57,244 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[df85c73b06a24142a5f29d8884f81104]
+2016-07-27 20:45:59,480 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@wahyuhari, text=@Richards_Rix @smi_dev wow nice]
+2016-07-27 20:45:59,514 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@Richards_Rix, text=Retweet @smi_dev @wahyuhari ]
+2016-07-27 20:46:20,576 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 20:46:21,649 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:46:24,478 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 8:46:00 PM until 7/28/2016 8:46:24 PM
+2016-07-27 20:46:27,970 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@wahyuhari, text=@Richards_Rix @smi_dev wow nice]
+2016-07-27 20:46:28,016 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@Richards_Rix, text=Retweet @smi_dev @wahyuhari ]
+2016-07-27 20:46:50,577 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 20:46:51,649 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:46:53,590 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 8:46:28 PM until 7/28/2016 8:46:53 PM
+2016-07-27 20:46:56,967 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@wahyuhari, text=@Richards_Rix @smi_dev wow nice]
+2016-07-27 20:46:57,002 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@Richards_Rix, text=Retweet @smi_dev @wahyuhari ]
+2016-07-27 20:47:20,577 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 20:47:21,649 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:47:23,698 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 8:46:57 PM until 7/28/2016 8:47:23 PM
+2016-07-27 20:47:27,073 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@wahyuhari, text=@Richards_Rix @smi_dev wow nice]
+2016-07-27 20:47:27,115 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@Richards_Rix, text=Retweet @smi_dev @wahyuhari ]
+2016-07-27 20:47:57,906 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-27 20:47:58,839 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-27 20:47:58,951 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:47:58,952 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 20:48:01,049 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 8:47:27 PM until 7/28/2016 8:48:01 PM
+2016-07-27 20:48:10,057 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@wahyuhari, text=@Richards_Rix @smi_dev wow nice]
+2016-07-27 20:48:10,378 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@Richards_Rix, text=Retweet @smi_dev @wahyuhari ]
+2016-07-27 20:48:27,962 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 20:48:28,840 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:48:33,527 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 8:48:11 PM until 7/28/2016 8:48:33 PM
+2016-07-27 20:48:37,005 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@wahyuhari, text=@Richards_Rix @smi_dev wow nice]
+2016-07-27 20:48:37,181 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@Richards_Rix, text=Retweet @smi_dev @wahyuhari ]
+2016-07-27 20:48:57,963 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 20:48:58,840 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:49:00,924 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 8:48:38 PM until 7/28/2016 8:49:00 PM
+2016-07-27 20:49:04,637 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@wahyuhari, text=@Richards_Rix @smi_dev wow nice]
+2016-07-27 20:49:04,712 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@Richards_Rix, text=Retweet @smi_dev @wahyuhari ]
+2016-07-27 20:49:27,962 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 20:49:28,841 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:49:30,902 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 8:49:05 PM until 7/28/2016 8:49:30 PM
+2016-07-27 20:49:34,318 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@wahyuhari, text=@Richards_Rix @smi_dev wow nice]
+2016-07-27 20:49:34,369 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@@Richards_Rix, text=Retweet @smi_dev @wahyuhari ]
+2016-07-27 20:54:41,075 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-27 20:54:42,425 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-27 20:54:42,591 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:54:42,594 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 20:54:47,684 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 8:49:35 PM until 7/28/2016 8:54:47 PM
+2016-07-27 20:54:58,665 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[da7ff5f9d4084c6b8ae2b7384896c72b], filename=[CoWiJLHUEAAEx7P.mp4]
+2016-07-27 20:54:58,777 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=@smi_dev @idris_maulana @wahyuhari @krisnanugroho @aurunisbi @Richards_Rix ]
+2016-07-27 20:54:58,828 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@rocks_sonny @smi_dev @aurunisbi @wahyuhari @Richards_Rix @krisnanugroho @indrasg @ita501 well let's celebrate then??????????]
+2016-07-27 20:54:58,854 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=omnichannel @smi_dev is on testing phase 1, yaay !]
+2016-07-27 20:54:58,906 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@Richards_Rix, text=Let go @smi_dev @wahyuhari]
+2016-07-27 20:54:58,929 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=@idris_maulana @smi_dev @aurunisbi @wahyuhari @Richards_Rix @krisnanugroho @indrasg @ita501 just softlaunch]
+2016-07-27 20:54:58,954 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=its working, time to lunch :D @smi_dev @idris_maulana]
+2016-07-27 20:54:58,979 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=hello @smi_dev]
+2016-07-27 20:54:59,012 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@smi_dev @idris_maulana uhuy nice]
+2016-07-27 20:54:59,122 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[3528082f6c37483a923c31add72ba6c2], filename=[CoWo-YyVUAIYQnZ.mp4]
+2016-07-27 20:54:59,205 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@smi_dev @rocks_sonny @wahyuhari @krisnanugroho @aurunisbi @Richards_Rix wihiiuuu ]
+2016-07-27 20:54:59,230 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@smi_dev come on guys !]
+2016-07-27 20:54:59,255 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=nice guys \m/ @smi_dev @rocks_sonny @idris_maulana @krisnanugroho @aurunisbi @Richards_Rix]
+2016-07-27 20:54:59,283 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@smi_dev @aurunisbi @wahyuhari @Richards_Rix @krisnanugroho @indrasg @ita501 @rocks_sonny isn't this classified guys?]
+2016-07-27 20:54:59,306 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@smi_dev laper bro, maksi yook eh makso ini harusnya]
+2016-07-27 20:54:59,338 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@Richards_Rix, text=@smi_dev @idris_maulana @aurunisbi @wahyuhari @krisnanugroho @indrasg @ita501 Wow keren]
+2016-07-27 20:54:59,372 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=not working huh @smi_dev]
+2016-07-27 20:54:59,426 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=let mention @smi_dev \m/]
+2016-07-27 20:54:59,855 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[0ab1217b98ac4bb3a33237d11c0232ce], filename=[CoWxgZ1VYAE48os.mp4]
+2016-07-27 20:54:59,973 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@aurunisbi, text=@smi_dev @rocks_sonny @idris_maulana @wahyuhari @krisnanugroho @Richards_Rix ]
+2016-07-27 20:55:00,074 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[a23c4d6a6b824de5a30fbdea66826f9c], filename=[CoWqc8JVYAQBzh_.mp4]
+2016-07-27 20:55:00,122 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@idris_maulana, text=@smi_dev watzaaaaaaap ]
+2016-07-27 20:55:00,148 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@Richards_Rix, text=Hi follow me @smi_dev]
+2016-07-27 20:55:00,175 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=haha lol @rocks_sonny @smi_dev @idris_maulana @krisnanugroho @aurunisbi @Richards_Rix]
+2016-07-27 20:55:00,307 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[7d0eb917b05841118cebcd2330ee6e42], filename=[CoWBrCtW8AE8ULl.jpg]
+2016-07-27 20:55:00,345 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@rocks_sonny, text=test omnichannel @smi_dev ]
+2016-07-27 20:55:11,164 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 20:55:12,425 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:55:14,461 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 8:55:01 PM until 7/28/2016 8:55:14 PM
+2016-07-27 20:55:50,777 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-27 20:55:52,366 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:55:54,693 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 8:55:01 PM until 7/28/2016 8:55:54 PM
+2016-07-27 20:58:12,413 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-27 20:58:13,478 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 20:58:17,131 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 8:55:01 PM until 7/28/2016 8:58:17 PM
+2016-07-27 21:01:45,306 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@Richards_Rix @smi_dev wow nice]
+2016-07-27 21:02:05,754 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@Richards_Rix, text=Retweet @smi_dev @wahyuhari ]
+2016-07-27 21:02:42,448 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:02:44,408 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:02:40 PM until 7/28/2016 9:02:44 PM
+2016-07-27 21:03:10,083 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=Time to sleep @smi_dev]
+2016-07-27 21:03:54,791 [OnTrace.Channel.Scheduler.Program] [INFO] Processing outbound...
+2016-07-27 21:03:55,850 [OnTrace.Channel.Scheduler.Program] [INFO] Processing inbound..
+2016-07-27 21:03:55,974 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:03:55,976 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:04:01,032 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:02:40 PM until 7/28/2016 9:04:01 PM
+2016-07-27 21:04:09,044 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=Time to sleep @smi_dev]
+2016-07-27 21:04:09,183 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@Richards_Rix @smi_dev wow nice]
+2016-07-27 21:04:09,235 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@Richards_Rix, text=Retweet @smi_dev @wahyuhari ]
+2016-07-27 21:04:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:04:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:04:27,918 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:04:27 PM
+2016-07-27 21:04:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:04:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:04:57,908 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:04:57 PM
+2016-07-27 21:05:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:05:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:05:27,782 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:05:27 PM
+2016-07-27 21:05:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:05:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:05:57,953 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:05:57 PM
+2016-07-27 21:06:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:06:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:06:28,573 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:06:28 PM
+2016-07-27 21:06:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:06:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:07:01,069 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:07:01 PM
+2016-07-27 21:07:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:07:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:07:28,711 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:07:28 PM
+2016-07-27 21:07:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:07:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:07:58,671 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:07:58 PM
+2016-07-27 21:08:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:08:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:08:30,706 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:08:30 PM
+2016-07-27 21:08:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:08:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:08:58,685 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:08:58 PM
+2016-07-27 21:09:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:09:24,890 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[271bd29146944d5ca53a69f3380ae2cc]
+2016-07-27 21:09:25,417 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[c4a6dc0c654d4afea225be7f96156b78]
+2016-07-27 21:09:25,455 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Publish tweet with image, @wahyuhari GOOD NIGHT
+2016-07-27 21:09:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:09:27,967 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:09:27 PM
+2016-07-27 21:09:34,538 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[c56d22cc4b604ab4bf04f8f95aff94c6]
+2016-07-27 21:09:34,545 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[c56d22cc4b604ab4bf04f8f95aff94c6], AgentId=[7], Account=[@wahyuhari], channel=[5]
+2016-07-27 21:09:34,699 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[c56d22cc4b604ab4bf04f8f95aff94c6], Filename=[error save template.jpg]
+2016-07-27 21:09:35,006 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[271bd29146944d5ca53a69f3380ae2cc]
+2016-07-27 21:09:35,009 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[271bd29146944d5ca53a69f3380ae2cc]
+2016-07-27 21:09:35,096 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Publish tweet with image, @wahyuhari good night then
+2016-07-27 21:09:37,929 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[9ea110ee638c4be49943e0ad9e39264a]
+2016-07-27 21:09:37,930 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[9ea110ee638c4be49943e0ad9e39264a], AgentId=[8], Account=[@wahyuhari], channel=[5]
+2016-07-27 21:09:38,171 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[9ea110ee638c4be49943e0ad9e39264a], Filename=[Untitled.png]
+2016-07-27 21:09:38,519 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[c4a6dc0c654d4afea225be7f96156b78]
+2016-07-27 21:09:38,520 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[c4a6dc0c654d4afea225be7f96156b78]
+2016-07-27 21:09:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:09:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:09:57,793 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:09:57 PM
+2016-07-27 21:10:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:10:24,873 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[0a87193da5b84aa3b06585fdcd22a515]
+2016-07-27 21:10:25,116 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Publish tweet with image, @Richards_Rix yo wis lah
+2016-07-27 21:10:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:10:28,598 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:10:28 PM
+2016-07-27 21:10:32,432 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[26cd537f035d4f2e8cdfffcac5f168fe]
+2016-07-27 21:10:32,433 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[26cd537f035d4f2e8cdfffcac5f168fe], AgentId=[8], Account=[@Richards_Rix], channel=[5]
+2016-07-27 21:10:32,458 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[26cd537f035d4f2e8cdfffcac5f168fe], Filename=[StatusConnecting (1).jpg]
+2016-07-27 21:10:32,687 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[0a87193da5b84aa3b06585fdcd22a515]
+2016-07-27 21:10:32,689 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[0a87193da5b84aa3b06585fdcd22a515]
+2016-07-27 21:10:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:10:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:11:01,324 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:11:01 PM
+2016-07-27 21:11:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:11:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:11:27,822 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:11:27 PM
+2016-07-27 21:11:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:11:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:12:00,319 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:04:10 PM until 7/28/2016 9:12:00 PM
+2016-07-27 21:12:06,704 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[5f22bd365c24478a8fdef456daa62a7c], filename=[CoYJfNfUsAAs7zS.jpg]
+2016-07-27 21:12:06,734 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@smi_dev lol ]
+2016-07-27 21:12:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:12:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:12:27,756 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:12:27 PM
+2016-07-27 21:12:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:12:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:12:57,752 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:12:57 PM
+2016-07-27 21:13:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:13:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:13:28,637 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:13:28 PM
+2016-07-27 21:13:54,865 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:13:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:13:57,788 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:13:57 PM
+2016-07-27 21:14:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:14:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:14:30,448 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:14:30 PM
+2016-07-27 21:14:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:14:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:14:57,763 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:14:57 PM
+2016-07-27 21:15:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:15:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:15:27,783 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:15:27 PM
+2016-07-27 21:15:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:15:54,869 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[26b628b501214825b1288d77ecdb363e]
+2016-07-27 21:15:54,873 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Publish tweet, @wahyuhari OK I KNOW WHAT YOU MEAN
+2016-07-27 21:15:55,617 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[11762e4c350441e2b26d5c51e24862f6]
+2016-07-27 21:15:55,618 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[11762e4c350441e2b26d5c51e24862f6], AgentId=[7], Account=[@wahyuhari], channel=[5]
+2016-07-27 21:15:55,643 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[26b628b501214825b1288d77ecdb363e]
+2016-07-27 21:15:55,644 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[26b628b501214825b1288d77ecdb363e]
+2016-07-27 21:15:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:15:58,579 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:15:58 PM
+2016-07-27 21:16:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:16:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:16:28,730 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:16:28 PM
+2016-07-27 21:16:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:16:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:17:00,436 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:17:00 PM
+2016-07-27 21:17:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:17:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:17:27,886 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:17:27 PM
+2016-07-27 21:17:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:17:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:17:57,781 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:17:57 PM
+2016-07-27 21:18:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:18:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:18:27,749 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:18:27 PM
+2016-07-27 21:18:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:18:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:19:03,367 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:19:03 PM
+2016-07-27 21:19:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:19:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:19:31,034 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:19:31 PM
+2016-07-27 21:19:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:19:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:20:00,988 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:20:00 PM
+2016-07-27 21:20:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:20:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:20:27,780 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:20:27 PM
+2016-07-27 21:20:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:20:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:20:57,927 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:12:07 PM until 7/28/2016 9:20:57 PM
+2016-07-27 21:21:04,329 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[e96591786d564d0098f6cf5c9f75864c], filename=[_hVSYY-pjB9vUcnz.mpd]
+2016-07-27 21:21:04,354 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@smi_dev video test bro ]
+2016-07-27 21:21:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:21:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:21:27,902 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:21:27 PM
+2016-07-27 21:21:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:21:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:21:58,069 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:21:58 PM
+2016-07-27 21:22:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:22:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:22:28,594 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:22:28 PM
+2016-07-27 21:22:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:22:54,871 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[39b4b8837f5048bc8536621ece412d6c]
+2016-07-27 21:22:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:22:56,823 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Publish tweet with image, @wahyuhari KIRIM VIDEO BRO
+2016-07-27 21:22:57,570 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[565db7d7e9574f91b4d6761008c3d7fa]
+2016-07-27 21:22:57,571 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[565db7d7e9574f91b4d6761008c3d7fa], AgentId=[7], Account=[@wahyuhari], channel=[5]
+2016-07-27 21:22:57,606 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[565db7d7e9574f91b4d6761008c3d7fa], Filename=[VID_20141215_172913.mp4]
+2016-07-27 21:22:58,108 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:22:58 PM
+2016-07-27 21:22:59,675 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[39b4b8837f5048bc8536621ece412d6c]
+2016-07-27 21:22:59,675 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[39b4b8837f5048bc8536621ece412d6c]
+2016-07-27 21:23:24,865 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:23:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:23:30,335 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:23:30 PM
+2016-07-27 21:23:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:23:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:24:00,306 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:24:00 PM
+2016-07-27 21:24:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:24:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:24:27,795 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:24:27 PM
+2016-07-27 21:24:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:24:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:24:57,765 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:24:57 PM
+2016-07-27 21:25:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:25:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:25:27,923 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:25:27 PM
+2016-07-27 21:25:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:25:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:25:57,922 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:25:57 PM
+2016-07-27 21:26:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:26:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:26:27,906 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:26:27 PM
+2016-07-27 21:26:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:26:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:26:57,820 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:26:57 PM
+2016-07-27 21:27:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:27:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:27:30,305 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:27:30 PM
+2016-07-27 21:27:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:27:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:27:57,940 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:27:57 PM
+2016-07-27 21:28:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:28:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:28:29,778 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:28:29 PM
+2016-07-27 21:28:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:28:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:28:57,875 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:21:05 PM until 7/28/2016 9:28:57 PM
+2016-07-27 21:29:04,156 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[87037b2697d8444e93993c384bb4ea3f], filename=[TfhvI5MBU37Uac9-.mpd]
+2016-07-27 21:29:04,172 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@wahyuhari, text=@smi_dev sample video ]
+2016-07-27 21:29:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:29:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:29:27,923 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:29:27 PM
+2016-07-27 21:29:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:29:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:29:57,840 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:29:57 PM
+2016-07-27 21:30:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:30:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:30:29,263 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:30:29 PM
+2016-07-27 21:30:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:30:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:30:57,845 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:30:57 PM
+2016-07-27 21:31:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:31:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:31:28,005 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:31:28 PM
+2016-07-27 21:31:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:31:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:31:57,862 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:31:57 PM
+2016-07-27 21:32:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:32:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:32:29,116 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:32:29 PM
+2016-07-27 21:32:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:32:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:32:57,902 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:32:57 PM
+2016-07-27 21:33:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:33:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:33:27,832 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:33:27 PM
+2016-07-27 21:33:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:33:54,874 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[65842e93450242e690a3cf665382d06e]
+2016-07-27 21:33:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:33:58,332 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:33:58 PM
+2016-07-27 21:33:59,027 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Publish tweet with image, @wahyuhari coba video ah
+2016-07-27 21:33:59,815 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[242b1cbe12154eb3a043051f38d4ae51]
+2016-07-27 21:33:59,816 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[242b1cbe12154eb3a043051f38d4ae51], AgentId=[8], Account=[@wahyuhari], channel=[5]
+2016-07-27 21:33:59,860 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[242b1cbe12154eb3a043051f38d4ae51], Filename=[computer_typing.mp4]
+2016-07-27 21:34:04,732 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[65842e93450242e690a3cf665382d06e]
+2016-07-27 21:34:04,733 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[65842e93450242e690a3cf665382d06e]
+2016-07-27 21:34:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:34:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:34:27,775 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:34:27 PM
+2016-07-27 21:34:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:34:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:35:00,477 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:35:00 PM
+2016-07-27 21:35:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:35:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:35:27,872 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:35:27 PM
+2016-07-27 21:35:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:35:54,869 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[39f089b08033402fab1f5c6d0a94c042]
+2016-07-27 21:35:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:35:58,218 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:35:58 PM
+2016-07-27 21:36:03,220 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Publish tweet with image, @wahyuhari oke bro
+2016-07-27 21:36:04,081 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[b722cdec9b8b4662b39bc5fe6637e777]
+2016-07-27 21:36:04,082 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[b722cdec9b8b4662b39bc5fe6637e777], AgentId=[7], Account=[@wahyuhari], channel=[5]
+2016-07-27 21:36:04,099 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[b722cdec9b8b4662b39bc5fe6637e777], Filename=[VID_20141215_172335.mp4]
+2016-07-27 21:36:07,094 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log file, LogId=[b722cdec9b8b4662b39bc5fe6637e777], Filename=[VID_20141215_172913.mp4]
+2016-07-27 21:36:09,299 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[39f089b08033402fab1f5c6d0a94c042]
+2016-07-27 21:36:09,300 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[39f089b08033402fab1f5c6d0a94c042]
+2016-07-27 21:36:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:36:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:36:27,899 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:36:27 PM
+2016-07-27 21:36:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:36:55,854 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:36:57,787 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:36:57 PM
+2016-07-27 21:37:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:37:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:37:28,406 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:37:28 PM
+2016-07-27 21:37:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:37:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:37:57,899 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:37:57 PM
+2016-07-27 21:38:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:38:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:38:29,349 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:38:29 PM
+2016-07-27 21:38:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:38:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:39:01,764 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:39:01 PM
+2016-07-27 21:39:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:39:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:39:27,758 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:39:27 PM
+2016-07-27 21:39:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:39:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:39:58,025 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:29:04 PM until 7/28/2016 9:39:58 PM
+2016-07-27 21:40:04,750 [OnTrace.Channel.Infrastructure.Data.AdoInboundQueueRepository] [INFO] Create inbound queue file, QueueId=[225abe512c3a4ee79f41a2366e725d78], filename=[B1k2AxcWxjJH7Ksj.mp4]
+2016-07-27 21:40:05,752 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@smi_dev, text=coba upload video @smi_dev @rocks_sonny @Richards_Rix @wahyuhari ]
+2016-07-27 21:40:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:40:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:40:27,971 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:40:27 PM
+2016-07-27 21:40:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:40:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:40:57,798 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:40:57 PM
+2016-07-27 21:41:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:41:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:41:27,754 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:41:27 PM
+2016-07-27 21:41:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:41:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:41:57,803 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:41:57 PM
+2016-07-27 21:42:24,865 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:42:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:42:27,829 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:42:27 PM
+2016-07-27 21:42:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:42:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:42:57,845 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:42:57 PM
+2016-07-27 21:43:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:43:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:43:30,559 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:43:30 PM
+2016-07-27 21:43:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:43:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:43:57,876 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:43:57 PM
+2016-07-27 21:44:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:44:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:44:28,183 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:44:28 PM
+2016-07-27 21:44:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:44:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:44:57,964 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:44:57 PM
+2016-07-27 21:45:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:45:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:45:30,678 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:45:30 PM
+2016-07-27 21:45:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:45:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:45:58,090 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:45:58 PM
+2016-07-27 21:46:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:46:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:46:28,060 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:46:28 PM
+2016-07-27 21:46:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:46:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:46:58,720 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:46:58 PM
+2016-07-27 21:47:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:47:24,897 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queue files, QueueId=[f37cdc75d5494ecd87e7e1d84fc28a72]
+2016-07-27 21:47:24,903 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Publish tweet, @smi_dev file attach videonya ga sampe ke ontrace client....FAILED
+2016-07-27 21:47:25,696 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Create new outbound log, id=[6d207f67cf42428d93240be41f432662]
+2016-07-27 21:47:25,696 [OnTrace.Channel.Infrastructure.Data.AdoOutboundLogRepository] [INFO] Create outbound log, LogId=[6d207f67cf42428d93240be41f432662], AgentId=[8], Account=[@smi_dev], channel=[5]
+2016-07-27 21:47:25,719 [OnTrace.Channel.Scheduler.Jobs.OutboundJob] [INFO] Remove outbound queue, id=[f37cdc75d5494ecd87e7e1d84fc28a72]
+2016-07-27 21:47:25,720 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Removing outbound queue, ID=[f37cdc75d5494ecd87e7e1d84fc28a72]
+2016-07-27 21:47:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:47:28,570 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:47:28 PM
+2016-07-27 21:47:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:47:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:48:00,415 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:40:06 PM until 7/28/2016 9:48:00 PM
+2016-07-27 21:48:03,741 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Create twitter inbound queue, [address=@smi_dev, text=@smi_dev file attach videonya ga sampe ke ontrace client....FAILED]
+2016-07-27 21:48:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:48:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:48:27,907 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:48:27 PM
+2016-07-27 21:48:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:48:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:48:57,983 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:48:57 PM
+2016-07-27 21:49:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:49:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:49:27,842 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:49:27 PM
+2016-07-27 21:49:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:49:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:49:57,915 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:49:57 PM
+2016-07-27 21:50:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:50:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:50:30,413 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:50:30 PM
+2016-07-27 21:50:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:50:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:50:57,860 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:50:57 PM
+2016-07-27 21:51:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:51:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:51:27,739 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:51:27 PM
+2016-07-27 21:51:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:51:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:52:00,300 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:52:00 PM
+2016-07-27 21:52:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:52:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:52:30,589 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:52:30 PM
+2016-07-27 21:52:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:52:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:52:57,904 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:52:57 PM
+2016-07-27 21:53:24,869 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:53:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:53:30,293 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:53:30 PM
+2016-07-27 21:53:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:53:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:53:57,755 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:53:57 PM
+2016-07-27 21:54:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:54:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:54:27,940 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:54:27 PM
+2016-07-27 21:54:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:54:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:54:57,947 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:54:57 PM
+2016-07-27 21:55:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:55:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:55:30,290 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:55:30 PM
+2016-07-27 21:55:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:55:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:55:57,843 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:55:57 PM
+2016-07-27 21:56:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:56:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:56:27,928 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:56:27 PM
+2016-07-27 21:56:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:56:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:56:57,770 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:56:57 PM
+2016-07-27 21:57:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:57:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:57:30,317 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:57:30 PM
+2016-07-27 21:57:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:57:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:57:57,735 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:57:57 PM
+2016-07-27 21:58:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:58:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:58:27,769 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:58:27 PM
+2016-07-27 21:58:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:58:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:58:57,883 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:58:57 PM
+2016-07-27 21:59:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:59:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:59:27,842 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:59:27 PM
+2016-07-27 21:59:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 21:59:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 21:59:57,773 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 9:59:57 PM
+2016-07-27 22:00:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:00:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:00:30,955 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:00:30 PM
+2016-07-27 22:00:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:00:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:00:57,885 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:00:57 PM
+2016-07-27 22:01:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:01:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:01:28,646 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:01:28 PM
+2016-07-27 22:01:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:01:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:01:58,754 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:01:58 PM
+2016-07-27 22:02:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:02:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:02:27,925 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:02:27 PM
+2016-07-27 22:02:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:02:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:02:57,899 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:02:57 PM
+2016-07-27 22:03:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:03:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:03:27,838 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:03:27 PM
+2016-07-27 22:03:54,868 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:03:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:04:00,287 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:04:00 PM
+2016-07-27 22:04:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:04:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:04:27,750 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:04:27 PM
+2016-07-27 22:04:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:04:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:04:57,894 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:04:57 PM
+2016-07-27 22:05:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:05:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:05:30,318 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:05:30 PM
+2016-07-27 22:05:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:05:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:05:57,797 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:05:57 PM
+2016-07-27 22:06:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:06:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:06:28,760 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:06:28 PM
+2016-07-27 22:06:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:06:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:06:57,773 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:06:57 PM
+2016-07-27 22:07:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:07:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:07:27,812 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:07:27 PM
+2016-07-27 22:07:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:07:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:08:00,389 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:08:00 PM
+2016-07-27 22:08:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:08:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:08:28,067 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:08:28 PM
+2016-07-27 22:08:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:08:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:08:58,449 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:08:58 PM
+2016-07-27 22:09:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:09:25,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:09:27,773 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:09:27 PM
+2016-07-27 22:09:54,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:09:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:09:57,896 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:09:57 PM
+2016-07-27 22:10:24,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:10:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:10:30,331 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:10:30 PM
+2016-07-27 22:10:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:10:55,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:10:57,802 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:10:57 PM
+2016-07-27 22:11:24,863 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:11:25,853 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:11:27,788 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:11:27 PM
+2016-07-27 22:11:54,864 [OnTrace.Channel.Infrastructure.Data.AdoOutboundQueueRepository] [INFO] Retrieving outbound queues, limit=[5]
+2016-07-27 22:11:55,852 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve mail messages, Account=[smi.bidex]
+2016-07-27 22:11:57,791 [OnTrace.Channel.Scheduler.Jobs.InboundJob] [INFO] Retrieve twitter data since 7/27/2016 9:48:04 PM until 7/28/2016 10:11:57 PM

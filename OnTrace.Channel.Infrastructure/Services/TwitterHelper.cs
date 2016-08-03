@@ -347,7 +347,7 @@ namespace OnTrace.Channel.Infrastructure.Services
                     var item = new TwitterTweet()
                     {
                         Id = tweet.Id,
-                        CreatedBy = tweet.CreatedBy.ScreenName,
+                        CreatedBy = "@" + tweet.CreatedBy.ScreenName,
                         CreatedAt = tweet.CreatedAt,
                         Text = Regex.Replace(tweet.FullText, @"http[^\s]+", ""),
                         Media = mediaList,
@@ -366,15 +366,27 @@ namespace OnTrace.Channel.Infrastructure.Services
         }
         
 
-        public List<TwitterMessage> GetPrivateMessages()
+        public IEnumerable<TwitterMessage> GetPrivateMessages()
         {
             var messages = Message.GetLatestMessagesReceived();
-            
-            return messages.Select(message => new TwitterMessage()
+
+            if (messages != null && messages.Any())
             {
-                Id = message.Id, Sender = message.SenderScreenName, Recipient = message.RecipientScreenName, CreatedAt = message.CreatedAt, Text = message.Text, Media = new List<TweetMedia>()
-            }).ToList();
-            
+
+                return messages.Select(message => new TwitterMessage()
+                {
+                    Id = message.Id,
+                    Sender = message.SenderScreenName,
+                    Recipient = message.RecipientScreenName,
+                    CreatedAt = message.CreatedAt,
+                    Text = message.Text,
+                    Media = new List<TweetMedia>()
+                });
+            }
+            else
+            {
+                return Enumerable.Empty<TwitterMessage>();
+            }
         }
 
         public void DestroyMessage(long messageId)

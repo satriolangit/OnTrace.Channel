@@ -120,79 +120,75 @@ namespace OnTrace.Channel.Scheduler.Jobs
                 //skip loop
                 if (logAlreadyExist || queueAlreadyExist) continue;
 
+                tweetRetrieved++;
+
                 var queue = new InboundQueue();
 
                 //download media
-                var mediaList = new List<TweetMedia>();
+                var mediaList = new List<InboundQueueFile>();
                 foreach (var tweetMedia in tweet.Media)
                 {
                     string pathToWrite = twitterHelper.MediaStorageLocationPath + fileProcessor.GetFilename(tweetMedia.Url);
                     fileProcessor.DownloadAndWriteMedia(tweetMedia.Url, pathToWrite);
-                    tweetMedia.Filedata = fileProcessor.StreamToBytes(pathToWrite);
-
-                    mediaList.Add(tweetMedia);
+                    
+                    mediaList.Add(new InboundQueueFile()
+                    {
+                        Filename = tweetMedia.Filename,
+                        FileType = tweetMedia.Type,
+                        Url = tweetMedia.Url,
+                        FileData = fileProcessor.StreamToBytes(pathToWrite),
+                        IsAttachment = true
+                    });
                 }
 
-                string mediaType = mediaList.Select(x => x.Type).FirstOrDefault();
+                string mediaType = mediaList.Select(x => x.FileType).FirstOrDefault();
 
                 queue.Subject = "tweet";
-                queue.AccountName = "@" + tweet.CreatedBy;
+                queue.AccountName = tweet.CreatedBy;
                 queue.InteractionChannelTypeID = channelType.InteractionChannelTypeId;
                 queue.LastAgentID = 0;
                 queue.Message = tweet.Text;
                 queue.MediaFiles = mediaList;
                 queue.MessageType = mediaList.Count == 0 ? 0 : mediaType != null && mediaType.Contains("mp4") ? 2 : 1;
                 
+                //create queue
+                repo.CreateInboundQueue(queue);
 
-                if (!queueAlreadyExist && !logAlreadyExist)
-                {
-                    tweetRetrieved++;
-                    repo.CreateInboundQueue(queue);
-
-                    Logger.Write($"Create twitter inbound queue, [address={queue.AccountName}, text={queue.Message}]", EventSeverity.Information);
-                }
+                //write log
+                Logger.Write($"Create twitter inbound queue, [address={queue.AccountName}, text={queue.Message}]", EventSeverity.Information);
+              
             }
             #endregion
 
-            try
+            #region Private Messages
+            var messages = twitterHelper.GetPrivateMessages();
+            foreach (var message in messages)
             {
-               
+                tweetRetrieved++;
 
-                #region Private Messages
-                var messages = twitterHelper.GetPrivateMessages();
-                foreach (var message in messages)
+                var queue = new InboundQueue()
                 {
-                    var queue = new InboundQueue()
-                    {
-                        Subject = "Private Message",
-                        AccountName = "@" + message.Sender,
-                        InteractionChannelTypeID = channelType.InteractionChannelTypeId,
-                        LastAgentID = 0,
-                        Message = message.Text,
-                        MediaFiles = new List<InboundQueueFile>(),
-                        MessageType = 2
-                    };
+                    Subject = "Private Message",
+                    AccountName = "@" + message.Sender,
+                    InteractionChannelTypeID = channelType.InteractionChannelTypeId,
+                    LastAgentID = 0,
+                    Message = message.Text,
+                    MediaFiles = new List<InboundQueueFile>(),
+                    MessageType = 2
+                };
 
-                    Logger.Write($"Create twitter inbound queue, [address={queue.AccountName}, text={queue.Message}]",EventSeverity.Information);
-                    repo.CreateInboundQueue(queue);
-                    
-                    //delete server message 
-                    twitterHelper.DestroyMessage(message.Id);
+                Logger.Write($"Create twitter inbound queue, [address={queue.AccountName}, text={queue.Message}]", EventSeverity.Information);
+                //repo.CreateInboundQueue(queue);
 
-                    tweetRetrieved++;
-                }
-                #endregion
-
-                //update sync time
-                if (tweetRetrieved > 0 && syncTime.ActivityTime.Date <= DateTime.Now.Date)
-                {
-                    repo.UpdateTwitterSyncTime(Guid.NewGuid().ToString("N"), DateTime.Now, ipAddress);
-                }
-               
+                //delete server message 
+                twitterHelper.DestroyMessage(message.Id);
             }
-            catch (Exception ex)
+            #endregion
+
+            //update sync time
+            if (tweetRetrieved > 0 && syncTime.ActivityTime.Date <= DateTime.Now.Date)
             {
-                Logger.Write($"Failed to create twitter inbound queue.", ex, EventSeverity.Error);
+                repo.UpdateTwitterSyncTime(Guid.NewGuid().ToString("N"), DateTime.Now, ipAddress);
             }
         }
     }

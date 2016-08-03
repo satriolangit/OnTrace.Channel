@@ -164,6 +164,18 @@ namespace OnTrace.Channel.Scheduler.Jobs
             //remove queue
             Logger.Write($"Remove outbound queue, id=[{queue.QueueId}]", EventSeverity.Information);
             repo.Remove(queue.QueueId);
+
+            foreach (var file in queue.MediaFiles)
+            {
+                logRepo.CreateFileLog(file, Guid.NewGuid().ToString("N"));
+            }
+        }
+
+        private void CreateFileLog(OutboundQueue queue, OutboundFileLog file, AdoOutboundLogRepository repoLog, AdoOutboundQueueRepository repo)
+        {
+            //repoLog.CreateFileLog();
         }
     }
+
+   
 }
